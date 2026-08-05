@@ -1,0 +1,1461 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Blue Bridge Developers — Dashboard</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@600;700;800&display=swap" rel="stylesheet" />
+  <!-- PayPal SDK — replace YOUR_CLIENT_ID with your PayPal Business Client ID -->
+  <script src="https://www.paypal.com/sdk/js?client-id=BAAKLapCRbDZNZkZNwqnaNcsggQuOVamRRnHd5bBL4ektYjon6Lpc8KbzKlfRz6kzB-eYTgjvpCKfQ9SPY&currency=USD&intent=capture"></script>
+  <style>
+    :root {
+      --blue: #0052FF; --blue-h: #0047E0; --blue-lt: #3B82F6;
+      --cyan: #22D3EE; --navy: #050A18; --navy-2: #090F22; --navy-3: #0D1530;
+      --white: #fff; --g100: #F1F5F9; --g300: #CBD5E1; --g400: #94A3B8;
+      --g500: #64748B; --g600: #475569; --g700: #334155;
+      --green: #34D399; --yellow: #FBBF24; --red: #F87171;
+      --sidebar-w: 232px; --header-h: 60px;
+      --r: 12px; --t: 0.22s ease;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html, body { height: 100%; }
+    body { font-family: 'Inter', sans-serif; background: var(--navy); color: var(--white); display: flex; min-height: 100vh; overflow-x: hidden; }
+    [data-lucide] { display: inline-block; vertical-align: middle; fill: none; stroke: currentColor; stroke-width: 1.75; stroke-linecap: round; stroke-linejoin: round; }
+
+    /* ── SIDEBAR ── */
+    .sidebar {
+      width: var(--sidebar-w); background: var(--navy-2); border-right: 1px solid rgba(255,255,255,0.05);
+      display: flex; flex-direction: column; position: fixed; top: 0; left: 0; bottom: 0; z-index: 100; flex-shrink: 0;
+    }
+    .sb-brand { padding: 18px 20px; border-bottom: 1px solid rgba(255,255,255,0.05); display: flex; align-items: center; gap: 10px; }
+    .sb-brand img { height: 24px; }
+    .sb-brand-tag { font-size: 9.5px; font-weight: 800; text-transform: uppercase; letter-spacing: 0.12em; color: #60A5FA; background: rgba(0,82,255,0.12); border: 1px solid rgba(0,82,255,0.25); padding: 2px 7px; border-radius: 100px; }
+    .sb-nav { flex: 1; padding: 16px 12px; display: flex; flex-direction: column; gap: 2px; overflow-y: auto; }
+    .sb-section-label { font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.12em; color: var(--g600); padding: 14px 8px 6px; }
+    .sb-link { display: flex; align-items: center; gap: 10px; padding: 9px 10px; border-radius: 8px; text-decoration: none; color: var(--g500); font-size: 13.5px; font-weight: 500; transition: all var(--t); cursor: pointer; }
+    .sb-link [data-lucide] { width: 16px; height: 16px; flex-shrink: 0; }
+    .sb-link:hover { background: rgba(255,255,255,0.04); color: var(--g300); }
+    .sb-link.active { background: rgba(0,82,255,0.1); color: var(--white); font-weight: 600; }
+    .sb-link.active [data-lucide] { color: #60A5FA; }
+    .sb-badge { margin-left: auto; background: var(--blue); color: white; font-size: 10px; font-weight: 700; padding: 1px 7px; border-radius: 100px; }
+    .sb-badge-green { background: rgba(52,211,153,0.15); color: var(--green); border: 1px solid rgba(52,211,153,0.25); }
+    .sb-footer { padding: 16px 12px; border-top: 1px solid rgba(255,255,255,0.05); }
+    .sb-user { display: flex; align-items: center; gap: 10px; padding: 8px 10px; border-radius: 8px; }
+    .sb-av { width: 32px; height: 32px; border-radius: 50%; background: linear-gradient(135deg, var(--blue), #60A5FA); display: flex; align-items: center; justify-content: center; font-size: 12px; font-weight: 800; flex-shrink: 0; }
+    .sb-user-name { font-size: 13px; font-weight: 600; }
+    .sb-user-plan { font-size: 11px; color: var(--g500); }
+
+    /* ── MAIN ── */
+    .main { margin-left: var(--sidebar-w); flex: 1; display: flex; flex-direction: column; min-height: 100vh; }
+
+    /* ── TOPBAR ── */
+    .topbar { height: var(--header-h); background: var(--navy-2); border-bottom: 1px solid rgba(255,255,255,0.05); display: flex; align-items: center; justify-content: space-between; padding: 0 28px; position: sticky; top: 0; z-index: 50; }
+    .topbar-left { display: flex; align-items: center; gap: 8px; }
+    .page-title { font-family: 'Space Grotesk', sans-serif; font-size: 16px; font-weight: 700; }
+    .page-breadcrumb { font-size: 13px; color: var(--g500); }
+    .topbar-right { display: flex; align-items: center; gap: 12px; }
+    .topbar-btn { background: var(--blue); color: white; border: none; padding: 8px 16px; border-radius: 8px; font-size: 13px; font-weight: 600; cursor: pointer; font-family: 'Inter', sans-serif; display: inline-flex; align-items: center; gap: 6px; transition: background var(--t); }
+    .topbar-btn:hover { background: var(--blue-h); }
+    .topbar-btn [data-lucide] { width: 14px; height: 14px; }
+    .topbar-icon { width: 36px; height: 36px; border-radius: 8px; background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.07); display: flex; align-items: center; justify-content: center; cursor: pointer; transition: background var(--t); }
+    .topbar-icon:hover { background: rgba(255,255,255,0.08); }
+    .topbar-icon [data-lucide] { width: 16px; height: 16px; color: var(--g400); }
+    .notif-dot { position: relative; }
+    .notif-dot::after { content:''; position: absolute; top: 6px; right: 6px; width: 6px; height: 6px; border-radius: 50%; background: var(--blue); border: 1.5px solid var(--navy-2); }
+
+    /* ── CONTENT ── */
+    .content { padding: 28px; flex: 1; }
+
+    /* VIEWS */
+    .view { display: none; }
+    .view.active { display: block; }
+
+    /* ── OVERVIEW CARDS ── */
+    .metrics-row { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-bottom: 28px; }
+    .metric-card { background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.07); border-radius: var(--r); padding: 20px; }
+    .mc-label { font-size: 12px; color: var(--g500); font-weight: 600; text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 10px; display: flex; align-items: center; gap: 7px; }
+    .mc-label [data-lucide] { width: 14px; height: 14px; }
+    .mc-val { font-family: 'Space Grotesk', sans-serif; font-size: 28px; font-weight: 800; line-height: 1; margin-bottom: 6px; }
+    .mc-change { font-size: 12px; font-weight: 600; display: inline-flex; align-items: center; gap: 3px; }
+    .mc-change.up { color: var(--green); }
+    .mc-change.down { color: var(--red); }
+
+    /* ── AGENTS GRID ── */
+    .section-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 20px; }
+    .section-title { font-family: 'Space Grotesk', sans-serif; font-size: 18px; font-weight: 700; }
+    .agents-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+    .agent-card { background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.07); border-radius: var(--r); padding: 22px; transition: all var(--t); }
+    .agent-card:hover { background: rgba(255,255,255,0.05); border-color: rgba(0,82,255,0.25); }
+    .agent-card-header { display: flex; align-items: flex-start; justify-content: space-between; margin-bottom: 14px; }
+    .agent-av-lg { width: 44px; height: 44px; border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 18px; font-weight: 800; color: white; }
+    .agent-status-pill { font-size: 10.5px; font-weight: 700; padding: 3px 9px; border-radius: 100px; }
+    .status-active { background: rgba(52,211,153,0.1); color: var(--green); border: 1px solid rgba(52,211,153,0.2); }
+    .status-idle { background: rgba(251,191,36,0.1); color: var(--yellow); border: 1px solid rgba(251,191,36,0.2); }
+    .status-off { background: rgba(100,116,139,0.15); color: var(--g500); border: 1px solid rgba(100,116,139,0.2); }
+    .agent-name { font-size: 15px; font-weight: 700; margin-bottom: 2px; }
+    .agent-role { font-size: 12px; color: var(--g500); margin-bottom: 14px; }
+    .agent-task-label { font-size: 11px; color: var(--g600); text-transform: uppercase; letter-spacing: 0.08em; font-weight: 700; margin-bottom: 5px; }
+    .agent-task-text { font-size: 12.5px; color: var(--g400); line-height: 1.5; margin-bottom: 16px; font-style: italic; }
+    .agent-stats { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-bottom: 16px; }
+    .as { background: rgba(255,255,255,0.03); border-radius: 8px; padding: 10px; }
+    .as-val { font-size: 16px; font-weight: 700; line-height: 1; }
+    .as-lbl { font-size: 10.5px; color: var(--g500); margin-top: 3px; }
+    .agent-actions { display: flex; gap: 8px; }
+    .btn-sm { flex: 1; padding: 8px; border-radius: 7px; font-size: 12px; font-weight: 600; cursor: pointer; font-family: 'Inter', sans-serif; text-align: center; transition: all var(--t); border: none; }
+    .btn-sm-outline { background: transparent; border: 1px solid rgba(255,255,255,0.1); color: var(--g400); }
+    .btn-sm-outline:hover { border-color: rgba(255,255,255,0.25); color: white; }
+    .btn-sm-blue { background: rgba(0,82,255,0.12); border: 1px solid rgba(0,82,255,0.25); color: #60A5FA; }
+    .btn-sm-blue:hover { background: rgba(0,82,255,0.22); }
+
+    /* CREATE AGENT CARD */
+    .agent-card-new { background: rgba(0,82,255,0.04); border: 1.5px dashed rgba(0,82,255,0.2); border-radius: var(--r); padding: 22px; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; cursor: pointer; transition: all var(--t); min-height: 240px; }
+    .agent-card-new:hover { background: rgba(0,82,255,0.08); border-color: rgba(0,82,255,0.4); }
+    .agent-card-new .plus-icon { width: 48px; height: 48px; border-radius: 14px; background: rgba(0,82,255,0.1); border: 1px solid rgba(0,82,255,0.2); display: flex; align-items: center; justify-content: center; margin: 0 auto 14px; }
+    .agent-card-new .plus-icon [data-lucide] { width: 22px; height: 22px; color: #60A5FA; }
+    .agent-card-new h4 { font-size: 15px; font-weight: 700; color: #60A5FA; margin-bottom: 6px; }
+    .agent-card-new p { font-size: 12.5px; color: var(--g500); line-height: 1.55; }
+
+    /* ── BILLING VIEW ── */
+    .plans-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-bottom: 40px; }
+    .plan-card { background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.07); border-radius: 16px; padding: 28px; position: relative; transition: all var(--t); }
+    .plan-card:hover { border-color: rgba(0,82,255,0.3); transform: translateY(-2px); }
+    .plan-card.featured { border-color: rgba(0,82,255,0.4); background: rgba(0,82,255,0.05); }
+    .plan-featured-badge { position: absolute; top: -12px; left: 50%; transform: translateX(-50%); background: var(--blue); color: white; font-size: 11px; font-weight: 700; padding: 4px 14px; border-radius: 100px; white-space: nowrap; }
+    .plan-name { font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: var(--g400); margin-bottom: 12px; }
+    .plan-price { font-family: 'Space Grotesk', sans-serif; font-size: 40px; font-weight: 900; line-height: 1; margin-bottom: 4px; }
+    .plan-price sup { font-size: 20px; vertical-align: super; font-weight: 700; }
+    .plan-period { font-size: 12px; color: var(--g500); margin-bottom: 20px; }
+    .plan-features { list-style: none; display: flex; flex-direction: column; gap: 10px; margin-bottom: 24px; }
+    .plan-features li { font-size: 13.5px; color: var(--g300); display: flex; align-items: center; gap: 9px; }
+    .check { color: var(--green); font-size: 14px; font-weight: 700; flex-shrink: 0; }
+    .plan-paypal { width: 100%; min-height: 48px; }
+    .plan-custom-btn { width: 100%; background: transparent; border: 1.5px solid rgba(255,255,255,0.15); color: white; padding: 13px; border-radius: 9px; font-size: 14px; font-weight: 600; cursor: pointer; font-family: 'Inter', sans-serif; transition: all var(--t); }
+    .plan-custom-btn:hover { background: rgba(255,255,255,0.06); border-color: rgba(255,255,255,0.3); }
+    .billing-history { background: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.06); border-radius: var(--r); overflow: hidden; }
+    .bh-header { display: flex; align-items: center; justify-content: space-between; padding: 18px 22px; border-bottom: 1px solid rgba(255,255,255,0.05); }
+    .bh-title { font-size: 14px; font-weight: 700; }
+    .bh-row { display: grid; grid-template-columns: 1fr 1fr 1fr 1fr; align-items: center; padding: 14px 22px; border-bottom: 1px solid rgba(255,255,255,0.04); font-size: 13.5px; }
+    .bh-row:last-child { border-bottom: none; }
+    .bh-head { background: rgba(255,255,255,0.02); font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--g500); }
+    .badge-paid { font-size: 11px; font-weight: 700; padding: 3px 9px; border-radius: 100px; background: rgba(52,211,153,0.1); color: var(--green); border: 1px solid rgba(52,211,153,0.2); }
+
+    /* ── CHANNELS ── */
+    .channel-card { background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.07); border-radius: 14px; padding: 20px; transition: all var(--t); }
+    .channel-card:hover { border-color: rgba(255,255,255,0.13); background: rgba(255,255,255,0.05); }
+    .ch-header { display: flex; align-items: center; gap: 12px; margin-bottom: 14px; }
+    .ch-icon { width: 42px; height: 42px; border-radius: 10px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+    .ch-name { font-size: 14px; font-weight: 700; }
+    .ch-desc { font-size: 11.5px; color: var(--g500); margin-top: 2px; }
+    .ch-toggle-wrap { margin-left: auto; }
+    .ch-toggle { position: relative; display: inline-block; width: 38px; height: 22px; }
+    .ch-toggle input { opacity: 0; width: 0; height: 0; }
+    .ch-slider { position: absolute; cursor: pointer; inset: 0; background: rgba(255,255,255,0.1); border-radius: 22px; transition: .3s; }
+    .ch-slider:before { content:''; position: absolute; width: 16px; height: 16px; left: 3px; bottom: 3px; background: white; border-radius: 50%; transition: .3s; }
+    .ch-toggle input:checked + .ch-slider { background: var(--blue); }
+    .ch-toggle input:checked + .ch-slider:before { transform: translateX(16px); }
+    .ch-status { font-size: 11.5px; font-weight: 700; padding: 3px 9px; border-radius: 100px; display: inline-block; margin-bottom: 12px; }
+    .ch-status.connected { background: rgba(52,211,153,0.1); color: var(--green); border: 1px solid rgba(52,211,153,0.2); }
+    .ch-status.disconnected { background: rgba(100,116,139,0.12); color: var(--g500); border: 1px solid rgba(100,116,139,0.2); }
+    .ch-btn { width: 100%; background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.1); color: var(--g300); padding: 9px; border-radius: 8px; font-size: 12.5px; font-weight: 600; cursor: pointer; font-family: 'Inter',sans-serif; transition: all var(--t); }
+    .ch-btn:hover { background: rgba(255,255,255,0.08); color: white; }
+    .ch-btn-connect { background: rgba(0,82,255,0.1); border-color: rgba(0,82,255,0.25); color: #60A5FA; }
+    .ch-btn-connect:hover { background: rgba(0,82,255,0.2); }
+
+    /* ── MODAL ── */
+    .modal-overlay { position: fixed; inset: 0; background: rgba(0,0,0,0.7); backdrop-filter: blur(6px); z-index: 200; display: none; align-items: center; justify-content: center; }
+    .modal-overlay.open { display: flex; }
+    .modal { background: var(--navy-2); border: 1px solid rgba(255,255,255,0.08); border-radius: 20px; padding: 32px; width: 560px; max-width: 95vw; position: relative; }
+    .modal-close { position: absolute; top: 16px; right: 16px; background: rgba(255,255,255,0.06); border: none; width: 32px; height: 32px; border-radius: 8px; cursor: pointer; color: var(--g400); display: flex; align-items: center; justify-content: center; transition: background var(--t); }
+    .modal-close:hover { background: rgba(255,255,255,0.12); color: white; }
+    .modal-close [data-lucide] { width: 15px; height: 15px; }
+    .modal h3 { font-family: 'Space Grotesk', sans-serif; font-size: 22px; font-weight: 800; margin-bottom: 6px; }
+    .modal-sub { font-size: 14px; color: var(--g400); margin-bottom: 28px; }
+    .agent-type-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin-bottom: 24px; }
+    .at-card { background: rgba(255,255,255,0.03); border: 1.5px solid rgba(255,255,255,0.07); border-radius: 10px; padding: 16px 12px; text-align: center; cursor: pointer; transition: all var(--t); }
+    .at-card:hover, .at-card.selected { background: rgba(0,82,255,0.1); border-color: rgba(0,82,255,0.4); }
+    .at-icon { width: 36px; height: 36px; border-radius: 10px; display: flex; align-items: center; justify-content: center; margin: 0 auto 10px; }
+    .at-icon [data-lucide] { width: 17px; height: 17px; }
+    .at-name { font-size: 12.5px; font-weight: 700; margin-bottom: 3px; }
+    .at-desc { font-size: 11px; color: var(--g500); line-height: 1.4; }
+    .modal-field { margin-bottom: 16px; }
+    .modal-field label { font-size: 12.5px; font-weight: 600; color: var(--g300); display: block; margin-bottom: 7px; }
+    .modal-field input, .modal-field select, .modal-field textarea { width: 100%; background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.1); border-radius: 9px; padding: 11px 14px; font-size: 13.5px; color: var(--white); font-family: 'Inter', sans-serif; outline: none; transition: border-color var(--t); }
+    .modal-field input::placeholder, .modal-field textarea::placeholder { color: var(--g600); }
+    .modal-field input:focus, .modal-field select:focus, .modal-field textarea:focus { border-color: rgba(0,82,255,0.5); }
+    .modal-field select { appearance: none; cursor: pointer; }
+    .modal-field textarea { resize: vertical; min-height: 80px; }
+    .modal-actions { display: flex; gap: 10px; margin-top: 24px; }
+    .btn-modal-cancel { flex: 1; background: transparent; border: 1px solid rgba(255,255,255,0.1); color: var(--g400); padding: 12px; border-radius: 9px; font-size: 14px; font-weight: 600; cursor: pointer; font-family: 'Inter', sans-serif; transition: all var(--t); }
+    .btn-modal-cancel:hover { border-color: rgba(255,255,255,0.25); color: white; }
+    .btn-modal-create { flex: 2; background: var(--blue); border: none; color: white; padding: 12px; border-radius: 9px; font-size: 14px; font-weight: 700; cursor: pointer; font-family: 'Inter', sans-serif; transition: background var(--t); }
+    .btn-modal-create:hover { background: var(--blue-h); }
+
+    /* ── ANALYTICS VIEW ── */
+    .analytics-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+    .chart-card { background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.07); border-radius: var(--r); padding: 22px; }
+    .chart-title { font-size: 14px; font-weight: 700; margin-bottom: 4px; }
+    .chart-sub { font-size: 12px; color: var(--g500); margin-bottom: 20px; }
+    .bar-chart { display: flex; align-items: flex-end; gap: 8px; height: 120px; }
+    .bar-wrap { flex: 1; display: flex; flex-direction: column; align-items: center; gap: 6px; height: 100%; justify-content: flex-end; }
+    .bar { width: 100%; border-radius: 4px 4px 0 0; min-height: 4px; transition: height 0.4s ease; }
+    .bar-lbl { font-size: 10px; color: var(--g500); }
+
+    /* Settings */
+    .settings-section { background: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.06); border-radius: var(--r); margin-bottom: 20px; overflow: hidden; }
+    .settings-section-header { padding: 18px 22px; border-bottom: 1px solid rgba(255,255,255,0.05); display: flex; align-items: center; justify-content: space-between; }
+    .ss-title { font-size: 14px; font-weight: 700; }
+    .ss-sub { font-size: 12px; color: var(--g500); margin-top: 2px; }
+    .settings-row { display: flex; align-items: center; justify-content: space-between; padding: 16px 22px; border-bottom: 1px solid rgba(255,255,255,0.04); }
+    .settings-row:last-child { border-bottom: none; }
+    .sr-label { font-size: 13.5px; font-weight: 500; }
+    .sr-sub { font-size: 12px; color: var(--g500); margin-top: 2px; }
+    .toggle { width: 40px; height: 22px; border-radius: 100px; background: rgba(255,255,255,0.1); border: none; cursor: pointer; position: relative; transition: background var(--t); flex-shrink: 0; }
+    .toggle.on { background: var(--blue); }
+    .toggle::after { content: ''; position: absolute; top: 3px; left: 3px; width: 16px; height: 16px; border-radius: 50%; background: white; transition: left var(--t); }
+    .toggle.on::after { left: 21px; }
+    .api-key-box { background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08); border-radius: 8px; padding: 12px 16px; font-family: 'Courier New', monospace; font-size: 12px; color: var(--g400); display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+    .copy-btn { background: transparent; border: 1px solid rgba(255,255,255,0.1); border-radius: 6px; padding: 4px 10px; color: var(--g400); font-size: 11.5px; cursor: pointer; font-family: 'Inter', sans-serif; transition: all var(--t); }
+    .copy-btn:hover { background: rgba(255,255,255,0.06); color: white; }
+  </style>
+</head>
+<body>
+
+<!-- ══ SIDEBAR ══ -->
+<aside class="sidebar">
+  <div class="sb-brand">
+    <a href="index.html"><img src="logo-blanco.png" alt="Blue Bridge" /></a>
+    <span class="sb-brand-tag">Dev</span>
+  </div>
+  <nav class="sb-nav">
+    <div class="sb-section-label">General</div>
+    <a class="sb-link active" onclick="showView('overview')">
+      <i data-lucide="layout-dashboard"></i> Overview
+    </a>
+    <a class="sb-link" onclick="showView('agents')">
+      <i data-lucide="cpu"></i> Agents
+      <span class="sb-badge">3</span>
+    </a>
+    <a class="sb-link" onclick="showView('analytics')">
+      <i data-lucide="bar-chart-2"></i> Analytics
+    </a>
+    <a class="sb-link" onclick="showView('reports')">
+      <i data-lucide="file-text"></i> Reports
+    </a>
+
+    <div class="sb-section-label">Channels</div>
+    <a class="sb-link" onclick="showView('channels')">
+      <i data-lucide="radio"></i> All Channels
+      <span class="sb-badge" style="background:rgba(251,191,36,0.15);color:#FBBF24;border:1px solid rgba(251,191,36,0.25)">New</span>
+    </a>
+    <a class="sb-link" onclick="showView('widget')">
+      <i data-lucide="message-circle"></i> Chat Widget
+    </a>
+    <a class="sb-link" onclick="showView('phone')">
+      <i data-lucide="phone"></i> Phone Agent
+    </a>
+
+    <div class="sb-section-label">Platform</div>
+    <a class="sb-link" onclick="showView('billing')">
+      <i data-lucide="credit-card"></i> Billing
+    </a>
+    <a class="sb-link" onclick="showView('settings')">
+      <i data-lucide="settings"></i> Settings
+    </a>
+    <a class="sb-link" href="api-docs.html">
+      <i data-lucide="book-open"></i> Docs
+    </a>
+    <a class="sb-link" href="#">
+      <i data-lucide="life-buoy"></i> Support
+    </a>
+  </nav>
+  <div class="sb-footer">
+    <div class="sb-user">
+      <div class="sb-av">JS</div>
+      <div>
+        <div class="sb-user-name">J. Sanchez</div>
+        <div class="sb-user-plan">Professional Plan</div>
+      </div>
+    </div>
+  </div>
+</aside>
+
+<!-- ══ MAIN ══ -->
+<main class="main">
+  <div class="topbar">
+    <div class="topbar-left">
+      <span class="page-breadcrumb">Blue Bridge Developers /</span>
+      <span class="page-title" id="page-title">Overview</span>
+    </div>
+    <div class="topbar-right">
+      <div class="topbar-icon notif-dot"><i data-lucide="bell"></i></div>
+      <button class="topbar-btn" onclick="openModal()">
+        <i data-lucide="plus"></i> New Agent
+      </button>
+    </div>
+  </div>
+
+  <div class="content">
+
+    <!-- ── OVERVIEW ── -->
+    <div class="view active" id="view-overview">
+      <div class="metrics-row">
+        <div class="metric-card">
+          <div class="mc-label"><i data-lucide="cpu"></i> Active Agents</div>
+          <div class="mc-val">3</div>
+          <div class="mc-change up">&#9650; 2 this month</div>
+        </div>
+        <div class="metric-card">
+          <div class="mc-label"><i data-lucide="message-square"></i> Conversations</div>
+          <div class="mc-val">1,248</div>
+          <div class="mc-change up">&#9650; 18% vs last month</div>
+        </div>
+        <div class="metric-card">
+          <div class="mc-label"><i data-lucide="check-circle"></i> Resolution Rate</div>
+          <div class="mc-val">83%</div>
+          <div class="mc-change up">&#9650; 5 pts</div>
+        </div>
+        <div class="metric-card">
+          <div class="mc-label"><i data-lucide="clock"></i> Avg. Response</div>
+          <div class="mc-val">1.4s</div>
+          <div class="mc-change down">&#9660; 0.3s slower</div>
+        </div>
+      </div>
+
+      <div class="section-header">
+        <span class="section-title">Your Agents</span>
+        <button class="topbar-btn" onclick="showView('agents')">
+          <i data-lucide="layout-grid"></i> View All
+        </button>
+      </div>
+      <div class="agents-grid">
+        <!-- Agent 1 -->
+        <div class="agent-card">
+          <div class="agent-card-header">
+            <div class="agent-av-lg" style="background:linear-gradient(135deg,#0052FF,#60A5FA)">A</div>
+            <span class="agent-status-pill status-active">Active</span>
+          </div>
+          <div class="agent-name">Alex — Sales Agent</div>
+          <div class="agent-role">Lead qualification &amp; outreach</div>
+          <div class="agent-task-label">Last action</div>
+          <div class="agent-task-text">"Followed up with 3 leads from today's form submissions"</div>
+          <div class="agent-stats">
+            <div class="as"><div class="as-val">342</div><div class="as-lbl">Conversations</div></div>
+            <div class="as"><div class="as-val">91%</div><div class="as-lbl">Resolution</div></div>
+          </div>
+          <div class="agent-actions">
+            <button class="btn-sm btn-sm-outline">Configure</button>
+            <button class="btn-sm btn-sm-blue">View Logs</button>
+          </div>
+        </div>
+        <!-- Agent 2 -->
+        <div class="agent-card">
+          <div class="agent-card-header">
+            <div class="agent-av-lg" style="background:linear-gradient(135deg,#10B981,#34D399)">R</div>
+            <span class="agent-status-pill status-active">Active</span>
+          </div>
+          <div class="agent-name">Ryan — Support Agent</div>
+          <div class="agent-role">Tier-1 ticket resolution</div>
+          <div class="agent-task-label">Last action</div>
+          <div class="agent-task-text">"Resolved ticket #4821 — password reset flow"</div>
+          <div class="agent-stats">
+            <div class="as"><div class="as-val">719</div><div class="as-lbl">Tickets Resolved</div></div>
+            <div class="as"><div class="as-val">78%</div><div class="as-lbl">Resolution</div></div>
+          </div>
+          <div class="agent-actions">
+            <button class="btn-sm btn-sm-outline">Configure</button>
+            <button class="btn-sm btn-sm-blue">View Logs</button>
+          </div>
+        </div>
+        <!-- Agent 3 -->
+        <div class="agent-card">
+          <div class="agent-card-header">
+            <div class="agent-av-lg" style="background:linear-gradient(135deg,#8B5CF6,#A78BFA)">S</div>
+            <span class="agent-status-pill status-idle">Idle</span>
+          </div>
+          <div class="agent-name">Sophie — Marketing</div>
+          <div class="agent-role">Content &amp; campaign automation</div>
+          <div class="agent-task-label">Last action</div>
+          <div class="agent-task-text">"Published 4 posts to social media channels"</div>
+          <div class="agent-stats">
+            <div class="as"><div class="as-val">187</div><div class="as-lbl">Tasks Done</div></div>
+            <div class="as"><div class="as-val">24</div><div class="as-lbl">Posts Published</div></div>
+          </div>
+          <div class="agent-actions">
+            <button class="btn-sm btn-sm-outline">Configure</button>
+            <button class="btn-sm btn-sm-blue">View Logs</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── AGENTS ── -->
+    <div class="view" id="view-agents">
+      <div class="section-header">
+        <span class="section-title">All Agents</span>
+        <button class="topbar-btn" onclick="openModal()">
+          <i data-lucide="plus"></i> New Agent
+        </button>
+      </div>
+      <div class="agents-grid">
+        <div class="agent-card">
+          <div class="agent-card-header">
+            <div class="agent-av-lg" style="background:linear-gradient(135deg,#0052FF,#60A5FA)">A</div>
+            <span class="agent-status-pill status-active">Active</span>
+          </div>
+          <div class="agent-name">Alex — Sales Agent</div>
+          <div class="agent-role">Lead qualification &amp; outreach</div>
+          <div class="agent-task-label">Last action</div>
+          <div class="agent-task-text">"Followed up with 3 leads from today's form submissions"</div>
+          <div class="agent-stats">
+            <div class="as"><div class="as-val">342</div><div class="as-lbl">Conversations</div></div>
+            <div class="as"><div class="as-val">91%</div><div class="as-lbl">Resolution</div></div>
+          </div>
+          <div class="agent-actions">
+            <button class="btn-sm btn-sm-outline">Configure</button>
+            <button class="btn-sm btn-sm-blue">View Logs</button>
+          </div>
+        </div>
+        <div class="agent-card">
+          <div class="agent-card-header">
+            <div class="agent-av-lg" style="background:linear-gradient(135deg,#10B981,#34D399)">R</div>
+            <span class="agent-status-pill status-active">Active</span>
+          </div>
+          <div class="agent-name">Ryan — Support Agent</div>
+          <div class="agent-role">Tier-1 ticket resolution</div>
+          <div class="agent-task-label">Last action</div>
+          <div class="agent-task-text">"Resolved ticket #4821 — password reset flow"</div>
+          <div class="agent-stats">
+            <div class="as"><div class="as-val">719</div><div class="as-lbl">Tickets Resolved</div></div>
+            <div class="as"><div class="as-val">78%</div><div class="as-lbl">Resolution</div></div>
+          </div>
+          <div class="agent-actions">
+            <button class="btn-sm btn-sm-outline">Configure</button>
+            <button class="btn-sm btn-sm-blue">View Logs</button>
+          </div>
+        </div>
+        <div class="agent-card">
+          <div class="agent-card-header">
+            <div class="agent-av-lg" style="background:linear-gradient(135deg,#8B5CF6,#A78BFA)">S</div>
+            <span class="agent-status-pill status-idle">Idle</span>
+          </div>
+          <div class="agent-name">Sophie — Marketing</div>
+          <div class="agent-role">Content &amp; campaign automation</div>
+          <div class="agent-task-label">Last action</div>
+          <div class="agent-task-text">"Published 4 posts to social media channels"</div>
+          <div class="agent-stats">
+            <div class="as"><div class="as-val">187</div><div class="as-lbl">Tasks Done</div></div>
+            <div class="as"><div class="as-val">24</div><div class="as-lbl">Posts Published</div></div>
+          </div>
+          <div class="agent-actions">
+            <button class="btn-sm btn-sm-outline">Configure</button>
+            <button class="btn-sm btn-sm-blue">View Logs</button>
+          </div>
+        </div>
+        <!-- Add New -->
+        <div class="agent-card-new" onclick="openModal()">
+          <div class="plus-icon"><i data-lucide="plus"></i></div>
+          <h4>Deploy New Agent</h4>
+          <p>Choose from 15 AI Agent types and configure it for your business in minutes.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── ANALYTICS ── -->
+    <div class="view" id="view-analytics">
+      <div class="metrics-row" style="margin-bottom:28px">
+        <div class="metric-card">
+          <div class="mc-label"><i data-lucide="message-square"></i> Total Conversations</div>
+          <div class="mc-val">1,248</div>
+          <div class="mc-change up">&#9650; 18%</div>
+        </div>
+        <div class="metric-card">
+          <div class="mc-label"><i data-lucide="thumbs-up"></i> Positive Sentiment</div>
+          <div class="mc-val">76%</div>
+          <div class="mc-change up">&#9650; 4 pts</div>
+        </div>
+        <div class="metric-card">
+          <div class="mc-label"><i data-lucide="user-check"></i> Human Escalations</div>
+          <div class="mc-val">17%</div>
+          <div class="mc-change down">&#9660; 3 pts</div>
+        </div>
+        <div class="metric-card">
+          <div class="mc-label"><i data-lucide="zap"></i> Avg. First Response</div>
+          <div class="mc-val">1.4s</div>
+          <div class="mc-change up">&#9650; Faster</div>
+        </div>
+      </div>
+      <div class="analytics-grid">
+        <div class="chart-card" style="grid-column: span 2;">
+          <div class="chart-title">Conversations over time</div>
+          <div class="chart-sub">Last 7 days — all agents combined</div>
+          <div class="bar-chart" id="bar-chart-main"></div>
+        </div>
+        <div class="chart-card">
+          <div class="chart-title">Agent Performance</div>
+          <div class="chart-sub">Resolution rate by agent</div>
+          <div style="margin-top:16px;display:flex;flex-direction:column;gap:12px">
+            <div>
+              <div style="display:flex;justify-content:space-between;font-size:13px;margin-bottom:5px"><span>Alex (Sales)</span><span style="font-weight:700;color:#34D399">91%</span></div>
+              <div style="height:6px;background:rgba(255,255,255,0.06);border-radius:3px"><div style="height:100%;width:91%;background:linear-gradient(90deg,#0052FF,#22D3EE);border-radius:3px"></div></div>
+            </div>
+            <div>
+              <div style="display:flex;justify-content:space-between;font-size:13px;margin-bottom:5px"><span>Ryan (Support)</span><span style="font-weight:700;color:#34D399">78%</span></div>
+              <div style="height:6px;background:rgba(255,255,255,0.06);border-radius:3px"><div style="height:100%;width:78%;background:linear-gradient(90deg,#10B981,#34D399);border-radius:3px"></div></div>
+            </div>
+            <div>
+              <div style="display:flex;justify-content:space-between;font-size:13px;margin-bottom:5px"><span>Sophie (Marketing)</span><span style="font-weight:700;color:#FBBF24">64%</span></div>
+              <div style="height:6px;background:rgba(255,255,255,0.06);border-radius:3px"><div style="height:100%;width:64%;background:linear-gradient(90deg,#8B5CF6,#EC4899);border-radius:3px"></div></div>
+            </div>
+          </div>
+        </div>
+        <div class="chart-card">
+          <div class="chart-title">Top Conversation Topics</div>
+          <div class="chart-sub">Categorized by AI</div>
+          <div style="margin-top:16px;display:flex;flex-direction:column;gap:10px">
+            <div style="display:flex;justify-content:space-between;align-items:center;font-size:13px"><span style="color:var(--g300)">Pricing inquiries</span><span style="font-weight:700">34%</span></div>
+            <div style="display:flex;justify-content:space-between;align-items:center;font-size:13px"><span style="color:var(--g300)">Product questions</span><span style="font-weight:700">28%</span></div>
+            <div style="display:flex;justify-content:space-between;align-items:center;font-size:13px"><span style="color:var(--g300)">Support requests</span><span style="font-weight:700">22%</span></div>
+            <div style="display:flex;justify-content:space-between;align-items:center;font-size:13px"><span style="color:var(--g300)">Booking / scheduling</span><span style="font-weight:700">16%</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── BILLING ── -->
+    <div class="view" id="view-billing">
+      <div class="section-header" style="margin-bottom:28px">
+        <div>
+          <span class="section-title">Plans &amp; Billing</span>
+          <p style="font-size:13px;color:var(--g500);margin-top:4px">Choose the package that fits your business — cancel anytime.</p>
+        </div>
+      </div>
+
+      <!-- Row 1: 3 packages -->
+      <div class="plans-grid" style="margin-bottom:20px">
+
+        <!-- Chat Starter -->
+        <div class="plan-card">
+          <div style="font-size:22px;margin-bottom:8px">💬</div>
+          <div class="plan-name">Chat Starter</div>
+          <div class="plan-price"><sup>$</sup>49<span style="font-size:20px">.99</span></div>
+          <div class="plan-period">per month</div>
+          <ul class="plan-features">
+            <li><span class="check">✓</span> 1 AI chat agent</li>
+            <li><span class="check">✓</span> Website widget (embed code)</li>
+            <li><span class="check">✓</span> 1,000 conversations/mo</li>
+            <li><span class="check">✓</span> Basic analytics &amp; reports</li>
+            <li><span class="check">✓</span> Email support</li>
+          </ul>
+          <div id="paypal-chat" class="plan-paypal"></div>
+        </div>
+
+        <!-- Booking Pro -->
+        <div class="plan-card">
+          <div style="margin-bottom:8px;color:var(--blue,#0052FF);"><i data-lucide="calendar" style="width:22px;height:22px;"></i></div>
+          <div class="plan-name">Booking Pro</div>
+          <div class="plan-price"><sup>$</sup>99<span style="font-size:20px">.99</span></div>
+          <div class="plan-period">per month</div>
+          <ul class="plan-features">
+            <li><span class="check">✓</span> AI booking agent</li>
+            <li><span class="check">✓</span> Calendar integration</li>
+            <li><span class="check">✓</span> SMS appointment reminders</li>
+            <li><span class="check">✓</span> 500 bookings/mo</li>
+            <li><span class="check">✓</span> Cancellation &amp; rescheduling</li>
+          </ul>
+          <div id="paypal-booking" class="plan-paypal"></div>
+        </div>
+
+        <!-- Call Center -->
+        <div class="plan-card featured">
+          <div class="plan-featured-badge">Most Popular</div>
+          <div style="margin-bottom:8px;color:var(--blue,#0052FF);"><i data-lucide="phone" style="width:22px;height:22px;"></i></div>
+          <div class="plan-name">Call Center</div>
+          <div class="plan-price"><sup>$</sup>149<span style="font-size:20px">.99</span></div>
+          <div class="plan-period">per month</div>
+          <ul class="plan-features">
+            <li><span class="check">✓</span> AI phone agent (Twilio)</li>
+            <li><span class="check">✓</span> Dedicated local phone number</li>
+            <li><span class="check">✓</span> 300 minutes/mo included</li>
+            <li><span class="check">✓</span> Call transcripts &amp; summaries</li>
+            <li><span class="check">✓</span> Voicemail with AI summary</li>
+          </ul>
+          <div id="paypal-call" class="plan-paypal"></div>
+        </div>
+
+      </div>
+
+      <!-- Row 2: 3 packages -->
+      <div class="plans-grid">
+
+        <!-- Marketing Suite -->
+        <div class="plan-card">
+          <div style="margin-bottom:8px;color:var(--blue,#0052FF);"><i data-lucide="megaphone" style="width:22px;height:22px;"></i></div>
+          <div class="plan-name">Marketing Suite</div>
+          <div class="plan-price"><sup>$</sup>249<span style="font-size:20px">.99</span></div>
+          <div class="plan-period">per month</div>
+          <ul class="plan-features">
+            <li><span class="check">✓</span> Social media agent</li>
+            <li><span class="check">✓</span> Content &amp; copy generation</li>
+            <li><span class="check">✓</span> Email campaign automation</li>
+            <li><span class="check">✓</span> Post scheduling</li>
+            <li><span class="check">✓</span> Campaign performance reports</li>
+          </ul>
+          <div id="paypal-marketing" class="plan-paypal"></div>
+        </div>
+
+        <!-- Sales Bundle -->
+        <div class="plan-card">
+          <div style="margin-bottom:8px;color:var(--blue,#0052FF);"><i data-lucide="target" style="width:22px;height:22px;"></i></div>
+          <div class="plan-name">Sales Bundle</div>
+          <div class="plan-price"><sup>$</sup>299<span style="font-size:20px">.99</span></div>
+          <div class="plan-period">per month</div>
+          <ul class="plan-features">
+            <li><span class="check">✓</span> Lead capture agent</li>
+            <li><span class="check">✓</span> CRM pipeline integration</li>
+            <li><span class="check">✓</span> Automated follow-up sequences</li>
+            <li><span class="check">✓</span> Contact reports &amp; exports</li>
+            <li><span class="check">✓</span> WhatsApp &amp; email outreach</li>
+          </ul>
+          <div id="paypal-sales" class="plan-paypal"></div>
+        </div>
+
+        <!-- Enterprise -->
+        <div class="plan-card">
+          <div style="margin-bottom:8px;color:var(--blue,#0052FF);"><i data-lucide="building-2" style="width:22px;height:22px;"></i></div>
+          <div class="plan-name">Enterprise</div>
+          <div class="plan-price" style="font-size:28px;padding-top:8px">Custom</div>
+          <div class="plan-period">tailored to your organization</div>
+          <ul class="plan-features">
+            <li><span class="check">✓</span> All packages included</li>
+            <li><span class="check">✓</span> Unlimited conversations</li>
+            <li><span class="check">✓</span> White-label branding</li>
+            <li><span class="check">✓</span> Dedicated account manager</li>
+            <li><span class="check">✓</span> SLA 99.9% uptime</li>
+            <li><span class="check">✓</span> On-premise deployment</li>
+          </ul>
+          <button class="plan-custom-btn" onclick="window.location.href='mailto:enterprise@bluebridge.es'">Contact Sales</button>
+        </div>
+
+      </div>
+
+      <!-- Billing History -->
+      <div class="billing-history" style="margin-top:32px">
+        <div class="bh-header">
+          <span class="bh-title">Payment History</span>
+          <button style="background:transparent;border:1px solid rgba(255,255,255,0.1);color:var(--g400);padding:6px 14px;border-radius:7px;font-size:12.5px;cursor:pointer;font-family:Inter,sans-serif">Download All</button>
+        </div>
+        <div class="bh-row bh-head">
+          <span>Date</span><span>Description</span><span>Amount</span><span>Status</span>
+        </div>
+        <div class="bh-row">
+          <span style="color:var(--g400)">Aug 1, 2026</span>
+          <span>Call Center — Monthly</span>
+          <span style="font-weight:700">$149.99</span>
+          <span><span class="badge-paid">Paid</span></span>
+        </div>
+        <div class="bh-row">
+          <span style="color:var(--g400)">Jul 1, 2026</span>
+          <span>Chat Starter — Monthly</span>
+          <span style="font-weight:700">$49.99</span>
+          <span><span class="badge-paid">Paid</span></span>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── PHONE AGENT ── -->
+    <div class="view" id="view-phone">
+      <div class="section-header" style="margin-bottom:28px">
+        <div>
+          <span class="section-title">Phone Agent</span>
+          <p style="font-size:13px;color:var(--g500);margin-top:4px">Assign a real phone number to your AI — powered by Twilio.</p>
+        </div>
+      </div>
+
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-bottom:28px">
+        <!-- Setup card -->
+        <div style="background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.07);border-radius:14px;padding:28px">
+          <div style="display:flex;align-items:center;gap:12px;margin-bottom:22px">
+            <div style="width:44px;height:44px;border-radius:12px;background:rgba(52,211,153,0.12);display:flex;align-items:center;justify-content:center">
+              <i data-lucide="phone" style="width:20px;height:20px;color:#34D399"></i>
+            </div>
+            <div>
+              <div style="font-size:15px;font-weight:700">Your AI Phone Number</div>
+              <div style="font-size:12px;color:var(--g500);margin-top:2px">Dedicated Twilio number for your agent</div>
+            </div>
+          </div>
+          <div style="margin-bottom:18px">
+            <label style="font-size:12px;font-weight:600;color:var(--g400);text-transform:uppercase;letter-spacing:.06em;display:block;margin-bottom:8px">Assigned Number</div>
+            <div style="background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);border-radius:10px;padding:14px 16px;font-size:18px;font-weight:700;letter-spacing:.05em;color:var(--cyan)">+1 (786) 555-0192</div>
+          </div>
+          <div style="margin-bottom:18px">
+            <label style="font-size:12px;font-weight:600;color:var(--g400);text-transform:uppercase;letter-spacing:.06em;display:block;margin-bottom:8px">Forward Calls To (optional)</label>
+            <input type="tel" placeholder="+1 (305) 000-0000" style="width:100%;background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);border-radius:10px;padding:12px 16px;font-size:14px;color:white;font-family:Inter,sans-serif;outline:none" />
+            <div style="font-size:11px;color:var(--g600);margin-top:6px">If set, calls are forwarded to a human after the AI handles the greeting.</div>
+          </div>
+          <button style="width:100%;background:var(--blue);color:white;border:none;padding:13px;border-radius:10px;font-size:14px;font-weight:700;cursor:pointer;font-family:Inter,sans-serif">Save Configuration</button>
+        </div>
+
+        <!-- Stats card -->
+        <div style="display:flex;flex-direction:column;gap:14px">
+          <div style="background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.07);border-radius:14px;padding:22px;display:flex;align-items:center;gap:16px">
+            <div style="width:44px;height:44px;border-radius:12px;background:rgba(0,82,255,0.12);display:flex;align-items:center;justify-content:center">
+              <i data-lucide="phone-incoming" style="width:20px;height:20px;color:#60A5FA"></i>
+            </div>
+            <div>
+              <div style="font-size:24px;font-weight:800;font-family:'Space Grotesk',sans-serif">128</div>
+              <div style="font-size:12px;color:var(--g500);margin-top:2px">Calls this month</div>
+            </div>
+          </div>
+          <div style="background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.07);border-radius:14px;padding:22px;display:flex;align-items:center;gap:16px">
+            <div style="width:44px;height:44px;border-radius:12px;background:rgba(52,211,153,0.12);display:flex;align-items:center;justify-content:center">
+              <i data-lucide="clock" style="width:20px;height:20px;color:#34D399"></i>
+            </div>
+            <div>
+              <div style="font-size:24px;font-weight:800;font-family:'Space Grotesk',sans-serif">243 min</div>
+              <div style="font-size:12px;color:var(--g500);margin-top:2px">Total talk time (57 min remaining)</div>
+            </div>
+          </div>
+          <div style="background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.07);border-radius:14px;padding:22px;display:flex;align-items:center;gap:16px">
+            <div style="width:44px;height:44px;border-radius:12px;background:rgba(251,191,36,0.12);display:flex;align-items:center;justify-content:center">
+              <i data-lucide="star" style="width:20px;height:20px;color:#FBBF24"></i>
+            </div>
+            <div>
+              <div style="font-size:24px;font-weight:800;font-family:'Space Grotesk',sans-serif">4.8/5</div>
+              <div style="font-size:12px;color:var(--g500);margin-top:2px">Caller satisfaction score</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Recent calls table -->
+      <div class="billing-history">
+        <div class="bh-header">
+          <span class="bh-title">Recent Calls</span>
+          <button style="background:transparent;border:1px solid rgba(255,255,255,0.1);color:var(--g400);padding:6px 14px;border-radius:7px;font-size:12.5px;cursor:pointer;font-family:Inter,sans-serif">Export CSV</button>
+        </div>
+        <div class="bh-row bh-head" style="grid-template-columns:1fr 1fr 1fr 1fr 1fr">
+          <span>Date</span><span>Caller</span><span>Duration</span><span>Outcome</span><span>Transcript</span>
+        </div>
+        <div class="bh-row" style="grid-template-columns:1fr 1fr 1fr 1fr 1fr">
+          <span style="color:var(--g400)">Aug 4, 14:32</span>
+          <span>+32 487 XX XX XX</span>
+          <span>3m 12s</span>
+          <span><span class="badge-paid">Booked</span></span>
+          <span><button class="btn-sm btn-sm-outline" style="padding:4px 10px;font-size:11px">View</button></span>
+        </div>
+        <div class="bh-row" style="grid-template-columns:1fr 1fr 1fr 1fr 1fr">
+          <span style="color:var(--g400)">Aug 4, 11:08</span>
+          <span>+1 305 XX XXXX</span>
+          <span>1m 44s</span>
+          <span><span style="font-size:11px;font-weight:700;padding:3px 9px;border-radius:100px;background:rgba(251,191,36,0.1);color:#FBBF24;border:1px solid rgba(251,191,36,0.2)">Info</span></span>
+          <span><button class="btn-sm btn-sm-outline" style="padding:4px 10px;font-size:11px">View</button></span>
+        </div>
+        <div class="bh-row" style="grid-template-columns:1fr 1fr 1fr 1fr 1fr">
+          <span style="color:var(--g400)">Aug 3, 17:55</span>
+          <span>+506 88XX XXXX</span>
+          <span>5m 01s</span>
+          <span><span class="badge-paid">Booked</span></span>
+          <span><button class="btn-sm btn-sm-outline" style="padding:4px 10px;font-size:11px">View</button></span>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── CHANNELS ── -->
+    <div class="view" id="view-channels">
+      <div class="section-header" style="margin-bottom:8px">
+        <div>
+          <span class="section-title">Channels</span>
+          <p style="font-size:13px;color:var(--g500);margin-top:4px">Connect your AI agent to any platform — no code required.</p>
+        </div>
+      </div>
+
+      <!-- Agent selector -->
+      <div style="background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.07);border-radius:12px;padding:18px 22px;margin-bottom:24px;display:flex;align-items:center;gap:16px">
+        <div style="font-size:13px;color:var(--g400);font-weight:600;white-space:nowrap">Active agent:</div>
+        <select id="ch-agent-select" style="flex:1;background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.12);border-radius:9px;padding:9px 14px;font-size:14px;color:white;font-family:Inter,sans-serif;outline:none;max-width:280px">
+          <option>Support Agent — "Sara"</option>
+          <option>Sales Agent — "Max"</option>
+          <option>Booking Agent — "Leo"</option>
+          <option>Marketing Agent — "Aria"</option>
+        </select>
+        <div style="font-size:12px;color:var(--g600)">Select which agent handles messages on each channel.</div>
+      </div>
+
+      <!-- Channels grid -->
+      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:16px">
+
+        <!-- Website Widget -->
+        <div class="channel-card" id="ch-website">
+          <div class="ch-header">
+            <div class="ch-icon" style="background:rgba(0,82,255,0.12)">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#60A5FA" stroke-width="1.75"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+            </div>
+            <div>
+              <div class="ch-name">Website</div>
+              <div class="ch-desc">Embed chat on any site</div>
+            </div>
+            <div class="ch-toggle-wrap">
+              <label class="ch-toggle"><input type="checkbox" checked onchange="toggleChannel('website',this)"><span class="ch-slider"></span></label>
+            </div>
+          </div>
+          <div class="ch-status connected">Connected</div>
+          <button class="ch-btn" onclick="showView('widget')">Configure Widget</button>
+        </div>
+
+        <!-- WhatsApp -->
+        <div class="channel-card" id="ch-whatsapp">
+          <div class="ch-header">
+            <div class="ch-icon" style="background:rgba(37,211,102,0.12)">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="#25D366"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg>
+            </div>
+            <div>
+              <div class="ch-name">WhatsApp</div>
+              <div class="ch-desc">Business API via Twilio</div>
+            </div>
+            <div class="ch-toggle-wrap">
+              <label class="ch-toggle"><input type="checkbox" onchange="toggleChannel('whatsapp',this)"><span class="ch-slider"></span></label>
+            </div>
+          </div>
+          <div class="ch-status disconnected">Not connected</div>
+          <button class="ch-btn ch-btn-connect" onclick="connectChannel('whatsapp')">Connect WhatsApp</button>
+        </div>
+
+        <!-- Instagram -->
+        <div class="channel-card" id="ch-instagram">
+          <div class="ch-header">
+            <div class="ch-icon" style="background:rgba(225,48,108,0.12)">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="url(#ig-grad)">
+                <defs><linearGradient id="ig-grad" x1="0%" y1="100%" x2="100%" y2="0%"><stop offset="0%" style="stop-color:#f09433"/><stop offset="25%" style="stop-color:#e6683c"/><stop offset="50%" style="stop-color:#dc2743"/><stop offset="75%" style="stop-color:#cc2366"/><stop offset="100%" style="stop-color:#bc1888"/></linearGradient></defs>
+                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+              </svg>
+            </div>
+            <div>
+              <div class="ch-name">Instagram</div>
+              <div class="ch-desc">DMs &amp; story replies</div>
+            </div>
+            <div class="ch-toggle-wrap">
+              <label class="ch-toggle"><input type="checkbox" onchange="toggleChannel('instagram',this)"><span class="ch-slider"></span></label>
+            </div>
+          </div>
+          <div class="ch-status disconnected">Not connected</div>
+          <button class="ch-btn ch-btn-connect" onclick="connectChannel('instagram')">Connect Instagram</button>
+        </div>
+
+        <!-- Facebook Messenger -->
+        <div class="channel-card" id="ch-messenger">
+          <div class="ch-header">
+            <div class="ch-icon" style="background:rgba(0,132,255,0.12)">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="#0084FF"><path d="M12 0C5.374 0 0 4.975 0 11.111c0 3.497 1.745 6.616 4.472 8.652V24l4.086-2.242c1.09.301 2.246.464 3.442.464 6.626 0 12-4.974 12-11.111C24 4.975 18.626 0 12 0zm1.193 14.963l-3.056-3.259-5.963 3.259 6.559-6.963 3.13 3.259 5.889-3.259-6.559 6.963z"/></svg>
+            </div>
+            <div>
+              <div class="ch-name">Messenger</div>
+              <div class="ch-desc">Facebook Page messages</div>
+            </div>
+            <div class="ch-toggle-wrap">
+              <label class="ch-toggle"><input type="checkbox" onchange="toggleChannel('messenger',this)"><span class="ch-slider"></span></label>
+            </div>
+          </div>
+          <div class="ch-status disconnected">Not connected</div>
+          <button class="ch-btn ch-btn-connect" onclick="connectChannel('messenger')">Connect Messenger</button>
+        </div>
+
+        <!-- Telegram -->
+        <div class="channel-card" id="ch-telegram">
+          <div class="ch-header">
+            <div class="ch-icon" style="background:rgba(0,136,204,0.12)">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="#0088CC"><path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/></svg>
+            </div>
+            <div>
+              <div class="ch-name">Telegram</div>
+              <div class="ch-desc">Bot for your channel</div>
+            </div>
+            <div class="ch-toggle-wrap">
+              <label class="ch-toggle"><input type="checkbox" onchange="toggleChannel('telegram',this)"><span class="ch-slider"></span></label>
+            </div>
+          </div>
+          <div class="ch-status disconnected">Not connected</div>
+          <button class="ch-btn ch-btn-connect" onclick="connectChannel('telegram')">Connect Telegram</button>
+        </div>
+
+        <!-- Email -->
+        <div class="channel-card" id="ch-email">
+          <div class="ch-header">
+            <div class="ch-icon" style="background:rgba(234,179,8,0.12)">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#EAB308" stroke-width="1.75"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            </div>
+            <div>
+              <div class="ch-name">Email</div>
+              <div class="ch-desc">Auto-reply to inbox</div>
+            </div>
+            <div class="ch-toggle-wrap">
+              <label class="ch-toggle"><input type="checkbox" onchange="toggleChannel('email',this)"><span class="ch-slider"></span></label>
+            </div>
+          </div>
+          <div class="ch-status disconnected">Not connected</div>
+          <button class="ch-btn ch-btn-connect" onclick="connectChannel('email')">Connect Email</button>
+        </div>
+
+        <!-- SMS -->
+        <div class="channel-card" id="ch-sms">
+          <div class="ch-header">
+            <div class="ch-icon" style="background:rgba(52,211,153,0.12)">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#34D399" stroke-width="1.75"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+            </div>
+            <div>
+              <div class="ch-name">SMS</div>
+              <div class="ch-desc">Text messages via Twilio</div>
+            </div>
+            <div class="ch-toggle-wrap">
+              <label class="ch-toggle"><input type="checkbox" onchange="toggleChannel('sms',this)"><span class="ch-slider"></span></label>
+            </div>
+          </div>
+          <div class="ch-status disconnected">Not connected</div>
+          <button class="ch-btn ch-btn-connect" onclick="connectChannel('sms')">Connect SMS</button>
+        </div>
+
+        <!-- TikTok -->
+        <div class="channel-card" id="ch-tiktok">
+          <div class="ch-header">
+            <div class="ch-icon" style="background:rgba(255,0,80,0.1)">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="#FF0050"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1-2.89-2.89 2.89 2.89 0 0 1 2.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 0 0-.79-.05 6.34 6.34 0 0 0-6.34 6.34 6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.33-6.34V8.69a8.18 8.18 0 0 0 4.78 1.52V6.76a4.85 4.85 0 0 1-1.01-.07z"/></svg>
+            </div>
+            <div>
+              <div class="ch-name">TikTok</div>
+              <div class="ch-desc">Comments &amp; DMs</div>
+            </div>
+            <div class="ch-toggle-wrap">
+              <label class="ch-toggle"><input type="checkbox" onchange="toggleChannel('tiktok',this)"><span class="ch-slider"></span></label>
+            </div>
+          </div>
+          <div class="ch-status disconnected">Not connected</div>
+          <button class="ch-btn ch-btn-connect" onclick="connectChannel('tiktok')">Connect TikTok</button>
+        </div>
+
+        <!-- Phone -->
+        <div class="channel-card" id="ch-phone">
+          <div class="ch-header">
+            <div class="ch-icon" style="background:rgba(139,92,246,0.12)">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#A78BFA" stroke-width="1.75"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.77a16 16 0 0 0 6.29 6.29l1.84-1.84a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            </div>
+            <div>
+              <div class="ch-name">Phone</div>
+              <div class="ch-desc">AI voice agent (Twilio)</div>
+            </div>
+            <div class="ch-toggle-wrap">
+              <label class="ch-toggle"><input type="checkbox" onchange="toggleChannel('phone',this)"><span class="ch-slider"></span></label>
+            </div>
+          </div>
+          <div class="ch-status disconnected">Not connected</div>
+          <button class="ch-btn ch-btn-connect" onclick="showView('phone')">Configure Phone Agent</button>
+        </div>
+
+      </div>
+
+      <!-- Connect modal -->
+      <div id="ch-modal" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,0.7);backdrop-filter:blur(6px);z-index:300;align-items:center;justify-content:center">
+        <div style="background:#090F22;border:1px solid rgba(255,255,255,0.1);border-radius:20px;padding:36px;width:480px;max-width:95vw">
+          <div style="font-size:18px;font-weight:800;margin-bottom:6px" id="ch-modal-title">Connect Channel</div>
+          <div style="font-size:13px;color:var(--g500);margin-bottom:24px" id="ch-modal-sub">Enter your credentials to activate this channel.</div>
+          <div id="ch-modal-body" style="margin-bottom:24px"></div>
+          <div style="display:flex;gap:10px">
+            <button onclick="document.getElementById('ch-modal').style.display='none'" style="flex:1;background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.1);color:var(--g400);padding:12px;border-radius:10px;font-size:14px;font-weight:600;cursor:pointer;font-family:Inter,sans-serif">Cancel</button>
+            <button onclick="saveChannel()" style="flex:1;background:var(--blue);border:none;color:white;padding:12px;border-radius:10px;font-size:14px;font-weight:700;cursor:pointer;font-family:Inter,sans-serif">Connect</button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- ── CHAT WIDGET ── -->
+    <div class="view" id="view-widget">
+      <div class="section-header" style="margin-bottom:28px">
+        <div>
+          <span class="section-title">Chat Widget</span>
+          <p style="font-size:13px;color:var(--g500);margin-top:4px">Embed your AI agent on any website — copy the code and paste it before &lt;/body&gt;.</p>
+        </div>
+      </div>
+
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:24px">
+        <!-- Configurator -->
+        <div>
+          <div style="background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.07);border-radius:14px;padding:26px;margin-bottom:20px">
+            <div style="font-size:14px;font-weight:700;margin-bottom:20px">Widget Configuration</div>
+
+            <div style="margin-bottom:16px">
+              <label style="font-size:12px;font-weight:600;color:var(--g400);text-transform:uppercase;letter-spacing:.06em;display:block;margin-bottom:8px">Agent Name</label>
+              <input id="wg-name" type="text" value="AI Assistant" oninput="updateEmbed()" style="width:100%;background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);border-radius:10px;padding:11px 14px;font-size:14px;color:white;font-family:Inter,sans-serif;outline:none" />
+            </div>
+            <div style="margin-bottom:16px">
+              <label style="font-size:12px;font-weight:600;color:var(--g400);text-transform:uppercase;letter-spacing:.06em;display:block;margin-bottom:8px">Agent Type</label>
+              <select id="wg-agent" onchange="updateEmbed()" style="width:100%;background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);border-radius:10px;padding:11px 14px;font-size:14px;color:white;font-family:Inter,sans-serif;outline:none;appearance:none">
+                <option value="support">Support</option>
+                <option value="sales">Sales</option>
+                <option value="booking">Booking</option>
+                <option value="marketing">Marketing</option>
+                <option value="hr">HR</option>
+                <option value="analytics">Analytics</option>
+              </select>
+            </div>
+            <div style="margin-bottom:16px">
+              <label style="font-size:12px;font-weight:600;color:var(--g400);text-transform:uppercase;letter-spacing:.06em;display:block;margin-bottom:8px">Primary Color</label>
+              <div style="display:flex;gap:10px;align-items:center">
+                <input id="wg-color" type="color" value="#0052FF" oninput="updateEmbed()" style="width:44px;height:44px;border:none;border-radius:10px;cursor:pointer;background:none;padding:2px" />
+                <input id="wg-color-hex" type="text" value="#0052FF" oninput="document.getElementById('wg-color').value=this.value;updateEmbed()" style="flex:1;background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);border-radius:10px;padding:11px 14px;font-size:14px;color:white;font-family:Inter,sans-serif;outline:none" />
+              </div>
+            </div>
+            <div style="margin-bottom:16px">
+              <label style="font-size:12px;font-weight:600;color:var(--g400);text-transform:uppercase;letter-spacing:.06em;display:block;margin-bottom:8px">Welcome Message</label>
+              <input id="wg-welcome" type="text" value="¡Hola! ¿En qué puedo ayudarte hoy?" oninput="updateEmbed()" style="width:100%;background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);border-radius:10px;padding:11px 14px;font-size:14px;color:white;font-family:Inter,sans-serif;outline:none" />
+            </div>
+            <div style="margin-bottom:0">
+              <label style="font-size:12px;font-weight:600;color:var(--g400);text-transform:uppercase;letter-spacing:.06em;display:block;margin-bottom:8px">Position</label>
+              <div style="display:flex;gap:10px">
+                <button onclick="setPosition('right')" id="pos-right" style="flex:1;padding:10px;border-radius:8px;font-size:13px;font-weight:600;cursor:pointer;font-family:Inter,sans-serif;background:rgba(0,82,255,0.15);border:1px solid rgba(0,82,255,0.4);color:#60A5FA">Bottom Right</button>
+                <button onclick="setPosition('left')" id="pos-left" style="flex:1;padding:10px;border-radius:8px;font-size:13px;font-weight:600;cursor:pointer;font-family:Inter,sans-serif;background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.1);color:var(--g400)">Bottom Left</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Embed code -->
+        <div>
+          <div style="background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.07);border-radius:14px;padding:26px;margin-bottom:20px">
+            <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:16px">
+              <div style="font-size:14px;font-weight:700">Embed Code</div>
+              <button onclick="copyEmbed()" style="background:rgba(0,82,255,0.12);border:1px solid rgba(0,82,255,0.25);color:#60A5FA;padding:6px 14px;border-radius:7px;font-size:12px;font-weight:600;cursor:pointer;font-family:Inter,sans-serif" id="copy-embed-btn">Copy Code</button>
+            </div>
+            <pre id="embed-code" style="background:#0a0f1e;border:1px solid rgba(255,255,255,0.07);border-radius:10px;padding:16px;font-size:12px;color:#94A3B8;white-space:pre-wrap;word-break:break-all;line-height:1.6;max-height:180px;overflow-y:auto;font-family:'Courier New',monospace"></pre>
+            <p style="font-size:11px;color:var(--g600);margin-top:12px">Paste this code before the <code style="color:#60A5FA">&lt;/body&gt;</code> tag of your website.</p>
+          </div>
+
+          <!-- Instructions -->
+          <div style="background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.07);border-radius:14px;padding:26px">
+            <div style="font-size:14px;font-weight:700;margin-bottom:16px">Quick Setup</div>
+            <div style="display:flex;flex-direction:column;gap:12px">
+              <div style="display:flex;gap:12px;align-items:flex-start">
+                <div style="width:24px;height:24px;border-radius:50%;background:var(--blue);display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:800;flex-shrink:0;margin-top:1px">1</div>
+                <div style="font-size:13px;color:var(--g300)">Configure your widget above — choose agent type, color, and welcome message.</div>
+              </div>
+              <div style="display:flex;gap:12px;align-items:flex-start">
+                <div style="width:24px;height:24px;border-radius:50%;background:var(--blue);display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:800;flex-shrink:0;margin-top:1px">2</div>
+                <div style="font-size:13px;color:var(--g300)">Copy the embed code and paste it into your website's HTML before &lt;/body&gt;.</div>
+              </div>
+              <div style="display:flex;gap:12px;align-items:flex-start">
+                <div style="width:24px;height:24px;border-radius:50%;background:var(--blue);display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:800;flex-shrink:0;margin-top:1px">3</div>
+                <div style="font-size:13px;color:var(--g300)">Your AI agent appears instantly as a chat bubble. No reload needed.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── REPORTS ── -->
+    <div class="view" id="view-reports">
+      <div class="section-header" style="margin-bottom:28px">
+        <div>
+          <span class="section-title">Reports</span>
+          <p style="font-size:13px;color:var(--g500);margin-top:4px">Contacts captured, conversations, and leads from all your agents.</p>
+        </div>
+        <button style="background:var(--blue);color:white;border:none;padding:10px 20px;border-radius:9px;font-size:13px;font-weight:600;cursor:pointer;font-family:Inter,sans-serif;display:flex;align-items:center;gap:7px">
+          <i data-lucide="download" style="width:14px;height:14px"></i> Export CSV
+        </button>
+      </div>
+
+      <!-- Summary metrics -->
+      <div class="metrics-row" style="margin-bottom:24px">
+        <div class="metric-card">
+          <div class="mc-label"><i data-lucide="users"></i> Total Contacts</div>
+          <div class="mc-val">1,284</div>
+          <span class="mc-change up">+18% this month</span>
+        </div>
+        <div class="metric-card">
+          <div class="mc-label"><i data-lucide="message-square"></i> Conversations</div>
+          <div class="mc-val">3,941</div>
+          <span class="mc-change up">+24% this month</span>
+        </div>
+        <div class="metric-card">
+          <div class="mc-label"><i data-lucide="target"></i> Leads Captured</div>
+          <div class="mc-val">342</div>
+          <span class="mc-change up">+31% this month</span>
+        </div>
+        <div class="metric-card">
+          <div class="mc-label"><i data-lucide="trending-up"></i> Conversion Rate</div>
+          <div class="mc-val">26.6%</div>
+          <span class="mc-change up">+4.2 pts</span>
+        </div>
+      </div>
+
+      <!-- Contacts table -->
+      <div class="billing-history">
+        <div class="bh-header">
+          <span class="bh-title">Contact List</span>
+          <div style="display:flex;gap:10px">
+            <input type="text" placeholder="Search contacts..." style="background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);border-radius:8px;padding:7px 14px;font-size:13px;color:white;font-family:Inter,sans-serif;outline:none;width:200px" />
+            <select style="background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);border-radius:8px;padding:7px 14px;font-size:13px;color:white;font-family:Inter,sans-serif;outline:none">
+              <option>All agents</option>
+              <option>Support</option>
+              <option>Sales</option>
+              <option>Booking</option>
+            </select>
+          </div>
+        </div>
+        <div class="bh-row bh-head" style="grid-template-columns:2fr 1fr 1fr 1fr 1fr">
+          <span>Contact</span><span>Channel</span><span>Date</span><span>Agent</span><span>Status</span>
+        </div>
+        <div class="bh-row" style="grid-template-columns:2fr 1fr 1fr 1fr 1fr">
+          <div><div style="font-weight:600;font-size:13.5px">Marie Dubois</div><div style="font-size:11px;color:var(--g500)">marie@example.be</div></div>
+          <span style="color:var(--g400)">Website</span>
+          <span style="color:var(--g400)">Aug 4</span>
+          <span><span class="agent-status-pill status-active" style="font-size:10px">Support</span></span>
+          <span><span class="badge-paid">Lead</span></span>
+        </div>
+        <div class="bh-row" style="grid-template-columns:2fr 1fr 1fr 1fr 1fr">
+          <div><div style="font-weight:600;font-size:13.5px">Carlos Méndez</div><div style="font-size:11px;color:var(--g500)">+506 8844 1122</div></div>
+          <span style="color:var(--g400)">Phone</span>
+          <span style="color:var(--g400)">Aug 4</span>
+          <span><span class="agent-status-pill status-idle" style="font-size:10px">Booking</span></span>
+          <span><span class="badge-paid">Booked</span></span>
+        </div>
+        <div class="bh-row" style="grid-template-columns:2fr 1fr 1fr 1fr 1fr">
+          <div><div style="font-weight:600;font-size:13.5px">Sophie Laurent</div><div style="font-size:11px;color:var(--g500)">sophie@company.fr</div></div>
+          <span style="color:var(--g400)">Website</span>
+          <span style="color:var(--g400)">Aug 3</span>
+          <span><span class="agent-status-pill status-active" style="font-size:10px">Sales</span></span>
+          <span><span style="font-size:11px;font-weight:700;padding:3px 9px;border-radius:100px;background:rgba(251,191,36,0.1);color:#FBBF24;border:1px solid rgba(251,191,36,0.2)">Follow-up</span></span>
+        </div>
+        <div class="bh-row" style="grid-template-columns:2fr 1fr 1fr 1fr 1fr">
+          <div><div style="font-weight:600;font-size:13.5px">Ahmed Al-Rashid</div><div style="font-size:11px;color:var(--g500)">ahmed@gmail.com</div></div>
+          <span style="color:var(--g400)">Website</span>
+          <span style="color:var(--g400)">Aug 3</span>
+          <span><span class="agent-status-pill status-active" style="font-size:10px">Support</span></span>
+          <span><span class="badge-paid">Resolved</span></span>
+        </div>
+        <div class="bh-row" style="grid-template-columns:2fr 1fr 1fr 1fr 1fr">
+          <div><div style="font-weight:600;font-size:13.5px">Isabelle Moreau</div><div style="font-size:11px;color:var(--g500)">+32 476 XX XX XX</div></div>
+          <span style="color:var(--g400)">Phone</span>
+          <span style="color:var(--g400)">Aug 2</span>
+          <span><span class="agent-status-pill status-active" style="font-size:10px">Sales</span></span>
+          <span><span class="badge-paid">Lead</span></span>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── SETTINGS ── -->
+    <div class="view" id="view-settings">
+      <div class="section-title" style="margin-bottom:24px">Account Settings</div>
+
+      <div class="settings-section">
+        <div class="settings-section-header">
+          <div><div class="ss-title">Profile</div><div class="ss-sub">Your account information</div></div>
+        </div>
+        <div class="settings-row">
+          <div><div class="sr-label">Full Name</div><div class="sr-sub">J. Sanchez</div></div>
+          <button class="copy-btn">Edit</button>
+        </div>
+        <div class="settings-row">
+          <div><div class="sr-label">Work Email</div><div class="sr-sub">jsanchez@bluebridge.es</div></div>
+          <button class="copy-btn">Edit</button>
+        </div>
+        <div class="settings-row">
+          <div><div class="sr-label">Company</div><div class="sr-sub">Blue Bridge Global Solutions</div></div>
+          <button class="copy-btn">Edit</button>
+        </div>
+      </div>
+
+      <div class="settings-section">
+        <div class="settings-section-header">
+          <div><div class="ss-title">API Access</div><div class="ss-sub">Use these keys to connect your applications to Blue Bridge APIs</div></div>
+        </div>
+        <div class="settings-row">
+          <div style="flex:1">
+            <div class="sr-label" style="margin-bottom:8px">Live API Key</div>
+            <div class="api-key-box">
+              <span>bb_live_••••••••••••••••••••••••••••••••</span>
+              <button class="copy-btn" onclick="this.textContent='Copied!'">Copy</button>
+            </div>
+          </div>
+        </div>
+        <div class="settings-row">
+          <div style="flex:1">
+            <div class="sr-label" style="margin-bottom:8px">Test API Key</div>
+            <div class="api-key-box">
+              <span>bb_test_••••••••••••••••••••••••••••••••</span>
+              <button class="copy-btn" onclick="this.textContent='Copied!'">Copy</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="settings-section">
+        <div class="settings-section-header">
+          <div><div class="ss-title">Notifications</div><div class="ss-sub">Choose what alerts you receive</div></div>
+        </div>
+        <div class="settings-row">
+          <div><div class="sr-label">Agent offline alerts</div><div class="sr-sub">Get notified when an agent goes inactive</div></div>
+          <button class="toggle on" onclick="this.classList.toggle('on')"></button>
+        </div>
+        <div class="settings-row">
+          <div><div class="sr-label">Weekly performance digest</div><div class="sr-sub">Summary of all agent activity via email</div></div>
+          <button class="toggle on" onclick="this.classList.toggle('on')"></button>
+        </div>
+        <div class="settings-row">
+          <div><div class="sr-label">Payment receipts</div><div class="sr-sub">Send receipts to billing email</div></div>
+          <button class="toggle" onclick="this.classList.toggle('on')"></button>
+        </div>
+      </div>
+    </div>
+
+  </div><!-- /content -->
+</main>
+
+<!-- ══ CREATE AGENT MODAL ══ -->
+<div class="modal-overlay" id="modal">
+  <div class="modal">
+    <button class="modal-close" onclick="closeModal()"><i data-lucide="x"></i></button>
+    <h3>Deploy New Agent</h3>
+    <p class="modal-sub">Choose an agent type and configure it for your business in minutes.</p>
+
+    <div class="agent-type-grid">
+      <div class="at-card selected" onclick="selectType(this)">
+        <div class="at-icon" style="background:rgba(0,82,255,0.12);color:#60A5FA"><i data-lucide="trending-up"></i></div>
+        <div class="at-name">Sales</div>
+        <div class="at-desc">Lead qualification &amp; outreach</div>
+      </div>
+      <div class="at-card" onclick="selectType(this)">
+        <div class="at-icon" style="background:rgba(16,185,129,0.12);color:#34D399"><i data-lucide="headphones"></i></div>
+        <div class="at-name">Support</div>
+        <div class="at-desc">Ticket resolution &amp; FAQs</div>
+      </div>
+      <div class="at-card" onclick="selectType(this)">
+        <div class="at-icon" style="background:rgba(139,92,246,0.12);color:#A78BFA"><i data-lucide="megaphone"></i></div>
+        <div class="at-name">Marketing</div>
+        <div class="at-desc">Content &amp; campaigns</div>
+      </div>
+      <div class="at-card" onclick="selectType(this)">
+        <div class="at-icon" style="background:rgba(245,158,11,0.12);color:#FCD34D"><i data-lucide="calendar"></i></div>
+        <div class="at-name">Booking</div>
+        <div class="at-desc">Appointment scheduling</div>
+      </div>
+      <div class="at-card" onclick="selectType(this)">
+        <div class="at-icon" style="background:rgba(239,68,68,0.12);color:#FB7185"><i data-lucide="users"></i></div>
+        <div class="at-name">HR</div>
+        <div class="at-desc">Onboarding &amp; HR tasks</div>
+      </div>
+      <div class="at-card" onclick="selectType(this)">
+        <div class="at-icon" style="background:rgba(14,165,233,0.12);color:#22D3EE"><i data-lucide="bar-chart-2"></i></div>
+        <div class="at-name">Analytics</div>
+        <div class="at-desc">Data &amp; reporting</div>
+      </div>
+    </div>
+
+    <div class="modal-field">
+      <label>Agent Name</label>
+      <input type="text" placeholder="e.g. Luna — Finance Agent" />
+    </div>
+    <div class="modal-field">
+      <label>Language</label>
+      <select>
+        <option>English</option>
+        <option>Spanish</option>
+        <option>French</option>
+        <option>Dutch</option>
+        <option>Portuguese</option>
+      </select>
+    </div>
+    <div class="modal-field">
+      <label>System Instructions (optional)</label>
+      <textarea placeholder="Describe your agent's role, tone, and what it should focus on..."></textarea>
+    </div>
+    <div class="modal-actions">
+      <button class="btn-modal-cancel" onclick="closeModal()">Cancel</button>
+      <button class="btn-modal-create" onclick="createAgent()">Deploy Agent</button>
+    </div>
+  </div>
+</div>
+
+<script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+<script>
+  lucide.createIcons();
+
+  // ── Navigation ──
+  const views = ['overview','agents','analytics','billing','settings','reports','widget','phone','channels'];
+  const titles = { overview:'Overview', agents:'Agents', analytics:'Analytics', billing:'Billing', settings:'Settings', reports:'Reports', widget:'Chat Widget', phone:'Phone Agent', channels:'Channels' };
+
+  function showView(name) {
+    views.forEach(v => {
+      const el = document.getElementById('view-'+v);
+      if (el) el.classList.toggle('active', v === name);
+    });
+    document.querySelectorAll('.sb-link').forEach(l => l.classList.remove('active'));
+    event && event.currentTarget && event.currentTarget.classList.add('active');
+    document.getElementById('page-title').textContent = titles[name] || name;
+    if (name === 'billing') initPayPal();
+    if (name === 'analytics') buildBarChart();
+    if (name === 'widget') updateEmbed();
+  }
+
+  // ── PayPal ──
+  let paypalLoaded = false;
+  const PLANS = [
+    { id:'paypal-chat',      amount:'49.99',  label:'Blue Bridge Chat Starter — Monthly',    color:'blue' },
+    { id:'paypal-booking',   amount:'99.99',  label:'Blue Bridge Booking Pro — Monthly',      color:'blue' },
+    { id:'paypal-call',      amount:'149.99', label:'Blue Bridge Call Center — Monthly',      color:'gold' },
+    { id:'paypal-marketing', amount:'249.99', label:'Blue Bridge Marketing Suite — Monthly',  color:'blue' },
+    { id:'paypal-sales',     amount:'299.99', label:'Blue Bridge Sales Bundle — Monthly',     color:'gold' },
+  ];
+
+  function initPayPal() {
+    if (paypalLoaded) return;
+    if (typeof paypal === 'undefined') {
+      PLANS.forEach(p => {
+        const el = document.getElementById(p.id);
+        if (el) el.innerHTML = '<p style="font-size:12px;color:var(--g500);padding:8px 0">PayPal loading...</p>';
+      });
+      return;
+    }
+    paypalLoaded = true;
+    PLANS.forEach(plan => {
+      const container = document.getElementById(plan.id);
+      if (!container) return;
+      paypal.Buttons({
+        style: { layout:'vertical', color: plan.color, shape:'rect', label:'pay', height:44 },
+        createOrder: (data, actions) => actions.order.create({
+          purchase_units: [{ amount: { value: plan.amount }, description: plan.label }]
+        }),
+        onApprove: (data, actions) => actions.order.capture().then(() => {
+          alert('Payment successful! Your plan is now active. Welcome to Blue Bridge AI.');
+        }),
+        onError: err => console.error(err)
+      }).render('#' + plan.id);
+    });
+  }
+
+  // ── Widget embed builder ──
+  let widgetPosition = 'right';
+  function setPosition(pos) {
+    widgetPosition = pos;
+    document.getElementById('pos-right').style.background = pos==='right' ? 'rgba(0,82,255,0.15)' : 'rgba(255,255,255,0.04)';
+    document.getElementById('pos-right').style.borderColor = pos==='right' ? 'rgba(0,82,255,0.4)' : 'rgba(255,255,255,0.1)';
+    document.getElementById('pos-right').style.color = pos==='right' ? '#60A5FA' : 'var(--g400)';
+    document.getElementById('pos-left').style.background = pos==='left' ? 'rgba(0,82,255,0.15)' : 'rgba(255,255,255,0.04)';
+    document.getElementById('pos-left').style.borderColor = pos==='left' ? 'rgba(0,82,255,0.4)' : 'rgba(255,255,255,0.1)';
+    document.getElementById('pos-left').style.color = pos==='left' ? '#60A5FA' : 'var(--g400)';
+    updateEmbed();
+  }
+  function updateEmbed() {
+    const name    = (document.getElementById('wg-name')    ||{}).value || 'AI Assistant';
+    const agent   = (document.getElementById('wg-agent')   ||{}).value || 'support';
+    const color   = (document.getElementById('wg-color')   ||{}).value || '#0052FF';
+    const welcome = (document.getElementById('wg-welcome') ||{}).value || '¡Hola! ¿En qué puedo ayudarte?';
+    const hexEl   = document.getElementById('wg-color-hex');
+    if (hexEl) hexEl.value = color;
+    const apiKey = 'bb_live_YOUR_API_KEY';
+    const code = `<!-- Blue Bridge AI Widget -->\n<script\n  src="https://bluebridge.es/widget.js"\n  data-api-key="${apiKey}"\n  data-agent="${agent}"\n  data-name="${name}"\n  data-color="${color}"\n  data-position="${widgetPosition}"\n  data-welcome="${welcome}"\n  async>\n<\/script>`;
+    const el = document.getElementById('embed-code');
+    if (el) el.textContent = code;
+  }
+  function copyEmbed() {
+    const code = document.getElementById('embed-code').textContent;
+    navigator.clipboard.writeText(code).then(() => {
+      const btn = document.getElementById('copy-embed-btn');
+      btn.textContent = 'Copied!';
+      btn.style.color = '#34D399';
+      setTimeout(() => { btn.textContent = 'Copy Code'; btn.style.color = '#60A5FA'; }, 2000);
+    });
+  }
+
+  // ── Channel connections ──
+  const CHANNEL_FIELDS = {
+    whatsapp:  { title:'Connect WhatsApp', sub:'Enter your Twilio WhatsApp Business credentials.', fields:[{label:'Twilio Account SID',placeholder:'ACxxxxxxxxxxxxxxxx'},{label:'Twilio Auth Token',placeholder:'your_auth_token',type:'password'},{label:'WhatsApp Number',placeholder:'+14155238886'}] },
+    instagram: { title:'Connect Instagram', sub:'You need a Facebook Business account connected to an Instagram Professional account.', fields:[{label:'Facebook Page ID',placeholder:'123456789'},{label:'Access Token',placeholder:'EAAxxxxx...',type:'password'}] },
+    messenger: { title:'Connect Messenger', sub:'Connect your Facebook Page to receive and reply to messages automatically.', fields:[{label:'Facebook Page ID',placeholder:'123456789'},{label:'Page Access Token',placeholder:'EAAxxxxx...',type:'password'},{label:'App Secret',placeholder:'your_app_secret',type:'password'}] },
+    telegram:  { title:'Connect Telegram', sub:'Create a Telegram bot via @BotFather and paste the token below.', fields:[{label:'Bot Token',placeholder:'123456789:AAxxxxx',type:'password'},{label:'Bot Username',placeholder:'@MyBusinessBot'}] },
+    email:     { title:'Connect Email', sub:'Connect a mailbox — your agent will read incoming emails and reply automatically.', fields:[{label:'Email Address',placeholder:'support@yourdomain.com'},{label:'SMTP Host',placeholder:'smtp.gmail.com'},{label:'SMTP Password',placeholder:'app_password',type:'password'}] },
+    sms:       { title:'Connect SMS', sub:'Send and receive SMS via Twilio.', fields:[{label:'Twilio Account SID',placeholder:'ACxxxxxxxxxxxxxxxx'},{label:'Twilio Auth Token',placeholder:'your_auth_token',type:'password'},{label:'Twilio SMS Number',placeholder:'+1xxxxxxxxxx'}] },
+    tiktok:    { title:'Connect TikTok', sub:'Connect your TikTok Business account to auto-reply to comments and DMs.', fields:[{label:'TikTok App ID',placeholder:'your_app_id'},{label:'Access Token',placeholder:'your_access_token',type:'password'}] },
+  };
+  let currentChannel = null;
+
+  function connectChannel(ch) {
+    currentChannel = ch;
+    const cfg = CHANNEL_FIELDS[ch];
+    if (!cfg) return;
+    document.getElementById('ch-modal-title').textContent = cfg.title;
+    document.getElementById('ch-modal-sub').textContent = cfg.sub;
+    document.getElementById('ch-modal-body').innerHTML = cfg.fields.map(f =>
+      `<div style="margin-bottom:14px">
+        <label style="font-size:12px;font-weight:600;color:var(--g400);text-transform:uppercase;letter-spacing:.06em;display:block;margin-bottom:7px">${f.label}</label>
+        <input type="${f.type||'text'}" placeholder="${f.placeholder}" style="width:100%;background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);border-radius:10px;padding:11px 14px;font-size:14px;color:white;font-family:Inter,sans-serif;outline:none" />
+      </div>`
+    ).join('');
+    document.getElementById('ch-modal').style.display = 'flex';
+  }
+
+  function saveChannel() {
+    if (!currentChannel) return;
+    document.getElementById('ch-modal').style.display = 'none';
+    const card = document.getElementById('ch-' + currentChannel);
+    if (card) {
+      card.querySelector('.ch-status').textContent = 'Connected';
+      card.querySelector('.ch-status').className = 'ch-status connected';
+      const btn = card.querySelector('.ch-btn');
+      btn.textContent = 'Configure';
+      btn.className = 'ch-btn';
+    }
+  }
+
+  function toggleChannel(ch, input) {
+    const card = document.getElementById('ch-' + ch);
+    const status = card ? card.querySelector('.ch-status') : null;
+    if (!status) return;
+    if (input.checked) {
+      status.textContent = 'Connected';
+      status.className = 'ch-status connected';
+    } else {
+      status.textContent = 'Paused';
+      status.className = 'ch-status disconnected';
+    }
+  }
+
+  document.getElementById('ch-modal').addEventListener('click', e => { if (e.target === e.currentTarget) e.currentTarget.style.display='none'; });
+
+  // ── Bar chart ──
+  function buildBarChart() {
+    const data = [48, 72, 61, 95, 88, 110, 134];
+    const days = ['Mon','Tue','Wed','Thu','Fri','Sat','Sun'];
+    const max = Math.max(...data);
+    const el = document.getElementById('bar-chart-main');
+    if (!el || el.children.length > 0) return;
+    data.forEach((v, i) => {
+      const wrap = document.createElement('div'); wrap.className = 'bar-wrap';
+      const bar = document.createElement('div'); bar.className = 'bar';
+      bar.style.height = `${(v / max) * 100}%`;
+      bar.style.background = `linear-gradient(180deg, #0052FF, #22D3EE)`;
+      const lbl = document.createElement('div'); lbl.className = 'bar-lbl'; lbl.textContent = days[i];
+      wrap.appendChild(bar); wrap.appendChild(lbl);
+      el.appendChild(wrap);
+    });
+  }
+
+  // ── Modal ──
+  function openModal() { document.getElementById('modal').classList.add('open'); }
+  function closeModal() { document.getElementById('modal').classList.remove('open'); }
+  function selectType(el) { document.querySelectorAll('.at-card').forEach(c => c.classList.remove('selected')); el.classList.add('selected'); }
+  function createAgent() {
+    closeModal();
+    alert('Agent deployed successfully! It will be active within a few minutes.');
+  }
+  document.getElementById('modal').addEventListener('click', e => { if (e.target === e.currentTarget) closeModal(); });
+
+  // ── Sidebar active on click ──
+  document.querySelectorAll('.sb-link').forEach(link => {
+    link.addEventListener('click', () => {
+      document.querySelectorAll('.sb-link').forEach(l => l.classList.remove('active'));
+      link.classList.add('active');
+    });
+  });
+</script>
+</body>
+</html>

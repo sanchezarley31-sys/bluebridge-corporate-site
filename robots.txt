@@ -1,0 +1,12 @@
+User-agent: *
+Allow: /
+
+# Block admin/private pages
+Disallow: /dashboard.html
+Disallow: /login.html
+Disallow: /widget.js
+
+# Block assets directory from indexing (except CSS/JS for rendering)
+Disallow: /assets/
+
+Sitemap: https://www.bluebridge.es/sitemap.xml
