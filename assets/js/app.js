@@ -277,11 +277,13 @@ document.addEventListener('DOMContentLoaded', () => {
   // i18n
   i18n.init();
 
-  // Language switcher clicks
+  // Language switcher clicks — select() (not set()) so choosing Español or
+  // Nederlands can jump to that language's home domain (bluebridge.es /
+  // bluebridgeglobal.be) instead of only swapping text in place.
   document.querySelectorAll('.lang-menu a').forEach(a => {
     a.addEventListener('click', e => {
       e.preventDefault();
-      i18n.set(a.dataset.lang);
+      i18n.select(a.dataset.lang);
     });
   });
 

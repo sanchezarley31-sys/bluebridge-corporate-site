@@ -7,22 +7,27 @@
 <meta name="description" content="Blue Bridge deploys AI Employees across sales, marketing, support, finance, and operations. Enterprise AI agents, automation, CRM, and cloud solutions for LATAM and EMEA.">
 <meta name="keywords" content="AI workforce, AI agents, enterprise AI, business automation, CRM, cloud solutions, Costa Rica, Belgium, LATAM, EMEA">
 <meta name="robots" content="index, follow">
-<link rel="canonical" href="https://www.bluebridge.es/">
+<link rel="canonical" href="https://www.bluebridgeglobal.be/">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Blue Bridge Global Connection — The AI Workforce Company">
 <meta property="og:description" content="AI Employees for sales, marketing, support, finance, and operations. Measurable results within 72 hours. LATAM & EMEA.">
-<meta property="og:url" content="https://www.bluebridge.es/">
+<meta property="og:url" content="https://www.bluebridgeglobal.be/">
 <meta property="og:site_name" content="Blue Bridge Global Connection">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Blue Bridge Global Connection — The AI Workforce Company">
 <meta name="twitter:description" content="AI Employees deployed across your operations in 72 hours. Enterprise AI for LATAM & EMEA.">
-<link rel="alternate" hreflang="en" href="https://www.bluebridge.es/">
+<!-- Two home domains, each fixed to its own language (see assets/js/i18n.js
+     BB_HOME_DOMAINS): bluebridgeglobal.be = Dutch, bluebridge.es = Spanish.
+     Other languages have no dedicated domain and stay on whichever domain
+     the visitor is on (client-side i18n swap), so their hreflang alternate
+     points at bluebridge.es as the general international entry point. -->
+<link rel="alternate" hreflang="nl" href="https://www.bluebridgeglobal.be/">
 <link rel="alternate" hreflang="es" href="https://www.bluebridge.es/">
+<link rel="alternate" hreflang="en" href="https://www.bluebridge.es/">
 <link rel="alternate" hreflang="fr" href="https://www.bluebridge.es/">
-<link rel="alternate" hreflang="nl" href="https://www.bluebridge.es/">
 <link rel="alternate" hreflang="pt" href="https://www.bluebridge.es/">
 <link rel="alternate" hreflang="de" href="https://www.bluebridge.es/">
-<link rel="alternate" hreflang="x-default" href="https://www.bluebridge.es/">
+<link rel="alternate" hreflang="x-default" href="https://www.bluebridgeglobal.be/">
 <link rel="icon" type="image/png" href="logo-azul.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -126,8 +131,8 @@
       <span class="hero-trust-label" data-i18n="hero_trust_label">Trusted by enterprises in</span>
       <div class="trust-badges">
         <span class="trust-badge"><span class="trust-dot"></span>Costa Rica</span>
-        <span class="trust-badge"><span class="trust-dot"></span>Belgium</span>
-        <span class="trust-badge"><span class="trust-dot"></span>Colombia</span>
+        <span class="trust-badge"><span class="trust-dot"></span><span data-i18n="home_badge_belgium">Belgium</span></span>
+        <span class="trust-badge"><span class="trust-dot"></span><span data-i18n="home_badge_colombia">Colombia</span></span>
         <span class="trust-badge"><span class="trust-dot"></span>LATAM</span>
         <span class="trust-badge"><span class="trust-dot"></span>EMEA</span>
       </div>
@@ -139,7 +144,7 @@
      CLIENT MARQUEE
 ══════════════════════════════════════════════════════════ -->
 <div class="marquee-section">
-  <div class="marquee-label">Trusted by leading organizations across EMEA and LATAM</div>
+  <div class="marquee-label" data-i18n="marquee_label">Trusted by leading organizations across EMEA and LATAM</div>
   <div class="marquee-track">
     <div class="marquee-inner">
       <span class="marquee-item">MediTour CR</span>
@@ -207,78 +212,78 @@
     <!-- AI Workforce -->
     <div class="swim-label reveal">
       <div class="swim-label-line"></div>
-      <span>AI Workforce Solutions</span>
+      <span data-i18n="home_swim_workforce">AI Workforce Solutions</span>
       <div class="swim-label-line"></div>
     </div>
     <div class="grid-3 reveal" style="margin-bottom:3.5rem;">
       <a href="solutions/ai-workforce.html" class="card card--feature">
         <div class="card-icon card-icon--blue"><i data-lucide="bot"></i></div>
         <div class="card-title" data-i18n="sol_ai_workforce">AI Workforce</div>
-        <p class="card-desc">Deploy teams of autonomous AI Employees that work 24/7 across your operations — sales, support, finance, HR, and more.</p>
-        <span class="card-link">Learn more <i data-lucide="arrow-right" style="width:14px;height:14px;"></i></span>
+        <p class="card-desc" data-i18n="home_card_workforce_desc">Deploy teams of autonomous AI Employees that work 24/7 across your operations — sales, support, finance, HR, and more.</p>
+        <span class="card-link" data-i18n="home_learn_more">Learn more <i data-lucide="arrow-right" style="width:14px;height:14px;"></i></span>
       </a>
       <a href="solutions/ai-agents.html" class="card card--feature">
         <div class="card-icon card-icon--cyan"><i data-lucide="zap"></i></div>
         <div class="card-title" data-i18n="sol_ai_agents">AI Agents</div>
-        <p class="card-desc">Custom intelligent agents trained on your business context, integrated into your systems, deployed on every channel.</p>
-        <span class="card-link">Learn more <i data-lucide="arrow-right" style="width:14px;height:14px;"></i></span>
+        <p class="card-desc" data-i18n="home_card_agents_desc">Custom intelligent agents trained on your business context, integrated into your systems, deployed on every channel.</p>
+        <span class="card-link" data-i18n="home_learn_more">Learn more <i data-lucide="arrow-right" style="width:14px;height:14px;"></i></span>
       </a>
       <a href="solutions/customer-support.html" class="card card--feature">
         <div class="card-icon card-icon--blue"><i data-lucide="message-square"></i></div>
         <div class="card-title" data-i18n="sol_support">Customer Support AI</div>
-        <p class="card-desc">AI agents resolving 70%+ of customer inquiries instantly across web, WhatsApp, Instagram, Telegram, and email.</p>
-        <span class="card-link">Learn more <i data-lucide="arrow-right" style="width:14px;height:14px;"></i></span>
+        <p class="card-desc" data-i18n="home_card_support_desc">AI agents resolving 70%+ of customer inquiries instantly across web, WhatsApp, Instagram, Telegram, and email.</p>
+        <span class="card-link" data-i18n="home_learn_more">Learn more <i data-lucide="arrow-right" style="width:14px;height:14px;"></i></span>
       </a>
       <a href="solutions/voice-ai.html" class="card card--feature">
         <div class="card-icon card-icon--cyan"><i data-lucide="phone"></i></div>
         <div class="card-title" data-i18n="sol_voice">Voice AI</div>
-        <p class="card-desc">Intelligent phone agents handling inbound calls, appointment scheduling, and inquiries with natural conversation.</p>
-        <span class="card-link">Learn more <i data-lucide="arrow-right" style="width:14px;height:14px;"></i></span>
+        <p class="card-desc" data-i18n="home_card_voice_desc">Intelligent phone agents handling inbound calls, appointment scheduling, and inquiries with natural conversation.</p>
+        <span class="card-link" data-i18n="home_learn_more">Learn more <i data-lucide="arrow-right" style="width:14px;height:14px;"></i></span>
       </a>
       <a href="solutions/booking-ai.html" class="card card--feature">
         <div class="card-icon card-icon--blue"><i data-lucide="calendar"></i></div>
         <div class="card-title" data-i18n="sol_booking">Booking AI</div>
-        <p class="card-desc">Smart appointment and reservation platforms for healthcare, hospitality, and professional services with automated reminders.</p>
-        <span class="card-link">Learn more <i data-lucide="arrow-right" style="width:14px;height:14px;"></i></span>
+        <p class="card-desc" data-i18n="home_card_booking_desc">Smart appointment and reservation platforms for healthcare, hospitality, and professional services with automated reminders.</p>
+        <span class="card-link" data-i18n="home_learn_more">Learn more <i data-lucide="arrow-right" style="width:14px;height:14px;"></i></span>
       </a>
       <a href="solutions/crm.html" class="card card--feature">
         <div class="card-icon card-icon--cyan"><i data-lucide="database"></i></div>
         <div class="card-title" data-i18n="sol_crm">CRM</div>
-        <p class="card-desc">Enterprise CRM with AI lead scoring, visual pipeline, automated follow-up, and a 360° view of every client relationship.</p>
-        <span class="card-link">Learn more <i data-lucide="arrow-right" style="width:14px;height:14px;"></i></span>
+        <p class="card-desc" data-i18n="home_card_crm_desc">Enterprise CRM with AI lead scoring, visual pipeline, automated follow-up, and a 360° view of every client relationship.</p>
+        <span class="card-link" data-i18n="home_learn_more">Learn more <i data-lucide="arrow-right" style="width:14px;height:14px;"></i></span>
       </a>
     </div>
 
     <!-- Digital Transformation -->
     <div class="swim-label reveal">
       <div class="swim-label-line"></div>
-      <span>Digital Transformation</span>
+      <span data-i18n="home_swim_digital">Digital Transformation</span>
       <div class="swim-label-line"></div>
     </div>
     <div class="grid-4 reveal">
       <a href="solutions/automation.html" class="card card--feature">
         <div class="card-icon card-icon--blue"><i data-lucide="settings-2"></i></div>
         <div class="card-title" data-i18n="sol_automation">Automation</div>
-        <p class="card-desc">Map and automate every repeatable process. Eliminate manual work across departments.</p>
-        <span class="card-link">Learn more <i data-lucide="arrow-right" style="width:14px;height:14px;"></i></span>
+        <p class="card-desc" data-i18n="home_card_automation_desc">Map and automate every repeatable process. Eliminate manual work across departments.</p>
+        <span class="card-link" data-i18n="home_learn_more">Learn more <i data-lucide="arrow-right" style="width:14px;height:14px;"></i></span>
       </a>
       <a href="solutions/software-development.html" class="card card--feature">
         <div class="card-icon card-icon--cyan"><i data-lucide="code-2"></i></div>
         <div class="card-title" data-i18n="sol_software">Custom Software</div>
-        <p class="card-desc">Bespoke applications on the BBOS stack — built for your process, not generic software that requires compromise.</p>
-        <span class="card-link">Learn more <i data-lucide="arrow-right" style="width:14px;height:14px;"></i></span>
+        <p class="card-desc" data-i18n="home_card_software_desc">Bespoke applications on the BBOS stack — built for your process, not generic software that requires compromise.</p>
+        <span class="card-link" data-i18n="home_learn_more">Learn more <i data-lucide="arrow-right" style="width:14px;height:14px;"></i></span>
       </a>
       <a href="solutions/web-development.html" class="card card--feature">
         <div class="card-icon card-icon--blue"><i data-lucide="globe"></i></div>
         <div class="card-title" data-i18n="sol_web">Web Development</div>
-        <p class="card-desc">Enterprise-grade websites and web applications. Performance first. SEO optimized. WCAG accessible.</p>
-        <span class="card-link">Learn more <i data-lucide="arrow-right" style="width:14px;height:14px;"></i></span>
+        <p class="card-desc" data-i18n="home_card_web_desc">Enterprise-grade websites and web applications. Performance first. SEO optimized. WCAG accessible.</p>
+        <span class="card-link" data-i18n="home_learn_more">Learn more <i data-lucide="arrow-right" style="width:14px;height:14px;"></i></span>
       </a>
       <a href="solutions/cloud-solutions.html" class="card card--feature">
         <div class="card-icon card-icon--cyan"><i data-lucide="cloud"></i></div>
         <div class="card-title" data-i18n="sol_cloud">Cloud Solutions</div>
-        <p class="card-desc">AWS infrastructure design, migration, and managed operations. Secure, scalable, cost-optimized.</p>
-        <span class="card-link">Learn more <i data-lucide="arrow-right" style="width:14px;height:14px;"></i></span>
+        <p class="card-desc" data-i18n="home_card_cloud_desc">BB Cloud infrastructure design, migration, and managed operations. Secure, scalable, cost-optimized.</p>
+        <span class="card-link" data-i18n="home_learn_more">Learn more <i data-lucide="arrow-right" style="width:14px;height:14px;"></i></span>
       </a>
     </div>
   </div>
@@ -290,63 +295,63 @@
 <section class="section section--dark">
   <div class="container">
     <div class="section-header section-header--center reveal">
-      <span class="label label--light">AI Workforce</span>
-      <h2 class="section-title mt-2 white">Meet Your AI Team</h2>
-      <p class="section-desc">15 specialized AI Employees, each trained for a specific business function. Deploy one or the full workforce.</p>
+      <span class="label label--light" data-i18n="sol_ai_workforce">AI Workforce</span>
+      <h2 class="section-title mt-2 white" data-i18n="home_workforce_title">Meet Your AI Team</h2>
+      <p class="section-desc" data-i18n="home_workforce_desc">15 specialized AI Employees, each trained for a specific business function. Deploy one or the full workforce.</p>
     </div>
     <div class="grid-4 reveal" style="margin-bottom:3rem;">
       <div class="card card--dark" style="text-align:center; padding:1.5rem;">
         <div class="card-icon card-icon--blue" style="margin:0 auto 1rem;"><i data-lucide="trending-up"></i></div>
-        <div style="font-weight:700; color:var(--white); margin-bottom:.25rem;">Sales Agent</div>
-        <div style="font-size:.8rem; color:rgba(255,255,255,.4);">Revenue</div>
-        <div style="margin-top:.75rem; font-size:.75rem; color:rgba(255,255,255,.35); line-height:1.6;">Lead qualification · Proposal drafting · Demo scheduling</div>
+        <div style="font-weight:700; color:var(--white); margin-bottom:.25rem;" data-i18n="home_role_sales_title">Sales Agent</div>
+        <div style="font-size:.8rem; color:rgba(255,255,255,.4);" data-i18n="home_role_sales_dept">Revenue</div>
+        <div style="margin-top:.75rem; font-size:.75rem; color:rgba(255,255,255,.35); line-height:1.6;" data-i18n="home_role_sales_desc">Lead qualification · Proposal drafting · Demo scheduling</div>
       </div>
       <div class="card card--dark" style="text-align:center; padding:1.5rem;">
         <div class="card-icon card-icon--cyan" style="margin:0 auto 1rem;"><i data-lucide="megaphone"></i></div>
-        <div style="font-weight:700; color:var(--white); margin-bottom:.25rem;">Marketing Agent</div>
-        <div style="font-size:.8rem; color:rgba(255,255,255,.4);">Growth</div>
-        <div style="margin-top:.75rem; font-size:.75rem; color:rgba(255,255,255,.35); line-height:1.6;">Content creation · Campaign execution · SEO articles</div>
+        <div style="font-weight:700; color:var(--white); margin-bottom:.25rem;" data-i18n="home_role_marketing_title">Marketing Agent</div>
+        <div style="font-size:.8rem; color:rgba(255,255,255,.4);" data-i18n="home_role_marketing_dept">Growth</div>
+        <div style="margin-top:.75rem; font-size:.75rem; color:rgba(255,255,255,.35); line-height:1.6;" data-i18n="home_role_marketing_desc">Content creation · Campaign execution · SEO articles</div>
       </div>
       <div class="card card--dark" style="text-align:center; padding:1.5rem;">
         <div class="card-icon card-icon--blue" style="margin:0 auto 1rem;"><i data-lucide="calendar-check"></i></div>
-        <div style="font-weight:700; color:var(--white); margin-bottom:.25rem;">Booking Agent</div>
-        <div style="font-size:.8rem; color:rgba(255,255,255,.4);">Operations</div>
-        <div style="margin-top:.75rem; font-size:.75rem; color:rgba(255,255,255,.35); line-height:1.6;">Multi-calendar scheduling · Reminders · Waitlist</div>
+        <div style="font-weight:700; color:var(--white); margin-bottom:.25rem;" data-i18n="home_role_booking_title">Booking Agent</div>
+        <div style="font-size:.8rem; color:rgba(255,255,255,.4);" data-i18n="home_role_booking_dept">Operations</div>
+        <div style="margin-top:.75rem; font-size:.75rem; color:rgba(255,255,255,.35); line-height:1.6;" data-i18n="home_role_booking_desc">Multi-calendar scheduling · Reminders · Waitlist</div>
       </div>
       <div class="card card--dark" style="text-align:center; padding:1.5rem;">
         <div class="card-icon card-icon--cyan" style="margin:0 auto 1rem;"><i data-lucide="phone-call"></i></div>
-        <div style="font-weight:700; color:var(--white); margin-bottom:.25rem;">Telephone Agent</div>
-        <div style="font-size:.8rem; color:rgba(255,255,255,.4);">Communications</div>
-        <div style="margin-top:.75rem; font-size:.75rem; color:rgba(255,255,255,.35); line-height:1.6;">Inbound handling · Outbound campaigns · Transcription</div>
+        <div style="font-weight:700; color:var(--white); margin-bottom:.25rem;" data-i18n="home_role_phone_title">Telephone Agent</div>
+        <div style="font-size:.8rem; color:rgba(255,255,255,.4);" data-i18n="home_role_phone_dept">Communications</div>
+        <div style="margin-top:.75rem; font-size:.75rem; color:rgba(255,255,255,.35); line-height:1.6;" data-i18n="home_role_phone_desc">Inbound handling · Outbound campaigns · Transcription</div>
       </div>
       <div class="card card--dark" style="text-align:center; padding:1.5rem;">
         <div class="card-icon card-icon--blue" style="margin:0 auto 1rem;"><i data-lucide="headphones"></i></div>
-        <div style="font-weight:700; color:var(--white); margin-bottom:.25rem;">Support Agent</div>
-        <div style="font-size:.8rem; color:rgba(255,255,255,.4);">Customer Success</div>
-        <div style="margin-top:.75rem; font-size:.75rem; color:rgba(255,255,255,.35); line-height:1.6;">Ticket resolution · Escalation · CSAT surveys</div>
+        <div style="font-weight:700; color:var(--white); margin-bottom:.25rem;" data-i18n="home_role_support_title">Support Agent</div>
+        <div style="font-size:.8rem; color:rgba(255,255,255,.4);" data-i18n="home_role_support_dept">Customer Success</div>
+        <div style="margin-top:.75rem; font-size:.75rem; color:rgba(255,255,255,.35); line-height:1.6;" data-i18n="home_role_support_desc">Ticket resolution · Escalation · CSAT surveys</div>
       </div>
       <div class="card card--dark" style="text-align:center; padding:1.5rem;">
         <div class="card-icon card-icon--cyan" style="margin:0 auto 1rem;"><i data-lucide="database"></i></div>
-        <div style="font-weight:700; color:var(--white); margin-bottom:.25rem;">CRM Assistant</div>
-        <div style="font-size:.8rem; color:rgba(255,255,255,.4);">Data</div>
-        <div style="margin-top:.75rem; font-size:.75rem; color:rgba(255,255,255,.35); line-height:1.6;">Data entry · Enrichment · Pipeline reporting</div>
+        <div style="font-weight:700; color:var(--white); margin-bottom:.25rem;" data-i18n="home_role_crm_title">CRM Assistant</div>
+        <div style="font-size:.8rem; color:rgba(255,255,255,.4);" data-i18n="home_role_crm_dept">Data</div>
+        <div style="margin-top:.75rem; font-size:.75rem; color:rgba(255,255,255,.35); line-height:1.6;" data-i18n="home_role_crm_desc">Data entry · Enrichment · Pipeline reporting</div>
       </div>
       <div class="card card--dark" style="text-align:center; padding:1.5rem;">
         <div class="card-icon card-icon--blue" style="margin:0 auto 1rem;"><i data-lucide="users"></i></div>
-        <div style="font-weight:700; color:var(--white); margin-bottom:.25rem;">HR Assistant</div>
-        <div style="font-size:.8rem; color:rgba(255,255,255,.4);">People</div>
-        <div style="margin-top:.75rem; font-size:.75rem; color:rgba(255,255,255,.35); line-height:1.6;">Onboarding · Leave management · Policy Q&amp;A</div>
+        <div style="font-weight:700; color:var(--white); margin-bottom:.25rem;" data-i18n="home_role_hr_title">HR Assistant</div>
+        <div style="font-size:.8rem; color:rgba(255,255,255,.4);" data-i18n="home_role_hr_dept">People</div>
+        <div style="margin-top:.75rem; font-size:.75rem; color:rgba(255,255,255,.35); line-height:1.6;" data-i18n="home_role_hr_desc">Onboarding · Leave management · Policy Q&amp;A</div>
       </div>
       <div class="card card--dark" style="text-align:center; padding:1.5rem;">
         <div class="card-icon card-icon--cyan" style="margin:0 auto 1rem;"><i data-lucide="receipt"></i></div>
-        <div style="font-weight:700; color:var(--white); margin-bottom:.25rem;">Finance Assistant</div>
-        <div style="font-size:.8rem; color:rgba(255,255,255,.4);">Finance</div>
-        <div style="margin-top:.75rem; font-size:.75rem; color:rgba(255,255,255,.35); line-height:1.6;">Invoice generation · Payment reminders · Expense tracking</div>
+        <div style="font-weight:700; color:var(--white); margin-bottom:.25rem;" data-i18n="home_role_finance_title">Finance Assistant</div>
+        <div style="font-size:.8rem; color:rgba(255,255,255,.4);" data-i18n="home_role_finance_dept">Finance</div>
+        <div style="margin-top:.75rem; font-size:.75rem; color:rgba(255,255,255,.35); line-height:1.6;" data-i18n="home_role_finance_desc">Invoice generation · Payment reminders · Expense tracking</div>
       </div>
     </div>
     <div class="text-center reveal">
-      <p style="font-size:.875rem; color:rgba(255,255,255,.35); margin-bottom:1.5rem;">+ 7 more: Executive Assistant, Project Manager, Data Analyst, Knowledge Assistant, Inventory Assistant, Email Assistant, Receptionist</p>
-      <a href="solutions/ai-workforce.html" class="btn btn--primary btn--lg">Deploy Your AI Workforce</a>
+      <p style="font-size:.875rem; color:rgba(255,255,255,.35); margin-bottom:1.5rem;" data-i18n="home_role_more">+ 7 more: Executive Assistant, Project Manager, Data Analyst, Knowledge Assistant, Inventory Assistant, Email Assistant, Receptionist</p>
+      <a href="solutions/ai-workforce.html" class="btn btn--primary btn--lg" data-i18n="home_deploy_workforce_btn">Deploy Your AI Workforce</a>
     </div>
   </div>
 </section>
@@ -357,70 +362,70 @@
 <section class="section section--gray">
   <div class="container">
     <div class="section-header section-header--center reveal">
-      <span class="label">Industries</span>
-      <h2 class="section-title mt-2">We Speak Your Industry's Language</h2>
-      <p class="section-desc">Specialized solutions for 16 industry verticals across LATAM and EMEA. Preconfigured for your specific regulations, workflows, and business model.</p>
+      <span class="label" data-i18n="home_industries_label">Industries</span>
+      <h2 class="section-title mt-2" data-i18n="home_industries_title">We Speak Your Industry's Language</h2>
+      <p class="section-desc" data-i18n="home_industries_desc">Specialized solutions for 16 industry verticals across LATAM and EMEA. Preconfigured for your specific regulations, workflows, and business model.</p>
     </div>
     <div class="grid-4 reveal">
       <div class="card" style="text-align:center;">
         <div class="card-icon card-icon--blue" style="margin:0 auto .75rem;"><i data-lucide="utensils"></i></div>
-        <div class="card-title">Restaurant</div>
-        <p class="card-desc" style="font-size:.8rem;">AI booking · No-show reduction · Marketing automation</p>
+        <div class="card-title" data-i18n="home_ind_restaurant_title">Restaurant</div>
+        <p class="card-desc" style="font-size:.8rem;" data-i18n="home_ind_restaurant_desc">AI booking · No-show reduction · Marketing automation</p>
       </div>
       <div class="card" style="text-align:center;">
         <div class="card-icon card-icon--blue" style="margin:0 auto .75rem;"><i data-lucide="stethoscope"></i></div>
-        <div class="card-title">Medical Clinic</div>
-        <p class="card-desc" style="font-size:.8rem;">AI receptionist · Patient booking · EHR integration</p>
+        <div class="card-title" data-i18n="home_ind_medical_title">Medical Clinic</div>
+        <p class="card-desc" style="font-size:.8rem;" data-i18n="home_ind_medical_desc">AI receptionist · Patient booking · EHR integration</p>
       </div>
       <div class="card" style="text-align:center;">
         <div class="card-icon card-icon--blue" style="margin:0 auto .75rem;"><i data-lucide="bed"></i></div>
-        <div class="card-title">Hotels &amp; Hospitality</div>
-        <p class="card-desc" style="font-size:.8rem;">Guest AI · Revenue BI · Channel management</p>
+        <div class="card-title" data-i18n="home_ind_hotels_title">Hotels &amp; Hospitality</div>
+        <p class="card-desc" style="font-size:.8rem;" data-i18n="home_ind_hotels_desc">Guest AI · Revenue BI · Channel management</p>
       </div>
       <div class="card" style="text-align:center;">
         <div class="card-icon card-icon--blue" style="margin:0 auto .75rem;"><i data-lucide="shopping-bag"></i></div>
-        <div class="card-title">Retail</div>
-        <p class="card-desc" style="font-size:.8rem;">Inventory AI · Loyalty CRM · Marketing agent</p>
+        <div class="card-title" data-i18n="home_ind_retail_title">Retail</div>
+        <p class="card-desc" style="font-size:.8rem;" data-i18n="home_ind_retail_desc">Inventory AI · Loyalty CRM · Marketing agent</p>
       </div>
       <div class="card" style="text-align:center;">
         <div class="card-icon card-icon--blue" style="margin:0 auto .75rem;"><i data-lucide="scissors"></i></div>
-        <div class="card-title">Beauty &amp; Wellness</div>
-        <p class="card-desc" style="font-size:.8rem;">Smart booking · Client retention · SMS reminders</p>
+        <div class="card-title" data-i18n="home_ind_beauty_title">Beauty &amp; Wellness</div>
+        <p class="card-desc" style="font-size:.8rem;" data-i18n="home_ind_beauty_desc">Smart booking · Client retention · SMS reminders</p>
       </div>
       <div class="card" style="text-align:center;">
         <div class="card-icon card-icon--blue" style="margin:0 auto .75rem;"><i data-lucide="plane"></i></div>
-        <div class="card-title">Medical Tourism</div>
-        <p class="card-desc" style="font-size:.8rem;">Multi-language CRM · AI sales agent · Coordination</p>
+        <div class="card-title" data-i18n="home_ind_medtourism_title">Medical Tourism</div>
+        <p class="card-desc" style="font-size:.8rem;" data-i18n="home_ind_medtourism_desc">Multi-language CRM · AI sales agent · Coordination</p>
       </div>
       <div class="card" style="text-align:center;">
         <div class="card-icon card-icon--blue" style="margin:0 auto .75rem;"><i data-lucide="scale"></i></div>
-        <div class="card-title">Law Firms</div>
-        <p class="card-desc" style="font-size:.8rem;">Client intake · Billing automation · Document CRM</p>
+        <div class="card-title" data-i18n="home_ind_law_title">Law Firms</div>
+        <p class="card-desc" style="font-size:.8rem;" data-i18n="home_ind_law_desc">Client intake · Billing automation · Document CRM</p>
       </div>
       <div class="card" style="text-align:center;">
         <div class="card-icon card-icon--blue" style="margin:0 auto .75rem;"><i data-lucide="hard-hat"></i></div>
-        <div class="card-title">Construction</div>
-        <p class="card-desc" style="font-size:.8rem;">Project AI · Supplier management · Cost control</p>
+        <div class="card-title" data-i18n="home_ind_construction_title">Construction</div>
+        <p class="card-desc" style="font-size:.8rem;" data-i18n="home_ind_construction_desc">Project AI · Supplier management · Cost control</p>
       </div>
       <div class="card" style="text-align:center;">
         <div class="card-icon card-icon--blue" style="margin:0 auto .75rem;"><i data-lucide="building-2"></i></div>
-        <div class="card-title">Real Estate</div>
-        <p class="card-desc" style="font-size:.8rem;">AI sales agent · CRM · Document management</p>
+        <div class="card-title" data-i18n="home_ind_realestate_title">Real Estate</div>
+        <p class="card-desc" style="font-size:.8rem;" data-i18n="home_ind_realestate_desc">AI sales agent · CRM · Document management</p>
       </div>
       <div class="card" style="text-align:center;">
         <div class="card-icon card-icon--blue" style="margin:0 auto .75rem;"><i data-lucide="headphones"></i></div>
-        <div class="card-title">BPO</div>
-        <p class="card-desc" style="font-size:.8rem;">Agent performance · Workflow automation · BI</p>
+        <div class="card-title" data-i18n="home_ind_bpo_title">BPO</div>
+        <p class="card-desc" style="font-size:.8rem;" data-i18n="home_ind_bpo_desc">Agent performance · Workflow automation · BI</p>
       </div>
       <div class="card" style="text-align:center;">
         <div class="card-icon card-icon--blue" style="margin:0 auto .75rem;"><i data-lucide="graduation-cap"></i></div>
-        <div class="card-title">Education</div>
-        <p class="card-desc" style="font-size:.8rem;">Enrollment AI · Student CRM · Finance automation</p>
+        <div class="card-title" data-i18n="home_ind_education_title">Education</div>
+        <p class="card-desc" style="font-size:.8rem;" data-i18n="home_ind_education_desc">Enrollment AI · Student CRM · Finance automation</p>
       </div>
       <div class="card" style="text-align:center;">
         <div class="card-icon card-icon--blue" style="margin:0 auto .75rem;"><i data-lucide="dumbbell"></i></div>
-        <div class="card-title">Fitness &amp; Gyms</div>
-        <p class="card-desc" style="font-size:.8rem;">Membership management · Class booking · Churn reduction</p>
+        <div class="card-title" data-i18n="home_ind_fitness_title">Fitness &amp; Gyms</div>
+        <p class="card-desc" style="font-size:.8rem;" data-i18n="home_ind_fitness_desc">Membership management · Class booking · Churn reduction</p>
       </div>
     </div>
   </div>
@@ -433,38 +438,38 @@
   <div class="container">
     <div class="grid-2 reveal" style="gap:5rem; align-items:start;">
       <div>
-        <span class="label label--light">ROI Calculator</span>
-        <h2 class="section-title mt-2 white">Estimate Your Savings</h2>
-        <p class="section-desc mt-3">Calculate how much Blue Bridge AI Workforce can save your business every month. Adjust the inputs to match your team.</p>
+        <span class="label label--light" data-i18n="home_roi_label">ROI Calculator</span>
+        <h2 class="section-title mt-2 white" data-i18n="home_roi_title">Estimate Your Savings</h2>
+        <p class="section-desc mt-3" data-i18n="home_roi_desc">Calculate how much Blue Bridge AI Workforce can save your business every month. Adjust the inputs to match your team.</p>
         <div class="checklist mt-4">
-          <div class="check-item"><div class="check-icon"><i data-lucide="check" style="width:10px;height:10px;"></i></div><span>AI Sales Agent replaces ~60% of SDR follow-up effort</span></div>
-          <div class="check-item"><div class="check-icon"><i data-lucide="check" style="width:10px;height:10px;"></i></div><span>AI Support Agent resolves ~70% of tier-1 tickets automatically</span></div>
-          <div class="check-item"><div class="check-icon"><i data-lucide="check" style="width:10px;height:10px;"></i></div><span>AI Finance Assistant saves ~6 hours/week on invoicing</span></div>
-          <div class="check-item"><div class="check-icon"><i data-lucide="check" style="width:10px;height:10px;"></i></div><span>Average deployment: 2.8 days from contract to live</span></div>
+          <div class="check-item"><div class="check-icon"><i data-lucide="check" style="width:10px;height:10px;"></i></div><span data-i18n="home_roi_check1">AI Sales Agent replaces ~60% of SDR follow-up effort</span></div>
+          <div class="check-item"><div class="check-icon"><i data-lucide="check" style="width:10px;height:10px;"></i></div><span data-i18n="home_roi_check2">AI Support Agent resolves ~70% of tier-1 tickets automatically</span></div>
+          <div class="check-item"><div class="check-icon"><i data-lucide="check" style="width:10px;height:10px;"></i></div><span data-i18n="home_roi_check3">AI Finance Assistant saves ~6 hours/week on invoicing</span></div>
+          <div class="check-item"><div class="check-icon"><i data-lucide="check" style="width:10px;height:10px;"></i></div><span data-i18n="home_roi_check4">Average deployment: 2.8 days from contract to live</span></div>
         </div>
       </div>
       <div class="roi-calc reveal">
         <div class="roi-input-row">
           <div class="form-group">
-            <label class="form-label" style="color:rgba(255,255,255,.7);">Sales reps (count)</label>
+            <label class="form-label" style="color:rgba(255,255,255,.7);" data-i18n="home_roi_reps_label">Sales reps (count)</label>
             <input type="number" id="roi-reps" class="form-input" value="5" min="1" max="200">
           </div>
           <div class="form-group">
-            <label class="form-label" style="color:rgba(255,255,255,.7);">Avg salary / month ($)</label>
+            <label class="form-label" style="color:rgba(255,255,255,.7);" data-i18n="home_roi_salary_label">Avg salary / month ($)</label>
             <input type="number" id="roi-salary" class="form-input" value="3500" min="500" max="20000">
           </div>
           <div class="form-group">
-            <label class="form-label" style="color:rgba(255,255,255,.7);">Support tickets / day</label>
+            <label class="form-label" style="color:rgba(255,255,255,.7);" data-i18n="home_roi_tickets_label">Support tickets / day</label>
             <input type="number" id="roi-tickets" class="form-input" value="50" min="0" max="5000">
           </div>
           <div class="form-group">
-            <label class="form-label" style="color:rgba(255,255,255,.7);">Cost per ticket ($)</label>
+            <label class="form-label" style="color:rgba(255,255,255,.7);" data-i18n="home_roi_ticketcost_label">Cost per ticket ($)</label>
             <input type="number" id="roi-ticket-cost" class="form-input" value="15" min="1" max="200">
           </div>
         </div>
-        <button class="btn btn--primary w-full" onclick="calcROI()">Calculate My Savings</button>
+        <button class="btn btn--primary w-full" onclick="calcROI()" data-i18n="home_roi_calc_btn">Calculate My Savings</button>
         <div class="roi-result" id="roi-result" style="display:none;">
-          <div class="roi-result-title">Estimated Monthly Savings</div>
+          <div class="roi-result-title" data-i18n="home_roi_result_title">Estimated Monthly Savings</div>
           <div class="roi-result-number" id="roi-number">$0</div>
           <div class="roi-result-sub" id="roi-detail">—</div>
         </div>
@@ -479,25 +484,25 @@
 <section class="section">
   <div class="container">
     <div class="section-header section-header--center reveal">
-      <span class="label">How It Works</span>
-      <h2 class="section-title mt-2">Live in 72 Hours</h2>
-      <p class="section-desc">Average time from contract signature to first AI Employee live: 2.8 days.</p>
+      <span class="label" data-i18n="home_how_label">How It Works</span>
+      <h2 class="section-title mt-2" data-i18n="home_how_title">Live in 72 Hours</h2>
+      <p class="section-desc" data-i18n="home_how_desc">Average time from contract signature to first AI Employee live: 2.8 days.</p>
     </div>
     <div class="process-steps section--dark" style="border-radius:var(--radius-xl); padding:3rem; margin-top:1rem;" class="reveal">
       <div class="step-item reveal">
         <div class="step-num">1</div>
-        <div class="step-title" style="color:var(--white);">Onboarding Call</div>
-        <p class="step-desc">Configuration form · AI employee profile created · Integration checklist</p>
+        <div class="step-title" style="color:var(--white);" data-i18n="home_step1_title">Onboarding Call</div>
+        <p class="step-desc" data-i18n="home_step1_desc">Configuration form · AI employee profile created · Integration checklist</p>
       </div>
       <div class="step-item reveal">
         <div class="step-num">2</div>
-        <div class="step-title" style="color:var(--white);">Integration Setup</div>
-        <p class="step-desc">Channel connections · Email, WhatsApp, CRM · Test run with your team</p>
+        <div class="step-title" style="color:var(--white);" data-i18n="home_step2_title">Integration Setup</div>
+        <p class="step-desc" data-i18n="home_step2_desc">Channel connections · Email, WhatsApp, CRM · Test run with your team</p>
       </div>
       <div class="step-item reveal">
         <div class="step-num">3</div>
-        <div class="step-title" style="color:var(--white);">Go-Live</div>
-        <p class="step-desc">AI employees active · First tasks executing · Dashboard live</p>
+        <div class="step-title" style="color:var(--white);" data-i18n="home_step3_title">Go-Live</div>
+        <p class="step-desc" data-i18n="home_step3_desc">AI employees active · First tasks executing · Dashboard live</p>
       </div>
     </div>
   </div>
@@ -510,40 +515,40 @@
   <div class="container">
     <div class="grid-2 reveal" style="gap:5rem; align-items:center;">
       <div>
-        <span class="label">Trust &amp; Security</span>
-        <h2 class="section-title mt-2">Enterprise-Grade Infrastructure</h2>
-        <p class="section-desc mt-3">Every Blue Bridge deployment runs on AWS with GDPR compliance, 99.9% uptime SLA, and end-to-end encryption.</p>
+        <span class="label" data-i18n="home_trust_label">Trust &amp; Security</span>
+        <h2 class="section-title mt-2" data-i18n="home_trust_title2">Enterprise-Grade Infrastructure</h2>
+        <p class="section-desc mt-3" data-i18n="home_trust_desc">Every Blue Bridge deployment runs on BB Cloud with GDPR compliance, 99.9% uptime SLA, and end-to-end encryption.</p>
         <div class="checklist mt-4">
-          <div class="check-item"><div class="check-icon"><i data-lucide="check" style="width:10px;height:10px;"></i></div><span>AWS Multi-Region · S3 · CloudFront · WAF · Shield</span></div>
-          <div class="check-item"><div class="check-icon"><i data-lucide="check" style="width:10px;height:10px;"></i></div><span>TLS 1.3 end-to-end encryption · AES-256 at rest</span></div>
-          <div class="check-item"><div class="check-icon"><i data-lucide="check" style="width:10px;height:10px;"></i></div><span>GDPR compliant · EU AI Act prepared · Privacy by Design</span></div>
-          <div class="check-item"><div class="check-icon"><i data-lucide="check" style="width:10px;height:10px;"></i></div><span>SOC 2 Type II (roadmap) · ISO 27001 (evaluating)</span></div>
-          <div class="check-item"><div class="check-icon"><i data-lucide="check" style="width:10px;height:10px;"></i></div><span>RBAC access control · MFA · Zero-trust architecture</span></div>
-          <div class="check-item"><div class="check-icon"><i data-lucide="check" style="width:10px;height:10px;"></i></div><span>P1 incident response &lt; 1 hour · RTO 4h · RPO 1h</span></div>
+          <div class="check-item"><div class="check-icon"><i data-lucide="check" style="width:10px;height:10px;"></i></div><span data-i18n="home_trust_check1">BB Cloud Multi-Region · Secure Object Storage · Global CDN · Web Application Firewall · DDoS Shield</span></div>
+          <div class="check-item"><div class="check-icon"><i data-lucide="check" style="width:10px;height:10px;"></i></div><span data-i18n="home_trust_check2">TLS 1.3 end-to-end encryption · AES-256 at rest</span></div>
+          <div class="check-item"><div class="check-icon"><i data-lucide="check" style="width:10px;height:10px;"></i></div><span data-i18n="home_trust_check3">GDPR compliant · EU AI Act prepared · Privacy by Design</span></div>
+          <div class="check-item"><div class="check-icon"><i data-lucide="check" style="width:10px;height:10px;"></i></div><span data-i18n="home_trust_check4">SOC 2 Type II (roadmap) · ISO 27001 (evaluating)</span></div>
+          <div class="check-item"><div class="check-icon"><i data-lucide="check" style="width:10px;height:10px;"></i></div><span data-i18n="home_trust_check5">RBAC access control · MFA · Zero-trust architecture</span></div>
+          <div class="check-item"><div class="check-icon"><i data-lucide="check" style="width:10px;height:10px;"></i></div><span data-i18n="home_trust_check6">P1 incident response &lt; 1 hour · RTO 4h · RPO 1h</span></div>
         </div>
-        <a href="legal/trust-center.html" class="btn btn--outline-dark mt-4">View Trust Center</a>
+        <a href="legal/trust-center.html" class="btn btn--outline-dark mt-4" data-i18n="home_trust_cta">View Trust Center</a>
       </div>
       <div class="reveal">
         <div style="display:grid; grid-template-columns:1fr 1fr; gap:1rem;">
           <div class="card" style="text-align:center; padding:1.5rem;">
             <div class="card-icon card-icon--blue" style="margin:0 auto .75rem;"><i data-lucide="cloud"></i></div>
-            <div class="card-title" style="font-size:.95rem;">AWS Global</div>
-            <p class="card-desc" style="font-size:.8rem;">Multi-region deployment</p>
+            <div class="card-title" style="font-size:.95rem;" data-i18n="home_trust_card1_title">BB Cloud Global</div>
+            <p class="card-desc" style="font-size:.8rem;" data-i18n="home_trust_card1_desc">Multi-region deployment</p>
           </div>
           <div class="card" style="text-align:center; padding:1.5rem;">
             <div class="card-icon card-icon--blue" style="margin:0 auto .75rem;"><i data-lucide="shield-check"></i></div>
-            <div class="card-title" style="font-size:.95rem;">GDPR Ready</div>
-            <p class="card-desc" style="font-size:.8rem;">EU data compliance</p>
+            <div class="card-title" style="font-size:.95rem;" data-i18n="home_trust_card2_title">GDPR Ready</div>
+            <p class="card-desc" style="font-size:.8rem;" data-i18n="home_trust_card2_desc">EU data compliance</p>
           </div>
           <div class="card" style="text-align:center; padding:1.5rem;">
             <div class="card-icon card-icon--blue" style="margin:0 auto .75rem;"><i data-lucide="lock"></i></div>
-            <div class="card-title" style="font-size:.95rem;">TLS 1.3</div>
-            <p class="card-desc" style="font-size:.8rem;">End-to-end encrypted</p>
+            <div class="card-title" style="font-size:.95rem;" data-i18n="home_trust_card3_title">TLS 1.3</div>
+            <p class="card-desc" style="font-size:.8rem;" data-i18n="home_trust_card3_desc">End-to-end encrypted</p>
           </div>
           <div class="card" style="text-align:center; padding:1.5rem;">
             <div class="card-icon card-icon--blue" style="margin:0 auto .75rem;"><i data-lucide="activity"></i></div>
-            <div class="card-title" style="font-size:.95rem;">99.9% Uptime</div>
-            <p class="card-desc" style="font-size:.8rem;">Enterprise SLA</p>
+            <div class="card-title" style="font-size:.95rem;" data-i18n="home_trust_card4_title">99.9% Uptime</div>
+            <p class="card-desc" style="font-size:.8rem;" data-i18n="home_trust_card4_desc">Enterprise SLA</p>
           </div>
         </div>
       </div>
@@ -558,39 +563,39 @@
   <div class="container">
     <div class="grid-2 reveal" style="gap:5rem; align-items:center;">
       <div>
-        <span class="label label--light">About Us</span>
-        <h2 class="section-title mt-2 white">AI-First. Enterprise-Grade.<br>Built for LATAM &amp; EMEA.</h2>
-        <p class="section-desc mt-3">Blue Bridge Global Connection is an enterprise technology company with operations in Costa Rica, Colombia, and Belgium. We build AI workforces, custom software, automation platforms, and cloud infrastructure that help businesses compete at the highest level.</p>
+        <span class="label label--light" data-i18n="home_about_label">About Us</span>
+        <h2 class="section-title mt-2 white" data-i18n="home_about_title">AI-First. Enterprise-Grade.<br>Built for LATAM &amp; EMEA.</h2>
+        <p class="section-desc mt-3" data-i18n="home_about_desc">Blue Bridge Global Connection is an enterprise technology company with operations in Costa Rica, Colombia, and Belgium. We build AI workforces, custom software, automation platforms, and cloud infrastructure that help businesses compete at the highest level.</p>
         <div class="flex" style="gap:1rem; flex-wrap:wrap; margin-top:2rem;">
-          <a href="about.html" class="btn btn--primary">About Blue Bridge</a>
-          <a href="contact.html" class="btn btn--outline">Get in Touch</a>
+          <a href="about.html" class="btn btn--primary" data-i18n="home_about_btn1">About Blue Bridge</a>
+          <a href="contact.html" class="btn btn--outline" data-i18n="home_about_btn2">Get in Touch</a>
         </div>
       </div>
       <div style="background:rgba(255,255,255,.03); border:1px solid var(--glass-border); border-radius:var(--radius-xl); padding:2rem;">
-        <div style="font-size:.7rem; font-weight:700; text-transform:uppercase; letter-spacing:.1em; color:rgba(255,255,255,.3); margin-bottom:1.25rem;">Legal Identity</div>
+        <div style="font-size:.7rem; font-weight:700; text-transform:uppercase; letter-spacing:.1em; color:rgba(255,255,255,.3); margin-bottom:1.25rem;" data-i18n="home_legal_identity">Legal Identity</div>
         <div class="trust-section">
           <div class="trust-row">
-            <div class="trust-key">Legal Name</div>
+            <div class="trust-key" data-i18n="home_legal_name_label">Legal Name</div>
             <div class="trust-val" style="font-size:.85rem;">THE BLUE BRIDGE CONNECTION CO<br>SOCIEDAD DE RESPONSABILIDAD LIMITADA</div>
           </div>
           <div class="trust-row">
-            <div class="trust-key">Brand</div>
+            <div class="trust-key" data-i18n="home_legal_brand_label">Brand</div>
             <div class="trust-val" style="font-size:.85rem;">Blue Bridge Global Connection</div>
           </div>
           <div class="trust-row">
-            <div class="trust-key">Reg. No.</div>
+            <div class="trust-key" data-i18n="home_legal_regno_label">Reg. No.</div>
             <div class="trust-val" style="font-size:.85rem;">3-102-880-591 · Costa Rica</div>
           </div>
           <div class="trust-row">
-            <div class="trust-key">Reg. Office</div>
+            <div class="trust-key" data-i18n="home_legal_regoffice_label">Reg. Office</div>
             <div class="trust-val" style="font-size:.85rem;">Alpha Legal, Blvd. Dent, San Pedro, Montes de Oca, San José 11501, Costa Rica</div>
           </div>
           <div class="trust-row" style="border-bottom:none;">
-            <div class="trust-key">Operations</div>
-            <div class="trust-val" style="font-size:.85rem;">Costa Rica · Colombia · Belgium</div>
+            <div class="trust-key" data-i18n="home_legal_ops_label">Operations</div>
+            <div class="trust-val" style="font-size:.85rem;" data-i18n="home_legal_ops_val">Costa Rica · Colombia · Belgium</div>
           </div>
         </div>
-        <a href="legal/index.html" style="display:block; margin-top:1.25rem; font-size:.8rem; color:var(--cyan); text-decoration:none; transition:color .2s;" onmouseover="this.style.color='var(--white)'" onmouseout="this.style.color='var(--cyan)'">View full legal information →</a>
+        <a href="legal/index.html" style="display:block; margin-top:1.25rem; font-size:.8rem; color:var(--cyan); text-decoration:none; transition:color .2s;" onmouseover="this.style.color='var(--white)'" onmouseout="this.style.color='var(--cyan)'" data-i18n="home_legal_view_link">View full legal information →</a>
       </div>
     </div>
   </div>
@@ -659,12 +664,13 @@ function calcROI() {
   var hours = (reps * 20 * 0.6) + (tickets * 30 * 0.7 * (10/60));
   var el = document.getElementById('roi-result');
   document.getElementById('roi-number').textContent = '$' + Math.round(total).toLocaleString();
-  document.getElementById('roi-detail').textContent = 'Est. ' + Math.round(hours) + ' hours recovered per month · ROI delivered in < 30 days';
+  document.getElementById('roi-detail').textContent = i18n.t('home_roi_detail').replace('{hours}', Math.round(hours));
   el.style.display = 'block';
 }
 </script>
 
 <script src="assets/js/i18n.js"></script>
 <script src="assets/js/app.js"></script>
+<script src="https://developers.bluebridge.es/api/public/agents/widget.js" data-agent="SdrbOWpdREB0UHRgxQQwCP8qpDkhgfKg" async></script>
 </body>
 </html>

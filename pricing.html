@@ -14,13 +14,13 @@
 
 <section class="page-hero">
   <div class="container page-hero-inner">
-    <nav class="breadcrumb"><a href="index.html">Home</a><span>/</span><span style="color:rgba(255,255,255,.7);">Pricing</span></nav>
+    <nav class="breadcrumb"><a href="index.html" data-i18n="pricing_breadcrumb_home">Home</a><span>/</span><span style="color:rgba(255,255,255,.7);" data-i18n="pricing_breadcrumb_current">Pricing</span></nav>
     <span class="label label--light" style="margin-top:1rem; display:inline-flex;" data-i18n="nav_pricing">Pricing</span>
-    <h1 class="page-title">Pricing You Can Understand</h1>
-    <p class="section-desc" style="max-width:600px; margin-top:1rem;">No hidden fees. No per-seat surprises. No 3-year lock-ins. Pay for the AI Workforce and modules you need. Grow your plan as you grow.</p>
+    <h1 class="page-title" data-i18n="pricing_page_title">Pricing You Can Understand</h1>
+    <p class="section-desc" style="max-width:600px; margin-top:1rem;" data-i18n="pricing_page_subtitle">No hidden fees. No per-seat surprises. No 3-year lock-ins. Pay for the AI Workforce and modules you need. Grow your plan as you grow.</p>
     <div style="margin-top:2rem; display:flex; align-items:center; gap:.25rem; background:rgba(255,255,255,.06); border:1px solid var(--glass-border); border-radius:var(--radius-full); padding:.35rem; width:fit-content;">
-      <button class="btn btn--primary btn--sm" id="toggle-annual" onclick="setBilling('annual')">Annual <span style="font-size:.68rem; background:rgba(16,185,129,.25); color:#10B981; padding:.15rem .5rem; border-radius:var(--radius-full); margin-left:.3rem;">Save 2 months</span></button>
-      <button class="btn btn--ghost btn--sm" id="toggle-monthly" onclick="setBilling('monthly')">Monthly</button>
+      <button class="btn btn--primary btn--sm" id="toggle-annual" onclick="setBilling('annual')"><span data-i18n="pricing_billing_toggle_annual">Annual</span> <span style="font-size:.68rem; background:rgba(16,185,129,.25); color:#10B981; padding:.15rem .5rem; border-radius:var(--radius-full); margin-left:.3rem;" data-i18n="pricing_billing_toggle_save">Save 2 months</span></button>
+      <button class="btn btn--ghost btn--sm" id="toggle-monthly" onclick="setBilling('monthly')" data-i18n="pricing_billing_toggle_monthly">Monthly</button>
     </div>
   </div>
 </section>
@@ -31,60 +31,60 @@
 
       <!-- STARTER -->
       <div class="pricing-card">
-        <div class="price-label">Starter</div>
+        <div class="price-label" data-i18n="pricing_plan_starter_name">Starter</div>
         <div class="price-amount">$<span class="price-val" data-monthly="199" data-annual="166">166</span></div>
-        <div class="price-period">per month &middot; <span class="price-cycle">billed annually</span></div>
+        <div class="price-period"><span data-i18n="pricing_price_period_label">per month</span> &middot; <span class="price-cycle" data-i18n="pricing_billed_cycle_annual">billed annually</span></div>
         <div class="price-divider"></div>
         <div class="price-features">
-          <div class="price-feature"><i data-lucide="check" style="width:15px;height:15px;color:#10B981;flex-shrink:0;margin-top:1px;"></i> Up to 3 BBOS modules</div>
-          <div class="price-feature"><i data-lucide="check" style="width:15px;height:15px;color:#10B981;flex-shrink:0;margin-top:1px;"></i> 2 AI Employees (any 2 of 15)</div>
-          <div class="price-feature"><i data-lucide="check" style="width:15px;height:15px;color:#10B981;flex-shrink:0;margin-top:1px;"></i> 5 user seats</div>
-          <div class="price-feature"><i data-lucide="check" style="width:15px;height:15px;color:#10B981;flex-shrink:0;margin-top:1px;"></i> 10,000 AI actions/month</div>
-          <div class="price-feature"><i data-lucide="check" style="width:15px;height:15px;color:#10B981;flex-shrink:0;margin-top:1px;"></i> Standard support (email + KB)</div>
-          <div class="price-feature"><i data-lucide="check" style="width:15px;height:15px;color:#10B981;flex-shrink:0;margin-top:1px;"></i> 1 integration</div>
-          <div class="price-feature"><i data-lucide="check" style="width:15px;height:15px;color:#10B981;flex-shrink:0;margin-top:1px;"></i> GDPR compliance pack</div>
+          <div class="price-feature"><i data-lucide="check" style="width:15px;height:15px;color:#10B981;flex-shrink:0;margin-top:1px;"></i> <span data-i18n="pricing_feature_starter_modules">Up to 3 BBOS modules</span></div>
+          <div class="price-feature"><i data-lucide="check" style="width:15px;height:15px;color:#10B981;flex-shrink:0;margin-top:1px;"></i> <span data-i18n="pricing_feature_starter_ai_employees">2 AI Employees (any 2 of 15)</span></div>
+          <div class="price-feature"><i data-lucide="check" style="width:15px;height:15px;color:#10B981;flex-shrink:0;margin-top:1px;"></i> <span data-i18n="pricing_feature_starter_seats">5 user seats</span></div>
+          <div class="price-feature"><i data-lucide="check" style="width:15px;height:15px;color:#10B981;flex-shrink:0;margin-top:1px;"></i> <span data-i18n="pricing_feature_starter_actions">10,000 AI actions/month</span></div>
+          <div class="price-feature"><i data-lucide="check" style="width:15px;height:15px;color:#10B981;flex-shrink:0;margin-top:1px;"></i> <span data-i18n="pricing_feature_starter_support">Standard support (email + KB)</span></div>
+          <div class="price-feature"><i data-lucide="check" style="width:15px;height:15px;color:#10B981;flex-shrink:0;margin-top:1px;"></i> <span data-i18n="pricing_feature_starter_integration">1 integration</span></div>
+          <div class="price-feature"><i data-lucide="check" style="width:15px;height:15px;color:#10B981;flex-shrink:0;margin-top:1px;"></i> <span data-i18n="pricing_feature_starter_gdpr">GDPR compliance pack</span></div>
         </div>
-        <a href="contact.html" class="btn btn--outline w-full" style="margin-top:auto;">Get Started</a>
+        <a href="contact.html" class="btn btn--outline w-full" style="margin-top:auto;" data-i18n="pricing_cta_get_started">Get Started</a>
       </div>
 
       <!-- PROFESSIONAL -->
       <div class="pricing-card pricing-card--featured">
-        <div style="position:absolute; top:-14px; left:50%; transform:translateX(-50%); background:var(--blue); color:#fff; font-size:.68rem; font-weight:700; text-transform:uppercase; letter-spacing:.08em; padding:.35rem 1rem; border-radius:var(--radius-full); white-space:nowrap;">Most Popular</div>
-        <div class="price-label">Professional</div>
+        <div style="position:absolute; top:-14px; left:50%; transform:translateX(-50%); background:var(--blue); color:#fff; font-size:.68rem; font-weight:700; text-transform:uppercase; letter-spacing:.08em; padding:.35rem 1rem; border-radius:var(--radius-full); white-space:nowrap;" data-i18n="pricing_badge_most_popular">Most Popular</div>
+        <div class="price-label" data-i18n="pricing_plan_professional_name">Professional</div>
         <div class="price-amount">$<span class="price-val" data-monthly="599" data-annual="499">499</span></div>
-        <div class="price-period">per month &middot; <span class="price-cycle">billed annually</span></div>
-        <div style="font-size:.78rem; color:#10B981; margin-top:.4rem; font-weight:500;">Save $1,200/year on annual plan</div>
+        <div class="price-period"><span data-i18n="pricing_price_period_label">per month</span> &middot; <span class="price-cycle" data-i18n="pricing_billed_cycle_annual">billed annually</span></div>
+        <div style="font-size:.78rem; color:#10B981; margin-top:.4rem; font-weight:500;" data-i18n="pricing_savings_professional">Save $1,200/year on annual plan</div>
         <div class="price-divider"></div>
         <div class="price-features">
-          <div class="price-feature"><i data-lucide="check" style="width:15px;height:15px;color:#10B981;flex-shrink:0;margin-top:1px;"></i> Up to 12 BBOS modules</div>
-          <div class="price-feature"><i data-lucide="check" style="width:15px;height:15px;color:#10B981;flex-shrink:0;margin-top:1px;"></i> 8 AI Employees included</div>
-          <div class="price-feature"><i data-lucide="check" style="width:15px;height:15px;color:#10B981;flex-shrink:0;margin-top:1px;"></i> 25 user seats</div>
-          <div class="price-feature"><i data-lucide="check" style="width:15px;height:15px;color:#10B981;flex-shrink:0;margin-top:1px;"></i> 100,000 AI actions/month</div>
-          <div class="price-feature"><i data-lucide="check" style="width:15px;height:15px;color:#10B981;flex-shrink:0;margin-top:1px;"></i> Priority support (email, chat, phone)</div>
-          <div class="price-feature"><i data-lucide="check" style="width:15px;height:15px;color:#10B981;flex-shrink:0;margin-top:1px;"></i> Unlimited integrations</div>
-          <div class="price-feature"><i data-lucide="check" style="width:15px;height:15px;color:#10B981;flex-shrink:0;margin-top:1px;"></i> Custom branding / white-label</div>
-          <div class="price-feature"><i data-lucide="check" style="width:15px;height:15px;color:#10B981;flex-shrink:0;margin-top:1px;"></i> Dedicated onboarding specialist</div>
+          <div class="price-feature"><i data-lucide="check" style="width:15px;height:15px;color:#10B981;flex-shrink:0;margin-top:1px;"></i> <span data-i18n="pricing_feature_pro_modules">Up to 12 BBOS modules</span></div>
+          <div class="price-feature"><i data-lucide="check" style="width:15px;height:15px;color:#10B981;flex-shrink:0;margin-top:1px;"></i> <span data-i18n="pricing_feature_pro_ai_employees">8 AI Employees included</span></div>
+          <div class="price-feature"><i data-lucide="check" style="width:15px;height:15px;color:#10B981;flex-shrink:0;margin-top:1px;"></i> <span data-i18n="pricing_feature_pro_seats">25 user seats</span></div>
+          <div class="price-feature"><i data-lucide="check" style="width:15px;height:15px;color:#10B981;flex-shrink:0;margin-top:1px;"></i> <span data-i18n="pricing_feature_pro_actions">100,000 AI actions/month</span></div>
+          <div class="price-feature"><i data-lucide="check" style="width:15px;height:15px;color:#10B981;flex-shrink:0;margin-top:1px;"></i> <span data-i18n="pricing_feature_pro_support">Priority support (email, chat, phone)</span></div>
+          <div class="price-feature"><i data-lucide="check" style="width:15px;height:15px;color:#10B981;flex-shrink:0;margin-top:1px;"></i> <span data-i18n="pricing_feature_pro_integrations">Unlimited integrations</span></div>
+          <div class="price-feature"><i data-lucide="check" style="width:15px;height:15px;color:#10B981;flex-shrink:0;margin-top:1px;"></i> <span data-i18n="pricing_feature_pro_branding">Custom branding / white-label</span></div>
+          <div class="price-feature"><i data-lucide="check" style="width:15px;height:15px;color:#10B981;flex-shrink:0;margin-top:1px;"></i> <span data-i18n="pricing_feature_pro_onboarding">Dedicated onboarding specialist</span></div>
         </div>
-        <a href="contact.html" class="btn btn--primary w-full" style="margin-top:auto;">Get Started</a>
+        <a href="contact.html" class="btn btn--primary w-full" style="margin-top:auto;" data-i18n="pricing_cta_get_started">Get Started</a>
       </div>
 
       <!-- ENTERPRISE -->
       <div class="pricing-card">
-        <div class="price-label">Enterprise</div>
-        <div style="font-size:1.8rem; font-weight:800; color:var(--white); letter-spacing:-.02em; margin:.25rem 0 .3rem;">Custom</div>
-        <div class="price-period">Tailored to your requirements</div>
+        <div class="price-label" data-i18n="pricing_plan_enterprise_name">Enterprise</div>
+        <div style="font-size:1.8rem; font-weight:800; color:var(--white); letter-spacing:-.02em; margin:.25rem 0 .3rem;" data-i18n="pricing_enterprise_price_label">Custom</div>
+        <div class="price-period" data-i18n="pricing_enterprise_price_caption">Tailored to your requirements</div>
         <div class="price-divider"></div>
         <div class="price-features">
-          <div class="price-feature"><i data-lucide="check" style="width:15px;height:15px;color:#10B981;flex-shrink:0;margin-top:1px;"></i> Unlimited BBOS modules</div>
-          <div class="price-feature"><i data-lucide="check" style="width:15px;height:15px;color:#10B981;flex-shrink:0;margin-top:1px;"></i> All 15 AI Employees</div>
-          <div class="price-feature"><i data-lucide="check" style="width:15px;height:15px;color:#10B981;flex-shrink:0;margin-top:1px;"></i> Unlimited user seats</div>
-          <div class="price-feature"><i data-lucide="check" style="width:15px;height:15px;color:#10B981;flex-shrink:0;margin-top:1px;"></i> Unlimited AI actions</div>
-          <div class="price-feature"><i data-lucide="check" style="width:15px;height:15px;color:#10B981;flex-shrink:0;margin-top:1px;"></i> 24/7 Premium support + Dedicated Slack</div>
-          <div class="price-feature"><i data-lucide="check" style="width:15px;height:15px;color:#10B981;flex-shrink:0;margin-top:1px;"></i> 99.9% uptime SLA guarantee</div>
-          <div class="price-feature"><i data-lucide="check" style="width:15px;height:15px;color:#10B981;flex-shrink:0;margin-top:1px;"></i> Custom data residency</div>
-          <div class="price-feature"><i data-lucide="check" style="width:15px;height:15px;color:#10B981;flex-shrink:0;margin-top:1px;"></i> Dedicated Customer Success Manager</div>
+          <div class="price-feature"><i data-lucide="check" style="width:15px;height:15px;color:#10B981;flex-shrink:0;margin-top:1px;"></i> <span data-i18n="pricing_feature_ent_modules">Unlimited BBOS modules</span></div>
+          <div class="price-feature"><i data-lucide="check" style="width:15px;height:15px;color:#10B981;flex-shrink:0;margin-top:1px;"></i> <span data-i18n="pricing_feature_ent_ai_employees">All 15 AI Employees</span></div>
+          <div class="price-feature"><i data-lucide="check" style="width:15px;height:15px;color:#10B981;flex-shrink:0;margin-top:1px;"></i> <span data-i18n="pricing_feature_ent_seats">Unlimited user seats</span></div>
+          <div class="price-feature"><i data-lucide="check" style="width:15px;height:15px;color:#10B981;flex-shrink:0;margin-top:1px;"></i> <span data-i18n="pricing_feature_ent_actions">Unlimited AI actions</span></div>
+          <div class="price-feature"><i data-lucide="check" style="width:15px;height:15px;color:#10B981;flex-shrink:0;margin-top:1px;"></i> <span data-i18n="pricing_feature_ent_support">24/7 Premium support + Dedicated Slack</span></div>
+          <div class="price-feature"><i data-lucide="check" style="width:15px;height:15px;color:#10B981;flex-shrink:0;margin-top:1px;"></i> <span data-i18n="pricing_feature_ent_sla">99.9% uptime SLA guarantee</span></div>
+          <div class="price-feature"><i data-lucide="check" style="width:15px;height:15px;color:#10B981;flex-shrink:0;margin-top:1px;"></i> <span data-i18n="pricing_feature_ent_data_residency">Custom data residency</span></div>
+          <div class="price-feature"><i data-lucide="check" style="width:15px;height:15px;color:#10B981;flex-shrink:0;margin-top:1px;"></i> <span data-i18n="pricing_feature_ent_csm">Dedicated Customer Success Manager</span></div>
         </div>
-        <a href="contact.html" class="btn btn--outline w-full" style="margin-top:auto;">Schedule Consultation</a>
+        <a href="contact.html" class="btn btn--outline w-full" style="margin-top:auto;" data-i18n="pricing_cta_schedule_consultation">Schedule Consultation</a>
       </div>
 
     </div>
@@ -92,52 +92,52 @@
     <!-- Add-ons -->
     <div style="margin-top:5rem;" class="reveal">
       <div class="section-header section-header--center">
-        <span class="label label--light">Module Add-Ons</span>
-        <h2 class="section-title mt-2 white" style="font-size:1.75rem;">Expand À La Carte</h2>
-        <p class="section-desc">Starter plan customers can add individual capabilities without upgrading the full plan.</p>
+        <span class="label label--light" data-i18n="pricing_addons_label">Module Add-Ons</span>
+        <h2 class="section-title mt-2 white" style="font-size:1.75rem;" data-i18n="pricing_addons_title">Expand À La Carte</h2>
+        <p class="section-desc" data-i18n="pricing_addons_desc">Starter plan customers can add individual capabilities without upgrading the full plan.</p>
       </div>
       <div class="grid-3" style="margin-top:2rem;">
         <div class="card card--dark">
           <div class="flex" style="justify-content:space-between; align-items:flex-start; margin-bottom:.75rem;">
-            <div class="card-title white">Additional AI Employee</div>
+            <div class="card-title white" data-i18n="pricing_addon_ai_employee_title">Additional AI Employee</div>
             <div style="font-size:1.2rem; font-weight:800; color:var(--blue);">$99<span style="font-size:.75rem; font-weight:400; color:rgba(255,255,255,.35);">/mo</span></div>
           </div>
-          <p class="card-desc">Each additional AI Employee beyond your plan's included count.</p>
+          <p class="card-desc" data-i18n="pricing_addon_ai_employee_desc">Each additional AI Employee beyond your plan's included count.</p>
         </div>
         <div class="card card--dark">
           <div class="flex" style="justify-content:space-between; align-items:flex-start; margin-bottom:.75rem;">
-            <div class="card-title white">AI Telephone Agent</div>
+            <div class="card-title white" data-i18n="pricing_addon_telephone_title">AI Telephone Agent</div>
             <div style="font-size:1.2rem; font-weight:800; color:var(--blue);">$199<span style="font-size:.75rem; font-weight:400; color:rgba(255,255,255,.35);">/mo</span></div>
           </div>
-          <p class="card-desc">Twilio voice included · 1,000 min/month · Full transcription.</p>
+          <p class="card-desc" data-i18n="pricing_addon_telephone_desc">Twilio voice included · 1,000 min/month · Full transcription.</p>
         </div>
         <div class="card card--dark">
           <div class="flex" style="justify-content:space-between; align-items:flex-start; margin-bottom:.75rem;">
-            <div class="card-title white">CRM Advanced</div>
+            <div class="card-title white" data-i18n="pricing_addon_crm_title">CRM Advanced</div>
             <div style="font-size:1.2rem; font-weight:800; color:var(--blue);">$149<span style="font-size:.75rem; font-weight:400; color:rgba(255,255,255,.35);">/mo</span></div>
           </div>
-          <p class="card-desc">Deal intelligence, revenue forecasting, AI-powered enrichment.</p>
+          <p class="card-desc" data-i18n="pricing_addon_crm_desc">Deal intelligence, revenue forecasting, AI-powered enrichment.</p>
         </div>
         <div class="card card--dark">
           <div class="flex" style="justify-content:space-between; align-items:flex-start; margin-bottom:.75rem;">
-            <div class="card-title white">ERP Finance Module</div>
+            <div class="card-title white" data-i18n="pricing_addon_erp_title">ERP Finance Module</div>
             <div style="font-size:1.2rem; font-weight:800; color:var(--blue);">$249<span style="font-size:.75rem; font-weight:400; color:rgba(255,255,255,.35);">/mo</span></div>
           </div>
-          <p class="card-desc">P&amp;L, balance sheet, multi-currency, PEPPOL e-invoicing.</p>
+          <p class="card-desc" data-i18n="pricing_addon_erp_desc">P&amp;L, balance sheet, multi-currency, PEPPOL e-invoicing.</p>
         </div>
         <div class="card card--dark">
           <div class="flex" style="justify-content:space-between; align-items:flex-start; margin-bottom:.75rem;">
-            <div class="card-title white">Extra AI Actions</div>
+            <div class="card-title white" data-i18n="pricing_addon_actions_title">Extra AI Actions</div>
             <div style="font-size:1.2rem; font-weight:800; color:var(--blue);">$49<span style="font-size:.75rem; font-weight:400; color:rgba(255,255,255,.35);">/50k</span></div>
           </div>
-          <p class="card-desc">50,000 additional AI actions per month for high-volume operations.</p>
+          <p class="card-desc" data-i18n="pricing_addon_actions_desc">50,000 additional AI actions per month for high-volume operations.</p>
         </div>
         <div class="card card--dark">
           <div class="flex" style="justify-content:space-between; align-items:flex-start; margin-bottom:.75rem;">
-            <div class="card-title white">Priority Support Upgrade</div>
+            <div class="card-title white" data-i18n="pricing_addon_priority_support_title">Priority Support Upgrade</div>
             <div style="font-size:1.2rem; font-weight:800; color:var(--blue);">$299<span style="font-size:.75rem; font-weight:400; color:rgba(255,255,255,.35);">/mo</span></div>
           </div>
-          <p class="card-desc">Email, chat, phone support with 2hr SLA. Available on Starter plan.</p>
+          <p class="card-desc" data-i18n="pricing_addon_priority_support_desc">Email, chat, phone support with 2hr SLA. Available on Starter plan.</p>
         </div>
       </div>
     </div>
@@ -148,38 +148,38 @@
 <section class="section">
   <div class="container" style="max-width:800px;">
     <div class="section-header section-header--center reveal">
-      <span class="label">FAQ</span>
-      <h2 class="section-title mt-2">Common Questions</h2>
+      <span class="label" data-i18n="pricing_faq_label">FAQ</span>
+      <h2 class="section-title mt-2" data-i18n="pricing_faq_title">Common Questions</h2>
     </div>
     <div class="reveal">
       <div class="accordion-item">
-        <button class="accordion-trigger">Can I change my plan at any time? <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18"><polyline points="6 9 12 15 18 9"/></svg></button>
-        <div class="accordion-body"><p>Yes. Upgrades take effect immediately. Downgrades take effect at the start of your next billing cycle. No lock-in periods on monthly plans.</p></div>
+        <button class="accordion-trigger"><span data-i18n="pricing_faq_q1">Can I change my plan at any time?</span> <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18"><polyline points="6 9 12 15 18 9"/></svg></button>
+        <div class="accordion-body"><p data-i18n="pricing_faq_a1">Yes. Upgrades take effect immediately. Downgrades take effect at the start of your next billing cycle. No lock-in periods on monthly plans.</p></div>
       </div>
       <div class="accordion-item">
-        <button class="accordion-trigger">Is there a free trial? <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18"><polyline points="6 9 12 15 18 9"/></svg></button>
-        <div class="accordion-body"><p>We offer a 14-day trial for Starter and Professional plans. Request it through the contact form — we'll set up a live environment with your business data.</p></div>
+        <button class="accordion-trigger"><span data-i18n="pricing_faq_q2">Is there a free trial?</span> <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18"><polyline points="6 9 12 15 18 9"/></svg></button>
+        <div class="accordion-body"><p data-i18n="pricing_faq_a2">We offer a 14-day trial for Starter and Professional plans. Request it through the contact form — we'll set up a live environment with your business data.</p></div>
       </div>
       <div class="accordion-item">
-        <button class="accordion-trigger">What counts as an AI action? <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18"><polyline points="6 9 12 15 18 9"/></svg></button>
-        <div class="accordion-body"><p>Any task executed by an AI Employee: sending an email, responding to a message, booking an appointment, generating a report, or completing a workflow step.</p></div>
+        <button class="accordion-trigger"><span data-i18n="pricing_faq_q3">What counts as an AI action?</span> <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18"><polyline points="6 9 12 15 18 9"/></svg></button>
+        <div class="accordion-body"><p data-i18n="pricing_faq_a3">Any task executed by an AI Employee: sending an email, responding to a message, booking an appointment, generating a report, or completing a workflow step.</p></div>
       </div>
       <div class="accordion-item">
-        <button class="accordion-trigger">Are integrations included or extra cost? <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18"><polyline points="6 9 12 15 18 9"/></svg></button>
-        <div class="accordion-body"><p>Starter includes 1 integration. Professional includes unlimited integrations. All standard connectors (WhatsApp, Gmail, Outlook, Google Calendar) are included at no extra cost.</p></div>
+        <button class="accordion-trigger"><span data-i18n="pricing_faq_q4">Are integrations included or extra cost?</span> <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18"><polyline points="6 9 12 15 18 9"/></svg></button>
+        <div class="accordion-body"><p data-i18n="pricing_faq_a4">Starter includes 1 integration. Professional includes unlimited integrations. All standard connectors (WhatsApp, Gmail, Outlook, Google Calendar) are included at no extra cost.</p></div>
       </div>
       <div class="accordion-item">
-        <button class="accordion-trigger">Do you offer discounts for nonprofits or startups? <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18"><polyline points="6 9 12 15 18 9"/></svg></button>
-        <div class="accordion-body"><p>Yes. 25% discounts for registered nonprofits and early-stage startups (under $500k revenue). Contact sales@bluebridge.es with documentation.</p></div>
+        <button class="accordion-trigger"><span data-i18n="pricing_faq_q5">Do you offer discounts for nonprofits or startups?</span> <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18"><polyline points="6 9 12 15 18 9"/></svg></button>
+        <div class="accordion-body"><p data-i18n="pricing_faq_a5">Yes. 25% discounts for registered nonprofits and early-stage startups (under $500k revenue). Contact sales@bluebridge.es with documentation.</p></div>
       </div>
       <div class="accordion-item">
-        <button class="accordion-trigger">Is there a setup fee? <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18"><polyline points="6 9 12 15 18 9"/></svg></button>
-        <div class="accordion-body"><p>No setup fees on Starter or Professional. Enterprise plans include a one-time implementation fee quoted based on scope, including full onboarding, integration, and testing.</p></div>
+        <button class="accordion-trigger"><span data-i18n="pricing_faq_q6">Is there a setup fee?</span> <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18"><polyline points="6 9 12 15 18 9"/></svg></button>
+        <div class="accordion-body"><p data-i18n="pricing_faq_a6">No setup fees on Starter or Professional. Enterprise plans include a one-time implementation fee quoted based on scope, including full onboarding, integration, and testing.</p></div>
       </div>
     </div>
     <div style="text-align:center; margin-top:3rem; padding-top:2rem; border-top:1px solid var(--gray-100);" class="reveal">
-      <p style="font-size:.9rem; color:var(--gray-400); margin-bottom:1.25rem;">Still have questions? Talk directly with our team.</p>
-      <a href="contact.html" class="btn btn--primary">Contact Sales</a>
+      <p style="font-size:.9rem; color:var(--gray-400); margin-bottom:1.25rem;" data-i18n="pricing_faq_cta_text">Still have questions? Talk directly with our team.</p>
+      <a href="contact.html" class="btn btn--primary" data-i18n="pricing_cta_contact_sales">Contact Sales</a>
     </div>
   </div>
 </section>

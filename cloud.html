@@ -270,11 +270,11 @@
     <div class="hero-grid">
       <div>
         <div class="cloud-wordmark">Blue Bridge Cloud™</div>
-        <h1 class="hero-headline">Host everything.<br><em>Deploy in seconds.</em></h1>
-        <p style="font-size:1.05rem; color:rgba(255,255,255,.55); max-width:560px; line-height:1.75; margin-bottom:2.5rem;">Websites, web apps, REST APIs, AI agents, VPS, databases and business drive — all from one intelligent developer panel. Built on AWS. Powered by Blue Bridge.</p>
+        <h1 class="hero-headline" data-i18n-html="cloud_hero_headline">Host everything.<br><em>Deploy in seconds.</em></h1>
+        <p style="font-size:1.05rem; color:rgba(255,255,255,.55); max-width:560px; line-height:1.75; margin-bottom:2.5rem;" data-i18n="cloud_hero_subheadline">Websites, web apps, REST APIs, AI agents, VPS, databases and business drive — all from one intelligent developer panel. Built on enterprise-grade infrastructure. Powered by Blue Bridge.</p>
         <div style="display:flex; gap:1rem; flex-wrap:wrap; margin-bottom:3rem;">
-          <a href="contact.html" class="btn btn--primary btn--lg">Get Started Free</a>
-          <a href="#hosting" class="btn btn--outline btn--lg">Explore Features</a>
+          <a href="contact.html" class="btn btn--primary btn--lg" data-i18n="cloud_hero_cta_get_started">Get Started Free</a>
+          <a href="#hosting" class="btn btn--outline btn--lg" data-i18n="cloud_hero_cta_explore">Explore Features</a>
         </div>
         <div class="stack-grid">
           <span class="stack-badge">Node.js</span>
@@ -302,7 +302,7 @@
           <div class="terminal-body">
             <div><span class="dim">$</span> <span class="cmd">cloud init my-api</span></div>
             <div class="ok">&#10003; Project created</div>
-            <div class="dim">&nbsp;&nbsp;Region: us-east-1 · Runtime: Python 3.12</div>
+            <div class="dim">&nbsp;&nbsp;Region: eu-west · Runtime: Python 3.12</div>
             <br>
             <div><span class="dim">$</span> <span class="cmd">git push cloud main</span></div>
             <div class="ok">&#10003; Build complete (12.4s)</div>
@@ -327,19 +327,19 @@
     <div class="stats-row" style="grid-template-columns: repeat(4, 1fr);">
       <div class="stat-item">
         <div class="stat-number" style="color:var(--cyan);">99.9%</div>
-        <div class="stat-label">Uptime SLA</div>
+        <div class="stat-label" data-i18n="cloud_stat_uptime_label">Uptime SLA</div>
       </div>
       <div class="stat-item">
         <div class="stat-number" style="color:var(--cyan);">&lt; 25s</div>
-        <div class="stat-label">Avg. deploy time</div>
+        <div class="stat-label" data-i18n="cloud_stat_deploy_label">Avg. deploy time</div>
       </div>
       <div class="stat-item">
         <div class="stat-number" style="color:var(--cyan);">12</div>
-        <div class="stat-label">Agent types available</div>
+        <div class="stat-label" data-i18n="cloud_stat_agents_label">Agent types available</div>
       </div>
       <div class="stat-item">
-        <div class="stat-number" style="color:var(--cyan);">AWS</div>
-        <div class="stat-label">Infrastructure backbone</div>
+        <div class="stat-number" style="color:var(--cyan);">BB Cloud</div>
+        <div class="stat-label" data-i18n="cloud_stat_infra_label">Infrastructure backbone</div>
       </div>
     </div>
   </div>
@@ -349,16 +349,16 @@
 <section class="section section--dark" id="hosting">
   <div class="container">
     <div class="section-header section-header--center reveal">
-      <span class="label label--light">Hosting</span>
-      <h2 class="section-title mt-2 white">Host anything your team builds.</h2>
-      <p class="section-desc">One platform. Every project type. No infrastructure management required.</p>
+      <span class="label label--light" data-i18n="cloud_hosting_eyebrow">Hosting</span>
+      <h2 class="section-title mt-2 white" data-i18n="cloud_hosting_title">Host anything your team builds.</h2>
+      <p class="section-desc" data-i18n="cloud_hosting_desc">One platform. Every project type. No infrastructure management required.</p>
     </div>
     <div class="host-grid reveal" style="margin-top:2.5rem;">
 
       <div class="host-card">
         <div class="host-card-icon" style="background:rgba(0,82,255,.15); color:var(--blue);"><i data-lucide="globe" style="width:20px;height:20px;"></i></div>
-        <div class="host-card-title">Websites &amp; WordPress</div>
-        <div class="host-card-desc">Static sites, WordPress, landing pages, blogs and e-commerce. Auto SSL, CDN, staging environment and one-click WordPress install included.</div>
+        <div class="host-card-title" data-i18n="cloud_host_websites_title">Websites &amp; WordPress</div>
+        <div class="host-card-desc" data-i18n="cloud_host_websites_desc">Static sites, WordPress, landing pages, blogs and e-commerce. Auto SSL, CDN, staging environment and one-click WordPress install included.</div>
         <div style="margin-top:1rem; display:flex; flex-wrap:wrap; gap:.4rem;">
           <span style="font-size:.7rem; background:rgba(0,82,255,.15); color:var(--blue); padding:.15rem .55rem; border-radius:4px; font-weight:600;">HTML/CSS/JS</span>
           <span style="font-size:.7rem; background:rgba(0,82,255,.15); color:var(--blue); padding:.15rem .55rem; border-radius:4px; font-weight:600;">WordPress</span>
@@ -368,8 +368,8 @@
 
       <div class="host-card">
         <div class="host-card-icon" style="background:rgba(0,200,245,.12); color:var(--cyan);"><i data-lucide="app-window" style="width:20px;height:20px;"></i></div>
-        <div class="host-card-title">Web Applications</div>
-        <div class="host-card-desc">Full-stack apps with frontend, backend, database and auth. CRM systems, SaaS platforms, dashboards, patient portals and marketplace applications.</div>
+        <div class="host-card-title" data-i18n="cloud_host_webapps_title">Web Applications</div>
+        <div class="host-card-desc" data-i18n="cloud_host_webapps_desc">Full-stack apps with frontend, backend, database and auth. CRM systems, SaaS platforms, dashboards, patient portals and marketplace applications.</div>
         <div style="margin-top:1rem; display:flex; flex-wrap:wrap; gap:.4rem;">
           <span style="font-size:.7rem; background:rgba(0,200,245,.1); color:var(--cyan); padding:.15rem .55rem; border-radius:4px; font-weight:600;">React</span>
           <span style="font-size:.7rem; background:rgba(0,200,245,.1); color:var(--cyan); padding:.15rem .55rem; border-radius:4px; font-weight:600;">Next.js</span>
@@ -379,8 +379,8 @@
 
       <div class="host-card">
         <div class="host-card-icon" style="background:rgba(0,82,255,.15); color:var(--blue);"><i data-lucide="code-2" style="width:20px;height:20px;"></i></div>
-        <div class="host-card-title">APIs &amp; Backends</div>
-        <div class="host-card-desc">REST and GraphQL APIs, microservices, webhooks and background workers. Auto-scaling, rate limiting, private networking and encrypted environment secrets.</div>
+        <div class="host-card-title" data-i18n="cloud_host_apis_title">APIs &amp; Backends</div>
+        <div class="host-card-desc" data-i18n="cloud_host_apis_desc">REST and GraphQL APIs, microservices, webhooks and background workers. Auto-scaling, rate limiting, private networking and encrypted environment secrets.</div>
         <div style="margin-top:1rem; display:flex; flex-wrap:wrap; gap:.4rem;">
           <span style="font-size:.7rem; background:rgba(0,82,255,.15); color:var(--blue); padding:.15rem .55rem; border-radius:4px; font-weight:600;">FastAPI</span>
           <span style="font-size:.7rem; background:rgba(0,82,255,.15); color:var(--blue); padding:.15rem .55rem; border-radius:4px; font-weight:600;">Node.js</span>
@@ -390,34 +390,34 @@
 
       <div class="host-card">
         <div class="host-card-icon" style="background:rgba(0,200,245,.12); color:var(--cyan);"><i data-lucide="bot" style="width:20px;height:20px;"></i></div>
-        <div class="host-card-title">AI Agents</div>
-        <div class="host-card-desc">Deploy chat, voice, sales, booking, support and CRM agents. Each agent gets its own endpoint, knowledge base, analytics dashboard and channel integrations.</div>
+        <div class="host-card-title" data-i18n="cloud_host_aiagents_title">AI Agents</div>
+        <div class="host-card-desc" data-i18n="cloud_host_aiagents_desc">Deploy chat, voice, sales, booking, support and CRM agents. Each agent gets its own endpoint, knowledge base, analytics dashboard and channel integrations.</div>
         <div style="margin-top:1rem; display:flex; flex-wrap:wrap; gap:.4rem;">
-          <span style="font-size:.7rem; background:rgba(0,200,245,.1); color:var(--cyan); padding:.15rem .55rem; border-radius:4px; font-weight:600;">Web chat</span>
+          <span style="font-size:.7rem; background:rgba(0,200,245,.1); color:var(--cyan); padding:.15rem .55rem; border-radius:4px; font-weight:600;" data-i18n="cloud_host_webchat_badge">Web chat</span>
           <span style="font-size:.7rem; background:rgba(0,200,245,.1); color:var(--cyan); padding:.15rem .55rem; border-radius:4px; font-weight:600;">WhatsApp</span>
-          <span style="font-size:.7rem; background:rgba(0,200,245,.1); color:var(--cyan); padding:.15rem .55rem; border-radius:4px; font-weight:600;">Voice</span>
+          <span style="font-size:.7rem; background:rgba(0,200,245,.1); color:var(--cyan); padding:.15rem .55rem; border-radius:4px; font-weight:600;" data-i18n="cloud_host_voice_badge">Voice</span>
         </div>
       </div>
 
       <div class="host-card">
         <div class="host-card-icon" style="background:rgba(0,82,255,.15); color:var(--blue);"><i data-lucide="smartphone" style="width:20px;height:20px;"></i></div>
-        <div class="host-card-title">Mobile App Backends</div>
-        <div class="host-card-desc">REST APIs, push notifications, authentication, file storage and database services for iOS and Android apps. SDK-ready with WebSocket support.</div>
+        <div class="host-card-title" data-i18n="cloud_host_mobile_title">Mobile App Backends</div>
+        <div class="host-card-desc" data-i18n="cloud_host_mobile_desc">REST APIs, push notifications, authentication, file storage and database services for iOS and Android apps. SDK-ready with WebSocket support.</div>
         <div style="margin-top:1rem; display:flex; flex-wrap:wrap; gap:.4rem;">
           <span style="font-size:.7rem; background:rgba(0,82,255,.15); color:var(--blue); padding:.15rem .55rem; border-radius:4px; font-weight:600;">REST API</span>
           <span style="font-size:.7rem; background:rgba(0,82,255,.15); color:var(--blue); padding:.15rem .55rem; border-radius:4px; font-weight:600;">WebSocket</span>
-          <span style="font-size:.7rem; background:rgba(0,82,255,.15); color:var(--blue); padding:.15rem .55rem; border-radius:4px; font-weight:600;">Push notifications</span>
+          <span style="font-size:.7rem; background:rgba(0,82,255,.15); color:var(--blue); padding:.15rem .55rem; border-radius:4px; font-weight:600;" data-i18n="cloud_host_pushnotif_badge">Push notifications</span>
         </div>
       </div>
 
       <div class="host-card">
         <div class="host-card-icon" style="background:rgba(0,200,245,.12); color:var(--cyan);"><i data-lucide="server" style="width:20px;height:20px;"></i></div>
-        <div class="host-card-title">VPS &amp; Custom Deployments</div>
-        <div class="host-card-desc">Root SSH access VPS with dedicated CPU, RAM and SSD. Docker containers, custom runtimes, private networking and dedicated IP addresses.</div>
+        <div class="host-card-title" data-i18n="cloud_host_vps_title">VPS &amp; Custom Deployments</div>
+        <div class="host-card-desc" data-i18n="cloud_host_vps_desc">Root SSH access VPS with dedicated CPU, RAM and SSD. Docker containers, custom runtimes, private networking and dedicated IP addresses.</div>
         <div style="margin-top:1rem; display:flex; flex-wrap:wrap; gap:.4rem;">
           <span style="font-size:.7rem; background:rgba(0,200,245,.1); color:var(--cyan); padding:.15rem .55rem; border-radius:4px; font-weight:600;">Docker</span>
           <span style="font-size:.7rem; background:rgba(0,200,245,.1); color:var(--cyan); padding:.15rem .55rem; border-radius:4px; font-weight:600;">SSH</span>
-          <span style="font-size:.7rem; background:rgba(0,200,245,.1); color:var(--cyan); padding:.15rem .55rem; border-radius:4px; font-weight:600;">Root access</span>
+          <span style="font-size:.7rem; background:rgba(0,200,245,.1); color:var(--cyan); padding:.15rem .55rem; border-radius:4px; font-weight:600;" data-i18n="cloud_host_rootaccess_badge">Root access</span>
         </div>
       </div>
 
@@ -429,31 +429,31 @@
 <section class="section" id="deploy">
   <div class="container">
     <div class="section-header section-header--center reveal">
-      <span class="label">Developer Workflow</span>
-      <h2 class="section-title mt-2">From commit to production in seconds.</h2>
-      <p class="section-desc" style="max-width:520px;">Connect your GitHub or GitLab repository. Every push triggers an automatic build, test suite, security scan and preview deployment.</p>
+      <span class="label" data-i18n="cloud_workflow_eyebrow">Developer Workflow</span>
+      <h2 class="section-title mt-2" data-i18n="cloud_workflow_title">From commit to production in seconds.</h2>
+      <p class="section-desc" style="max-width:520px;" data-i18n="cloud_workflow_desc">Connect your GitHub or GitLab repository. Every push triggers an automatic build, test suite, security scan and preview deployment.</p>
     </div>
 
     <div class="workflow reveal" style="margin: 3.5rem 0 3rem;">
       <div class="wf-step">
         <div class="wf-dot wf-dot--done"><i data-lucide="git-branch" style="width:18px;height:18px;"></i></div>
-        <div style="font-weight:700; font-size:.9rem; color:var(--gray-900); margin-bottom:.35rem;">Push to Git</div>
-        <p style="font-size:.8rem; color:var(--gray-500); line-height:1.6;">GitHub or GitLab. Any branch triggers your pipeline automatically.</p>
+        <div style="font-weight:700; font-size:.9rem; color:var(--gray-900); margin-bottom:.35rem;" data-i18n="cloud_wf_step1_title">Push to Git</div>
+        <p style="font-size:.8rem; color:var(--gray-500); line-height:1.6;" data-i18n="cloud_wf_step1_desc">GitHub or GitLab. Any branch triggers your pipeline automatically.</p>
       </div>
       <div class="wf-step">
         <div class="wf-dot wf-dot--done"><i data-lucide="cpu" style="width:18px;height:18px;"></i></div>
-        <div style="font-weight:700; font-size:.9rem; color:var(--gray-900); margin-bottom:.35rem;">Build &amp; Test</div>
-        <p style="font-size:.8rem; color:var(--gray-500); line-height:1.6;">Automated build, unit tests, integration tests and security scan.</p>
+        <div style="font-weight:700; font-size:.9rem; color:var(--gray-900); margin-bottom:.35rem;" data-i18n="cloud_wf_step2_title">Build &amp; Test</div>
+        <p style="font-size:.8rem; color:var(--gray-500); line-height:1.6;" data-i18n="cloud_wf_step2_desc">Automated build, unit tests, integration tests and security scan.</p>
       </div>
       <div class="wf-step">
         <div class="wf-dot wf-dot--done"><i data-lucide="eye" style="width:18px;height:18px;"></i></div>
-        <div style="font-weight:700; font-size:.9rem; color:var(--gray-900); margin-bottom:.35rem;">Staging Preview</div>
-        <p style="font-size:.8rem; color:var(--gray-500); line-height:1.6;">Unique preview URL. Share with clients for approval before going live.</p>
+        <div style="font-weight:700; font-size:.9rem; color:var(--gray-900); margin-bottom:.35rem;" data-i18n="cloud_wf_step3_title">Staging Preview</div>
+        <p style="font-size:.8rem; color:var(--gray-500); line-height:1.6;" data-i18n="cloud_wf_step3_desc">Unique preview URL. Share with clients for approval before going live.</p>
       </div>
       <div class="wf-step">
         <div class="wf-dot"><i data-lucide="rocket" style="width:18px;height:18px;"></i></div>
-        <div style="font-weight:700; font-size:.9rem; color:var(--gray-900); margin-bottom:.35rem;">Production</div>
-        <p style="font-size:.8rem; color:var(--gray-500); line-height:1.6;">One-click promote to production on your custom domain. Zero downtime.</p>
+        <div style="font-weight:700; font-size:.9rem; color:var(--gray-900); margin-bottom:.35rem;" data-i18n="cloud_wf_step4_title">Production</div>
+        <p style="font-size:.8rem; color:var(--gray-500); line-height:1.6;" data-i18n="cloud_wf_step4_desc">One-click promote to production on your custom domain. Zero downtime.</p>
       </div>
     </div>
 
@@ -485,30 +485,30 @@
         <div class="card" style="padding:1.25rem;">
           <div style="display:flex; align-items:center; gap:.75rem; margin-bottom:.5rem;">
             <div style="color:var(--blue);"><i data-lucide="git-merge" style="width:18px;height:18px;"></i></div>
-            <div style="font-weight:700; font-size:.9rem; color:var(--gray-900);">Branch Deployments</div>
+            <div style="font-weight:700; font-size:.9rem; color:var(--gray-900);" data-i18n="cloud_wf_card1_title">Branch Deployments</div>
           </div>
-          <p style="font-size:.83rem; color:var(--gray-500); line-height:1.6;">Every feature branch gets its own preview URL. Perfect for client reviews and team testing before merging.</p>
+          <p style="font-size:.83rem; color:var(--gray-500); line-height:1.6;" data-i18n="cloud_wf_card1_desc">Every feature branch gets its own preview URL. Perfect for client reviews and team testing before merging.</p>
         </div>
         <div class="card" style="padding:1.25rem;">
           <div style="display:flex; align-items:center; gap:.75rem; margin-bottom:.5rem;">
             <div style="color:var(--blue);"><i data-lucide="rotate-ccw" style="width:18px;height:18px;"></i></div>
-            <div style="font-weight:700; font-size:.9rem; color:var(--gray-900);">Instant Rollback</div>
+            <div style="font-weight:700; font-size:.9rem; color:var(--gray-900);" data-i18n="cloud_wf_card2_title">Instant Rollback</div>
           </div>
-          <p style="font-size:.83rem; color:var(--gray-500); line-height:1.6;">Revert to any previous deployment in one click. Full deployment history always available.</p>
+          <p style="font-size:.83rem; color:var(--gray-500); line-height:1.6;" data-i18n="cloud_wf_card2_desc">Revert to any previous deployment in one click. Full deployment history always available.</p>
         </div>
         <div class="card" style="padding:1.25rem;">
           <div style="display:flex; align-items:center; gap:.75rem; margin-bottom:.5rem;">
             <div style="color:var(--blue);"><i data-lucide="lock" style="width:18px;height:18px;"></i></div>
-            <div style="font-weight:700; font-size:.9rem; color:var(--gray-900);">Secrets &amp; Env Vars</div>
+            <div style="font-weight:700; font-size:.9rem; color:var(--gray-900);" data-i18n="cloud_wf_card3_title">Secrets &amp; Env Vars</div>
           </div>
-          <p style="font-size:.83rem; color:var(--gray-500); line-height:1.6;">Encrypted environment variables per project and environment. Never commit credentials again.</p>
+          <p style="font-size:.83rem; color:var(--gray-500); line-height:1.6;" data-i18n="cloud_wf_card3_desc">Encrypted environment variables per project and environment. Never commit credentials again.</p>
         </div>
         <div class="card" style="padding:1.25rem;">
           <div style="display:flex; align-items:center; gap:.75rem; margin-bottom:.5rem;">
             <div style="color:var(--blue);"><i data-lucide="box" style="width:18px;height:18px;"></i></div>
-            <div style="font-weight:700; font-size:.9rem; color:var(--gray-900);">Docker &amp; Containers</div>
+            <div style="font-weight:700; font-size:.9rem; color:var(--gray-900);" data-i18n="cloud_wf_card4_title">Docker &amp; Containers</div>
           </div>
-          <p style="font-size:.83rem; color:var(--gray-500); line-height:1.6;">Bring your own Dockerfile or use our optimized base images. Full container lifecycle with auto-scaling.</p>
+          <p style="font-size:.83rem; color:var(--gray-500); line-height:1.6;" data-i18n="cloud_wf_card4_desc">Bring your own Dockerfile or use our optimized base images. Full container lifecycle with auto-scaling.</p>
         </div>
       </div>
     </div>
@@ -519,9 +519,9 @@
 <section class="section section--gray" id="vps">
   <div class="container">
     <div class="section-header reveal">
-      <span class="label">Cloud VPS</span>
-      <h2 class="section-title mt-2">Dedicated cloud resources. Full control.</h2>
-      <p class="section-desc" style="max-width:560px;">When shared hosting is not enough. Root SSH access, dedicated CPU and RAM, Docker support, custom firewall and private networking.</p>
+      <span class="label" data-i18n="cloud_vps_eyebrow">Cloud VPS</span>
+      <h2 class="section-title mt-2" data-i18n="cloud_vps_title">Dedicated cloud resources. Full control.</h2>
+      <p class="section-desc" style="max-width:560px;" data-i18n="cloud_vps_desc">When shared hosting is not enough. Root SSH access, dedicated CPU and RAM, Docker support, custom firewall and private networking.</p>
     </div>
     <div class="vps-grid reveal" style="margin-top:2rem;">
 
@@ -532,21 +532,21 @@
           <div><div class="vps-spec">RAM</div><div class="vps-val">1 GB</div></div>
           <div><div class="vps-spec">SSD</div><div class="vps-val">20 GB</div></div>
         </div>
-        <div style="font-size:.78rem; color:var(--gray-500); margin-bottom:1rem;">1 TB bandwidth</div>
-        <div style="font-size:1.3rem; font-weight:800; color:var(--gray-900); margin-bottom:1rem;">&#8364;3.99<span style="font-size:.8rem; font-weight:500; color:var(--gray-400);">/mo</span></div>
-        <a href="contact.html" class="btn btn--outline btn--sm" style="width:100%; text-align:center; display:block;">Get VPS 1</a>
+        <div style="font-size:.78rem; color:var(--gray-500); margin-bottom:1rem;" data-i18n="cloud_vps1_bandwidth">1 TB bandwidth</div>
+        <div style="font-size:1.3rem; font-weight:800; color:var(--gray-900); margin-bottom:1rem;">&#8364;3.99<span style="font-size:.8rem; font-weight:500; color:var(--gray-400);" data-i18n="cloud_price_per_month_suffix">/mo</span></div>
+        <a href="contact.html" class="btn btn--outline btn--sm" style="width:100%; text-align:center; display:block;" data-i18n="cloud_vps1_cta">Get VPS 1</a>
       </div>
 
       <div class="vps-card vps-card--featured">
-        <div style="font-size:.7rem; font-weight:700; text-transform:uppercase; letter-spacing:.08em; color:var(--blue); margin-bottom:.75rem;">Cloud VPS 2 — Popular</div>
+        <div style="font-size:.7rem; font-weight:700; text-transform:uppercase; letter-spacing:.08em; color:var(--blue); margin-bottom:.75rem;" data-i18n="cloud_vps2_label">Cloud VPS 2 — Popular</div>
         <div class="vps-specs-row">
           <div><div class="vps-spec">vCPU</div><div class="vps-val">2</div></div>
           <div><div class="vps-spec">RAM</div><div class="vps-val">4 GB</div></div>
           <div><div class="vps-spec">SSD</div><div class="vps-val">80 GB</div></div>
         </div>
-        <div style="font-size:.78rem; color:var(--gray-500); margin-bottom:1rem;">4 TB bandwidth</div>
-        <div style="font-size:1.3rem; font-weight:800; color:var(--gray-900); margin-bottom:1rem;">&#8364;9.99<span style="font-size:.8rem; font-weight:500; color:var(--gray-400);">/mo</span></div>
-        <a href="contact.html" class="btn btn--primary btn--sm" style="width:100%; text-align:center; display:block;">Get VPS 2</a>
+        <div style="font-size:.78rem; color:var(--gray-500); margin-bottom:1rem;" data-i18n="cloud_vps2_bandwidth">4 TB bandwidth</div>
+        <div style="font-size:1.3rem; font-weight:800; color:var(--gray-900); margin-bottom:1rem;">&#8364;9.99<span style="font-size:.8rem; font-weight:500; color:var(--gray-400);" data-i18n="cloud_price_per_month_suffix">/mo</span></div>
+        <a href="contact.html" class="btn btn--primary btn--sm" style="width:100%; text-align:center; display:block;" data-i18n="cloud_vps2_cta">Get VPS 2</a>
       </div>
 
       <div class="vps-card">
@@ -556,9 +556,9 @@
           <div><div class="vps-spec">RAM</div><div class="vps-val">8 GB</div></div>
           <div><div class="vps-spec">SSD</div><div class="vps-val">160 GB</div></div>
         </div>
-        <div style="font-size:.78rem; color:var(--gray-500); margin-bottom:1rem;">8 TB bandwidth</div>
-        <div style="font-size:1.3rem; font-weight:800; color:var(--gray-900); margin-bottom:1rem;">&#8364;18.99<span style="font-size:.8rem; font-weight:500; color:var(--gray-400);">/mo</span></div>
-        <a href="contact.html" class="btn btn--outline btn--sm" style="width:100%; text-align:center; display:block;">Get VPS 4</a>
+        <div style="font-size:.78rem; color:var(--gray-500); margin-bottom:1rem;" data-i18n="cloud_vps4_bandwidth">8 TB bandwidth</div>
+        <div style="font-size:1.3rem; font-weight:800; color:var(--gray-900); margin-bottom:1rem;">&#8364;18.99<span style="font-size:.8rem; font-weight:500; color:var(--gray-400);" data-i18n="cloud_price_per_month_suffix">/mo</span></div>
+        <a href="contact.html" class="btn btn--outline btn--sm" style="width:100%; text-align:center; display:block;" data-i18n="cloud_vps4_cta">Get VPS 4</a>
       </div>
 
       <div class="vps-card">
@@ -568,29 +568,29 @@
           <div><div class="vps-spec">RAM</div><div class="vps-val">32 GB</div></div>
           <div><div class="vps-spec">SSD</div><div class="vps-val">320 GB</div></div>
         </div>
-        <div style="font-size:.78rem; color:var(--gray-500); margin-bottom:1rem;">16 TB bandwidth</div>
-        <div style="font-size:1.3rem; font-weight:800; color:var(--gray-900); margin-bottom:1rem;">&#8364;39.99<span style="font-size:.8rem; font-weight:500; color:var(--gray-400);">/mo</span></div>
-        <a href="contact.html" class="btn btn--outline btn--sm" style="width:100%; text-align:center; display:block;">Get VPS 8</a>
+        <div style="font-size:.78rem; color:var(--gray-500); margin-bottom:1rem;" data-i18n="cloud_vps8_bandwidth">16 TB bandwidth</div>
+        <div style="font-size:1.3rem; font-weight:800; color:var(--gray-900); margin-bottom:1rem;">&#8364;39.99<span style="font-size:.8rem; font-weight:500; color:var(--gray-400);" data-i18n="cloud_price_per_month_suffix">/mo</span></div>
+        <a href="contact.html" class="btn btn--outline btn--sm" style="width:100%; text-align:center; display:block;" data-i18n="cloud_vps8_cta">Get VPS 8</a>
       </div>
 
     </div>
     <div style="margin-top:1.5rem; display:flex; flex-wrap:wrap; gap:.6rem;">
-      <span class="badge badge--blue">Root SSH access</span>
-      <span class="badge badge--blue">Docker &amp; Kubernetes</span>
-      <span class="badge badge--blue">Private networking</span>
-      <span class="badge badge--blue">Custom firewall</span>
-      <span class="badge badge--blue">Dedicated IP</span>
-      <span class="badge badge--blue">Snapshots &amp; restore</span>
-      <span class="badge badge--blue">99.9% uptime SLA</span>
+      <span class="badge badge--blue" data-i18n="cloud_vps_badge_ssh">Root SSH access</span>
+      <span class="badge badge--blue" data-i18n="cloud_vps_badge_docker_k8s">Docker &amp; Kubernetes</span>
+      <span class="badge badge--blue" data-i18n="cloud_vps_badge_privnet">Private networking</span>
+      <span class="badge badge--blue" data-i18n="cloud_vps_badge_firewall">Custom firewall</span>
+      <span class="badge badge--blue" data-i18n="cloud_vps_badge_dedicated_ip">Dedicated IP</span>
+      <span class="badge badge--blue" data-i18n="cloud_vps_badge_snapshots">Snapshots &amp; restore</span>
+      <span class="badge badge--blue" data-i18n="cloud_vps_badge_sla">99.9% uptime SLA</span>
     </div>
 
     <!-- VPS Terminal showcase -->
     <div class="reveal" style="margin-top:3.5rem;">
       <div style="display:flex; align-items:center; gap:1rem; margin-bottom:1.25rem; flex-wrap:wrap;">
-        <h3 style="font-size:1.2rem; font-weight:800; color:var(--gray-900); margin:0;">Browser-based SSH terminal. Manage your VPS from anywhere.</h3>
-        <span style="background:rgba(0,82,255,.1); color:var(--blue); font-size:.7rem; font-weight:700; text-transform:uppercase; letter-spacing:.08em; padding:.2rem .65rem; border-radius:99px; border:1px solid rgba(0,82,255,.2);">Built-in</span>
+        <h3 style="font-size:1.2rem; font-weight:800; color:var(--gray-900); margin:0;" data-i18n="cloud_vps_terminal_title">Browser-based SSH terminal. Manage your VPS from anywhere.</h3>
+        <span style="background:rgba(0,82,255,.1); color:var(--blue); font-size:.7rem; font-weight:700; text-transform:uppercase; letter-spacing:.08em; padding:.2rem .65rem; border-radius:99px; border:1px solid rgba(0,82,255,.2);" data-i18n="cloud_vps_terminal_badge">Built-in</span>
       </div>
-      <p style="font-size:.9rem; color:var(--gray-500); max-width:640px; margin-bottom:2rem;">No SSH client required. Access your server directly from the Cloud panel — with full root access, command history and session persistence.</p>
+      <p style="font-size:.9rem; color:var(--gray-500); max-width:640px; margin-bottom:2rem;" data-i18n="cloud_vps_terminal_desc">No SSH client required. Access your server directly from the Cloud panel — with full root access, command history and session persistence.</p>
 
       <!-- Terminal window with tabs -->
       <div style="background:#0D1117; border:1px solid rgba(255,255,255,.1); border-radius:14px; overflow:hidden; box-shadow:0 24px 64px rgba(0,0,0,.25);">
@@ -681,7 +681,7 @@
         <div style="background:#0A0E15; border-top:1px solid rgba(255,255,255,.05); padding:.5rem 1rem; display:flex; gap:1.5rem; align-items:center; flex-wrap:wrap;">
           <span style="font-size:.68rem; color:rgba(255,255,255,.3); font-family:var(--font-mono);">SSH · AES-256-GCM · Port 22</span>
           <span style="font-size:.68rem; color:#3FB950; font-family:var(--font-mono);">&#9679; Latency: 8ms</span>
-          <span style="font-size:.68rem; color:rgba(255,255,255,.3); font-family:var(--font-mono);">Region: us-east-1</span>
+          <span style="font-size:.68rem; color:rgba(255,255,255,.3); font-family:var(--font-mono);">Region: eu-west</span>
           <div style="margin-left:auto; display:flex; gap:.75rem;">
             <span style="font-size:.68rem; color:rgba(255,255,255,.25); font-family:var(--font-mono);">Snapshot</span>
             <span style="font-size:.68rem; color:rgba(255,255,255,.25); font-family:var(--font-mono);">Reboot</span>
@@ -698,40 +698,40 @@
 <section class="section section--dark" id="databases">
   <div class="container">
     <div class="section-header reveal">
-      <span class="label label--light">Databases</span>
-      <h2 class="section-title mt-2 white">Managed databases. Zero configuration.</h2>
-      <p class="section-desc" style="max-width:520px;">Provision a production-ready database in seconds. Automated backups, replication, private connections and a built-in query editor.</p>
+      <span class="label label--light" data-i18n="cloud_db_eyebrow">Databases</span>
+      <h2 class="section-title mt-2 white" data-i18n="cloud_db_title">Managed databases. Zero configuration.</h2>
+      <p class="section-desc" style="max-width:520px;" data-i18n="cloud_db_desc">Provision a production-ready database in seconds. Automated backups, replication, private connections and a built-in query editor.</p>
     </div>
     <div class="grid-3 reveal" style="margin-top:2rem; gap:1.25rem;">
       <div class="host-card">
         <div class="host-card-icon" style="background:rgba(0,82,255,.15); color:var(--blue);"><i data-lucide="database" style="width:20px;height:20px;"></i></div>
         <div class="host-card-title">PostgreSQL</div>
-        <div class="host-card-desc">Primary relational database. Shared, managed and dedicated tiers. Connection pooling, read replicas and point-in-time recovery.</div>
+        <div class="host-card-desc" data-i18n="cloud_db_postgres_desc">Primary relational database. Shared, managed and dedicated tiers. Connection pooling, read replicas and point-in-time recovery.</div>
       </div>
       <div class="host-card">
         <div class="host-card-icon" style="background:rgba(0,200,245,.12); color:var(--cyan);"><i data-lucide="zap" style="width:20px;height:20px;"></i></div>
         <div class="host-card-title">Redis Cache</div>
-        <div class="host-card-desc">In-memory data store for session management, caching, queues and real-time pub/sub. Persistence options available.</div>
+        <div class="host-card-desc" data-i18n="cloud_db_redis_desc">In-memory data store for session management, caching, queues and real-time pub/sub. Persistence options available.</div>
       </div>
       <div class="host-card">
         <div class="host-card-icon" style="background:rgba(0,82,255,.15); color:var(--blue);"><i data-lucide="brain" style="width:20px;height:20px;"></i></div>
-        <div class="host-card-title">Vector Database</div>
-        <div class="host-card-desc">Semantic search and AI embeddings storage for RAG-powered agents and document intelligence applications.</div>
+        <div class="host-card-title" data-i18n="cloud_db_vector_title">Vector Database</div>
+        <div class="host-card-desc" data-i18n="cloud_db_vector_desc">Semantic search and AI embeddings storage for RAG-powered agents and document intelligence applications.</div>
       </div>
       <div class="host-card">
         <div class="host-card-icon" style="background:rgba(0,200,245,.12); color:var(--cyan);"><i data-lucide="hard-drive" style="width:20px;height:20px;"></i></div>
         <div class="host-card-title">MySQL</div>
-        <div class="host-card-desc">Full MySQL compatibility for legacy applications and WordPress. Automated backups and monitoring included.</div>
+        <div class="host-card-desc" data-i18n="cloud_db_mysql_desc">Full MySQL compatibility for legacy applications and WordPress. Automated backups and monitoring included.</div>
       </div>
       <div class="host-card">
         <div class="host-card-icon" style="background:rgba(0,82,255,.15); color:var(--blue);"><i data-lucide="file-json" style="width:20px;height:20px;"></i></div>
         <div class="host-card-title">MongoDB-Compatible</div>
-        <div class="host-card-desc">Document database for flexible schemas. Compatible with existing MongoDB drivers and ODMs.</div>
+        <div class="host-card-desc" data-i18n="cloud_db_mongo_desc">Document database for flexible schemas. Compatible with existing MongoDB drivers and ODMs.</div>
       </div>
       <div class="host-card">
         <div class="host-card-icon" style="background:rgba(0,200,245,.12); color:var(--cyan);"><i data-lucide="terminal" style="width:20px;height:20px;"></i></div>
-        <div class="host-card-title">Query Editor</div>
-        <div class="host-card-desc">Browser-based SQL editor with syntax highlighting, query history, explain plans and data export. No separate client needed.</div>
+        <div class="host-card-title" data-i18n="cloud_db_queryeditor_title">Query Editor</div>
+        <div class="host-card-desc" data-i18n="cloud_db_queryeditor_desc">Browser-based SQL editor with syntax highlighting, query history, explain plans and data export. No separate client needed.</div>
       </div>
     </div>
   </div>
@@ -743,63 +743,63 @@
     <div class="grid-2 reveal" style="gap:5rem; align-items:center;">
       <div>
         <span class="label">Cloud AI&#8482;</span>
-        <h2 class="section-title mt-2">Deploy AI agents. Not infrastructure.</h2>
-        <p class="body-md muted-dark mt-3" style="margin-bottom:1.5rem;">Cloud AI gives your applications intelligent agents without managing AI infrastructure. The Blue Model Router automatically selects the best AI model for each task based on cost, speed, privacy and complexity.</p>
-        <p class="body-md muted-dark" style="margin-bottom:1.75rem;">You deploy agents. The platform handles model selection, rate limiting, failover, cost tracking and compliance. Your application calls one endpoint.</p>
+        <h2 class="section-title mt-2" data-i18n="cloud_ai_title">Deploy AI agents. Not infrastructure.</h2>
+        <p class="body-md muted-dark mt-3" style="margin-bottom:1.5rem;" data-i18n="cloud_ai_desc1">Cloud AI gives your applications intelligent agents without managing AI infrastructure. The Blue Model Router automatically selects the best AI model for each task based on cost, speed, privacy and complexity.</p>
+        <p class="body-md muted-dark" style="margin-bottom:1.75rem;" data-i18n="cloud_ai_desc2">You deploy agents. The platform handles model selection, rate limiting, failover, cost tracking and compliance. Your application calls one endpoint.</p>
         <div style="background:var(--gray-50); border:1px solid var(--gray-100); border-radius:var(--radius-lg); padding:1.25rem; margin-bottom:1.5rem;">
           <div style="font-size:.7rem; font-weight:700; text-transform:uppercase; letter-spacing:.08em; color:var(--gray-400); margin-bottom:.75rem;">Blue Model Router</div>
-          <p style="font-size:.83rem; color:var(--gray-600); line-height:1.7; margin-bottom:.75rem;">Routes each request to the optimal model based on: cost threshold &middot; response speed &middot; data privacy policy &middot; task type &middot; language &middot; context length.</p>
+          <p style="font-size:.83rem; color:var(--gray-600); line-height:1.7; margin-bottom:.75rem;" data-i18n="cloud_ai_router_desc">Routes each request to the optimal model based on: cost threshold &middot; response speed &middot; data privacy policy &middot; task type &middot; language &middot; context length.</p>
           <div class="model-pills" style="margin-top:0; background:transparent;">
             <span class="model-pill" style="background:rgba(0,82,255,.08); border-color:rgba(0,82,255,.2); color:var(--blue);">Constitutional AI</span>
             <span class="model-pill" style="background:rgba(16,185,129,.06); border-color:rgba(16,185,129,.2); color:#10B981;">GPT-4 class</span>
             <span class="model-pill" style="background:rgba(239,68,68,.06); border-color:rgba(239,68,68,.2); color:#EF4444;">Gemini class</span>
-            <span class="model-pill">Open-source</span>
-            <span class="model-pill">Local models</span>
-            <span class="model-pill">Bedrock</span>
+            <span class="model-pill" data-i18n="cloud_ai_pill_opensource">Open-source</span>
+            <span class="model-pill" data-i18n="cloud_ai_pill_local">Local models</span>
+            <span class="model-pill" data-i18n="cloud_ai_pill_enterprise">Enterprise models</span>
           </div>
         </div>
         <div style="display:flex; flex-direction:column; gap:.65rem;">
-          <div style="display:flex; align-items:center; gap:.75rem;"><div style="color:var(--blue);"><i data-lucide="check-circle" style="width:16px;height:16px;"></i></div><span style="font-size:.875rem; color:var(--gray-700);">You own your agents — not a third-party AI platform</span></div>
-          <div style="display:flex; align-items:center; gap:.75rem;"><div style="color:var(--blue);"><i data-lucide="check-circle" style="width:16px;height:16px;"></i></div><span style="font-size:.875rem; color:var(--gray-700);">Client data stays inside your Cloud environment</span></div>
-          <div style="display:flex; align-items:center; gap:.75rem;"><div style="color:var(--blue);"><i data-lucide="check-circle" style="width:16px;height:16px;"></i></div><span style="font-size:.875rem; color:var(--gray-700);">Consistent API regardless of which model runs underneath</span></div>
-          <div style="display:flex; align-items:center; gap:.75rem;"><div style="color:var(--blue);"><i data-lucide="check-circle" style="width:16px;height:16px;"></i></div><span style="font-size:.875rem; color:var(--gray-700);">Cost controls, usage caps and audit logs per agent</span></div>
+          <div style="display:flex; align-items:center; gap:.75rem;"><div style="color:var(--blue);"><i data-lucide="check-circle" style="width:16px;height:16px;"></i></div><span style="font-size:.875rem; color:var(--gray-700);" data-i18n="cloud_ai_check1">You own your agents — not a third-party AI platform</span></div>
+          <div style="display:flex; align-items:center; gap:.75rem;"><div style="color:var(--blue);"><i data-lucide="check-circle" style="width:16px;height:16px;"></i></div><span style="font-size:.875rem; color:var(--gray-700);" data-i18n="cloud_ai_check2">Client data stays inside your Cloud environment</span></div>
+          <div style="display:flex; align-items:center; gap:.75rem;"><div style="color:var(--blue);"><i data-lucide="check-circle" style="width:16px;height:16px;"></i></div><span style="font-size:.875rem; color:var(--gray-700);" data-i18n="cloud_ai_check3">Consistent API regardless of which model runs underneath</span></div>
+          <div style="display:flex; align-items:center; gap:.75rem;"><div style="color:var(--blue);"><i data-lucide="check-circle" style="width:16px;height:16px;"></i></div><span style="font-size:.875rem; color:var(--gray-700);" data-i18n="cloud_ai_check4">Cost controls, usage caps and audit logs per agent</span></div>
         </div>
       </div>
       <div style="display:flex; flex-direction:column; gap:.85rem;">
-        <div style="font-size:.7rem; font-weight:700; text-transform:uppercase; letter-spacing:.1em; color:var(--gray-400); margin-bottom:.25rem;">Deploy these agents instantly</div>
+        <div style="font-size:.7rem; font-weight:700; text-transform:uppercase; letter-spacing:.1em; color:var(--gray-400); margin-bottom:.25rem;" data-i18n="cloud_ai_deploy_label">Deploy these agents instantly</div>
         <div style="display:grid; grid-template-columns:1fr 1fr; gap:.85rem;">
           <div style="background:var(--gray-50); border:1px solid var(--gray-100); border-radius:10px; padding:1rem;">
             <div style="color:var(--blue); margin-bottom:.4rem;"><i data-lucide="message-square" style="width:16px;height:16px;"></i></div>
-            <div style="font-size:.85rem; font-weight:700; color:var(--gray-900);">Customer Support</div>
-            <div style="font-size:.75rem; color:var(--gray-500);">24/7 omnichannel support</div>
+            <div style="font-size:.85rem; font-weight:700; color:var(--gray-900);" data-i18n="cloud_ai_agent1_title">Customer Support</div>
+            <div style="font-size:.75rem; color:var(--gray-500);" data-i18n="cloud_ai_agent1_desc">24/7 omnichannel support</div>
           </div>
           <div style="background:var(--gray-50); border:1px solid var(--gray-100); border-radius:10px; padding:1rem;">
             <div style="color:var(--blue); margin-bottom:.4rem;"><i data-lucide="trending-up" style="width:16px;height:16px;"></i></div>
-            <div style="font-size:.85rem; font-weight:700; color:var(--gray-900);">Sales Agent</div>
-            <div style="font-size:.75rem; color:var(--gray-500);">Lead qualification + CRM</div>
+            <div style="font-size:.85rem; font-weight:700; color:var(--gray-900);" data-i18n="cloud_ai_agent2_title">Sales Agent</div>
+            <div style="font-size:.75rem; color:var(--gray-500);" data-i18n="cloud_ai_agent2_desc">Lead qualification + CRM</div>
           </div>
           <div style="background:var(--gray-50); border:1px solid var(--gray-100); border-radius:10px; padding:1rem;">
             <div style="color:var(--blue); margin-bottom:.4rem;"><i data-lucide="calendar" style="width:16px;height:16px;"></i></div>
-            <div style="font-size:.85rem; font-weight:700; color:var(--gray-900);">Booking Agent</div>
-            <div style="font-size:.75rem; color:var(--gray-500);">Appointments + payments</div>
+            <div style="font-size:.85rem; font-weight:700; color:var(--gray-900);" data-i18n="cloud_ai_agent3_title">Booking Agent</div>
+            <div style="font-size:.75rem; color:var(--gray-500);" data-i18n="cloud_ai_agent3_desc">Appointments + payments</div>
           </div>
           <div style="background:var(--gray-50); border:1px solid var(--gray-100); border-radius:10px; padding:1rem;">
             <div style="color:var(--blue); margin-bottom:.4rem;"><i data-lucide="phone" style="width:16px;height:16px;"></i></div>
-            <div style="font-size:.85rem; font-weight:700; color:var(--gray-900);">Voice Agent</div>
-            <div style="font-size:.75rem; color:var(--gray-500);">Phone + call routing</div>
+            <div style="font-size:.85rem; font-weight:700; color:var(--gray-900);" data-i18n="cloud_ai_agent4_title">Voice Agent</div>
+            <div style="font-size:.75rem; color:var(--gray-500);" data-i18n="cloud_ai_agent4_desc">Phone + call routing</div>
           </div>
           <div style="background:var(--gray-50); border:1px solid var(--gray-100); border-radius:10px; padding:1rem;">
             <div style="color:var(--blue); margin-bottom:.4rem;"><i data-lucide="users" style="width:16px;height:16px;"></i></div>
-            <div style="font-size:.85rem; font-weight:700; color:var(--gray-900);">HR Agent</div>
-            <div style="font-size:.75rem; color:var(--gray-500);">Onboarding + employee</div>
+            <div style="font-size:.85rem; font-weight:700; color:var(--gray-900);" data-i18n="cloud_ai_agent5_title">HR Agent</div>
+            <div style="font-size:.75rem; color:var(--gray-500);" data-i18n="cloud_ai_agent5_desc">Onboarding + employee</div>
           </div>
           <div style="background:var(--gray-50); border:1px solid var(--gray-100); border-radius:10px; padding:1rem;">
             <div style="color:var(--blue); margin-bottom:.4rem;"><i data-lucide="bar-chart-2" style="width:16px;height:16px;"></i></div>
-            <div style="font-size:.85rem; font-weight:700; color:var(--gray-900);">Analytics Agent</div>
-            <div style="font-size:.75rem; color:var(--gray-500);">Reports + BI insights</div>
+            <div style="font-size:.85rem; font-weight:700; color:var(--gray-900);" data-i18n="cloud_ai_agent6_title">Analytics Agent</div>
+            <div style="font-size:.75rem; color:var(--gray-500);" data-i18n="cloud_ai_agent6_desc">Reports + BI insights</div>
           </div>
         </div>
-        <a href="contact.html" class="btn btn--primary" style="text-align:center; display:block; margin-top:.25rem;">Deploy Your First Agent</a>
+        <a href="contact.html" class="btn btn--primary" style="text-align:center; display:block; margin-top:.25rem;" data-i18n="cloud_ai_cta">Deploy Your First Agent</a>
       </div>
     </div>
   </div>
@@ -810,40 +810,40 @@
   <div class="container">
     <div class="grid-2 reveal" style="gap:5rem; align-items:center;">
       <div>
-        <span class="label label--light">Infrastructure</span>
-        <h2 class="section-title mt-2 white">Enterprise infrastructure. Developer simplicity.</h2>
-        <p style="font-size:.95rem; color:rgba(255,255,255,.55); line-height:1.8; margin-top:1rem; margin-bottom:2rem;">AWS-backed infrastructure with global CDN, automated DDoS mitigation, zero-downtime deployments and 99.9% uptime SLA — without managing a single server.</p>
+        <span class="label label--light" data-i18n="cloud_perf_eyebrow">Infrastructure</span>
+        <h2 class="section-title mt-2 white" data-i18n="cloud_perf_title">Enterprise infrastructure. Developer simplicity.</h2>
+        <p style="font-size:.95rem; color:rgba(255,255,255,.55); line-height:1.8; margin-top:1rem; margin-bottom:2rem;" data-i18n="cloud_perf_desc">BB Cloud infrastructure with global CDN, automated DDoS mitigation, zero-downtime deployments and 99.9% uptime SLA — without managing a single server.</p>
         <div style="display:flex; flex-wrap:wrap; gap:.6rem;">
-          <span class="badge badge--glass">Global CDN</span>
-          <span class="badge badge--glass">DDoS Protection</span>
-          <span class="badge badge--glass">Auto Scaling</span>
+          <span class="badge badge--glass" data-i18n="cloud_perf_badge_cdn">Global CDN</span>
+          <span class="badge badge--glass" data-i18n="cloud_perf_badge_ddos">DDoS Protection</span>
+          <span class="badge badge--glass" data-i18n="cloud_perf_badge_autoscale">Auto Scaling</span>
           <span class="badge badge--glass">WAF</span>
-          <span class="badge badge--glass">Free SSL</span>
-          <span class="badge badge--glass">Daily Backups</span>
-          <span class="badge badge--glass">Monitoring</span>
-          <span class="badge badge--glass">Alerting</span>
-          <span class="badge badge--glass">99.9% SLA</span>
+          <span class="badge badge--glass" data-i18n="cloud_perf_badge_freessl">Free SSL</span>
+          <span class="badge badge--glass" data-i18n="cloud_perf_badge_backups">Daily Backups</span>
+          <span class="badge badge--glass" data-i18n="cloud_perf_badge_monitoring">Monitoring</span>
+          <span class="badge badge--glass" data-i18n="cloud_perf_badge_alerting">Alerting</span>
+          <span class="badge badge--glass" data-i18n="cloud_perf_badge_sla">99.9% SLA</span>
         </div>
       </div>
       <div class="perf-bars">
         <div>
-          <div class="perf-bar-label"><span>Global CDN Coverage</span><span style="color:var(--cyan);">99.98%</span></div>
+          <div class="perf-bar-label"><span data-i18n="cloud_perf_bar1_label">Global CDN Coverage</span><span style="color:var(--cyan);">99.98%</span></div>
           <div class="perf-bar-track"><div class="perf-bar-fill" style="width:99.98%;"></div></div>
         </div>
         <div>
-          <div class="perf-bar-label"><span>Uptime SLA</span><span style="color:var(--cyan);">99.9%</span></div>
+          <div class="perf-bar-label"><span data-i18n="cloud_perf_bar2_label">Uptime SLA</span><span style="color:var(--cyan);">99.9%</span></div>
           <div class="perf-bar-track"><div class="perf-bar-fill" style="width:99.9%;"></div></div>
         </div>
         <div>
-          <div class="perf-bar-label"><span>Build Success Rate</span><span style="color:var(--cyan);">99.4%</span></div>
+          <div class="perf-bar-label"><span data-i18n="cloud_perf_bar3_label">Build Success Rate</span><span style="color:var(--cyan);">99.4%</span></div>
           <div class="perf-bar-track"><div class="perf-bar-fill" style="width:99.4%;"></div></div>
         </div>
         <div>
-          <div class="perf-bar-label"><span>Avg. Deploy Time</span><span style="color:var(--cyan);">&lt; 25s</span></div>
+          <div class="perf-bar-label"><span data-i18n="cloud_perf_bar4_label">Avg. Deploy Time</span><span style="color:var(--cyan);">&lt; 25s</span></div>
           <div class="perf-bar-track"><div class="perf-bar-fill" style="width:88%;"></div></div>
         </div>
         <div>
-          <div class="perf-bar-label"><span>DDoS Mitigation Speed</span><span style="color:var(--cyan);">&lt; 3s</span></div>
+          <div class="perf-bar-label"><span data-i18n="cloud_perf_bar5_label">DDoS Mitigation Speed</span><span style="color:var(--cyan);">&lt; 3s</span></div>
           <div class="perf-bar-track"><div class="perf-bar-fill" style="width:95%;"></div></div>
         </div>
       </div>
@@ -855,106 +855,106 @@
 <section class="section" id="pricing">
   <div class="container">
     <div class="section-header section-header--center reveal">
-      <span class="label">Pricing</span>
-      <h2 class="section-title mt-2">Start free. Scale as you build.</h2>
-      <p class="section-desc" style="max-width:500px;">All plans include SSL, CDN, DDoS protection, automated backups and a Blue Bridge subdomain. Annual billing for promotional pricing.</p>
+      <span class="label" data-i18n="cloud_pricing_eyebrow">Pricing</span>
+      <h2 class="section-title mt-2" data-i18n="cloud_pricing_title">Start free. Scale as you build.</h2>
+      <p class="section-desc" style="max-width:500px;" data-i18n="cloud_pricing_desc">All plans include SSL, CDN, DDoS protection, automated backups and a Blue Bridge subdomain. Annual billing for promotional pricing.</p>
     </div>
 
     <div class="cloud-plans reveal" style="margin-top:2.5rem;">
 
       <div class="cloud-plan">
         <div class="cloud-plan-name">Free</div>
-        <div class="cloud-plan-price"><sup>&#8364;</sup>0<sub>/mo</sub></div>
-        <div style="font-size:.78rem; color:var(--gray-400); margin-bottom:1.25rem;">Forever free</div>
+        <div class="cloud-plan-price"><sup>&#8364;</sup>0<sub data-i18n="cloud_price_per_month_suffix">/mo</sub></div>
+        <div style="font-size:.78rem; color:var(--gray-400); margin-bottom:1.25rem;" data-i18n="cloud_plan_free_note">Forever free</div>
         <ul class="cloud-plan-list">
-          <li><i data-lucide="check" style="width:14px;height:14px;"></i>1 static website</li>
-          <li><i data-lucide="check" style="width:14px;height:14px;"></i>500 MB storage</li>
-          <li><i data-lucide="check" style="width:14px;height:14px;"></i>1 GB Cloud Drive</li>
-          <li><i data-lucide="check" style="width:14px;height:14px;"></i>SSL + subdomain</li>
-          <li><i data-lucide="check" style="width:14px;height:14px;"></i>1 demo AI agent</li>
-          <li><i data-lucide="check" style="width:14px;height:14px;"></i>50 AI messages/mo</li>
+          <li><i data-lucide="check" style="width:14px;height:14px;"></i data-i18n="cloud_plan_free_item1">1 static website</li>
+          <li><i data-lucide="check" style="width:14px;height:14px;"></i data-i18n="cloud_plan_free_item2">500 MB storage</li>
+          <li><i data-lucide="check" style="width:14px;height:14px;"></i data-i18n="cloud_plan_free_item3">1 GB Cloud Drive</li>
+          <li><i data-lucide="check" style="width:14px;height:14px;"></i data-i18n="cloud_plan_free_item4">SSL + subdomain</li>
+          <li><i data-lucide="check" style="width:14px;height:14px;"></i data-i18n="cloud_plan_free_item5">1 demo AI agent</li>
+          <li><i data-lucide="check" style="width:14px;height:14px;"></i data-i18n="cloud_plan_free_item6">50 AI messages/mo</li>
         </ul>
-        <a href="contact.html" class="btn btn--outline" style="width:100%; text-align:center; display:block;">Get Started</a>
+        <a href="contact.html" class="btn btn--outline" style="width:100%; text-align:center; display:block;" data-i18n="cloud_plan_free_cta">Get Started</a>
       </div>
 
       <div class="cloud-plan cloud-plan--pop">
-        <div class="cloud-plan-pop-label">Most Popular</div>
+        <div class="cloud-plan-pop-label" data-i18n="cloud_plan_popular_label">Most Popular</div>
         <div class="cloud-plan-name">Business</div>
-        <div class="cloud-plan-price"><sup>&#8364;</sup>6.99<sub>/mo</sub></div>
-        <div class="cloud-plan-note">Regular &#8364;14.99/mo</div>
+        <div class="cloud-plan-price"><sup>&#8364;</sup>6.99<sub data-i18n="cloud_price_per_month_suffix">/mo</sub></div>
+        <div class="cloud-plan-note" data-i18n="cloud_plan_business_note">Regular &#8364;14.99/mo</div>
         <ul class="cloud-plan-list">
-          <li><i data-lucide="check" style="width:14px;height:14px;"></i>25 websites / projects</li>
-          <li><i data-lucide="check" style="width:14px;height:14px;"></i>50 GB hosting</li>
-          <li><i data-lucide="check" style="width:14px;height:14px;"></i>100 GB Cloud Drive</li>
-          <li><i data-lucide="check" style="width:14px;height:14px;"></i>10 databases</li>
-          <li><i data-lucide="check" style="width:14px;height:14px;"></i>Daily backups + restore</li>
-          <li><i data-lucide="check" style="width:14px;height:14px;"></i>3 AI agents</li>
-          <li><i data-lucide="check" style="width:14px;height:14px;"></i>2,000 AI messages/mo</li>
-          <li><i data-lucide="check" style="width:14px;height:14px;"></i>Staging + Git deploy</li>
-          <li><i data-lucide="check" style="width:14px;height:14px;"></i>Priority support</li>
+          <li><i data-lucide="check" style="width:14px;height:14px;"></i data-i18n="cloud_plan_business_item1">25 websites / projects</li>
+          <li><i data-lucide="check" style="width:14px;height:14px;"></i data-i18n="cloud_plan_business_item2">50 GB hosting</li>
+          <li><i data-lucide="check" style="width:14px;height:14px;"></i data-i18n="cloud_plan_business_item3">100 GB Cloud Drive</li>
+          <li><i data-lucide="check" style="width:14px;height:14px;"></i data-i18n="cloud_plan_business_item4">10 databases</li>
+          <li><i data-lucide="check" style="width:14px;height:14px;"></i data-i18n="cloud_plan_business_item5">Daily backups + restore</li>
+          <li><i data-lucide="check" style="width:14px;height:14px;"></i data-i18n="cloud_plan_business_item6">3 AI agents</li>
+          <li><i data-lucide="check" style="width:14px;height:14px;"></i data-i18n="cloud_plan_business_item7">2,000 AI messages/mo</li>
+          <li><i data-lucide="check" style="width:14px;height:14px;"></i data-i18n="cloud_plan_business_item8">Staging + Git deploy</li>
+          <li><i data-lucide="check" style="width:14px;height:14px;"></i data-i18n="cloud_plan_business_item9">Priority support</li>
         </ul>
-        <a href="contact.html" class="btn btn--primary" style="width:100%; text-align:center; display:block;">Get Business</a>
+        <a href="contact.html" class="btn btn--primary" style="width:100%; text-align:center; display:block;" data-i18n="cloud_plan_business_cta">Get Business</a>
       </div>
 
       <div class="cloud-plan">
         <div class="cloud-plan-name">Pro</div>
-        <div class="cloud-plan-price"><sup>&#8364;</sup>12.99<sub>/mo</sub></div>
-        <div class="cloud-plan-note">Regular &#8364;24.99/mo</div>
+        <div class="cloud-plan-price"><sup>&#8364;</sup>12.99<sub data-i18n="cloud_price_per_month_suffix">/mo</sub></div>
+        <div class="cloud-plan-note" data-i18n="cloud_plan_pro_note">Regular &#8364;24.99/mo</div>
         <ul class="cloud-plan-list">
-          <li><i data-lucide="check" style="width:14px;height:14px;"></i>100 websites / projects</li>
-          <li><i data-lucide="check" style="width:14px;height:14px;"></i>100 GB hosting</li>
-          <li><i data-lucide="check" style="width:14px;height:14px;"></i>500 GB Cloud Drive</li>
-          <li><i data-lucide="check" style="width:14px;height:14px;"></i>Node.js, Python, APIs</li>
-          <li><i data-lucide="check" style="width:14px;height:14px;"></i>Docker containers</li>
-          <li><i data-lucide="check" style="width:14px;height:14px;"></i>10 AI agents</li>
-          <li><i data-lucide="check" style="width:14px;height:14px;"></i>10,000 AI messages/mo</li>
-          <li><i data-lucide="check" style="width:14px;height:14px;"></i>Dedicated IP</li>
-          <li><i data-lucide="check" style="width:14px;height:14px;"></i>Marketplace access</li>
+          <li><i data-lucide="check" style="width:14px;height:14px;"></i data-i18n="cloud_plan_pro_item1">100 websites / projects</li>
+          <li><i data-lucide="check" style="width:14px;height:14px;"></i data-i18n="cloud_plan_pro_item2">100 GB hosting</li>
+          <li><i data-lucide="check" style="width:14px;height:14px;"></i data-i18n="cloud_plan_pro_item3">500 GB Cloud Drive</li>
+          <li><i data-lucide="check" style="width:14px;height:14px;"></i data-i18n="cloud_plan_pro_item4">Node.js, Python, APIs</li>
+          <li><i data-lucide="check" style="width:14px;height:14px;"></i data-i18n="cloud_plan_pro_item5">Docker containers</li>
+          <li><i data-lucide="check" style="width:14px;height:14px;"></i data-i18n="cloud_plan_pro_item6">10 AI agents</li>
+          <li><i data-lucide="check" style="width:14px;height:14px;"></i data-i18n="cloud_plan_pro_item7">10,000 AI messages/mo</li>
+          <li><i data-lucide="check" style="width:14px;height:14px;"></i data-i18n="cloud_plan_pro_item8">Dedicated IP</li>
+          <li><i data-lucide="check" style="width:14px;height:14px;"></i data-i18n="cloud_plan_pro_item9">Marketplace access</li>
         </ul>
-        <a href="contact.html" class="btn btn--outline" style="width:100%; text-align:center; display:block;">Get Pro</a>
+        <a href="contact.html" class="btn btn--outline" style="width:100%; text-align:center; display:block;" data-i18n="cloud_plan_pro_cta">Get Pro</a>
       </div>
 
       <div class="cloud-plan">
         <div class="cloud-plan-name">Agency</div>
-        <div class="cloud-plan-price"><sup>&#8364;</sup>24.99<sub>/mo</sub></div>
-        <div class="cloud-plan-note">Regular &#8364;49.99/mo</div>
+        <div class="cloud-plan-price"><sup>&#8364;</sup>24.99<sub data-i18n="cloud_price_per_month_suffix">/mo</sub></div>
+        <div class="cloud-plan-note" data-i18n="cloud_plan_agency_note">Regular &#8364;49.99/mo</div>
         <ul class="cloud-plan-list">
-          <li><i data-lucide="check" style="width:14px;height:14px;"></i>100 managed clients</li>
-          <li><i data-lucide="check" style="width:14px;height:14px;"></i>Multi-org panel</li>
-          <li><i data-lucide="check" style="width:14px;height:14px;"></i>250 websites</li>
-          <li><i data-lucide="check" style="width:14px;height:14px;"></i>1 TB Cloud Drive</li>
-          <li><i data-lucide="check" style="width:14px;height:14px;"></i>White-label panel</li>
-          <li><i data-lucide="check" style="width:14px;height:14px;"></i>Client billing mgmt</li>
-          <li><i data-lucide="check" style="width:14px;height:14px;"></i>25 AI agents</li>
-          <li><i data-lucide="check" style="width:14px;height:14px;"></i>Project cloning</li>
-          <li><i data-lucide="check" style="width:14px;height:14px;"></i>Agency support</li>
+          <li><i data-lucide="check" style="width:14px;height:14px;"></i data-i18n="cloud_plan_agency_item1">100 managed clients</li>
+          <li><i data-lucide="check" style="width:14px;height:14px;"></i data-i18n="cloud_plan_agency_item2">Multi-org panel</li>
+          <li><i data-lucide="check" style="width:14px;height:14px;"></i data-i18n="cloud_plan_agency_item3">250 websites</li>
+          <li><i data-lucide="check" style="width:14px;height:14px;"></i data-i18n="cloud_plan_agency_item4">1 TB Cloud Drive</li>
+          <li><i data-lucide="check" style="width:14px;height:14px;"></i data-i18n="cloud_plan_agency_item5">White-label panel</li>
+          <li><i data-lucide="check" style="width:14px;height:14px;"></i data-i18n="cloud_plan_agency_item6">Client billing mgmt</li>
+          <li><i data-lucide="check" style="width:14px;height:14px;"></i data-i18n="cloud_plan_agency_item7">25 AI agents</li>
+          <li><i data-lucide="check" style="width:14px;height:14px;"></i data-i18n="cloud_plan_agency_item8">Project cloning</li>
+          <li><i data-lucide="check" style="width:14px;height:14px;"></i data-i18n="cloud_plan_agency_item9">Agency support</li>
         </ul>
-        <a href="contact.html" class="btn btn--outline" style="width:100%; text-align:center; display:block;">Get Agency</a>
+        <a href="contact.html" class="btn btn--outline" style="width:100%; text-align:center; display:block;" data-i18n="cloud_plan_agency_cta">Get Agency</a>
       </div>
 
     </div>
 
     <div class="reveal" style="margin-top:1.25rem; background:var(--navy-2, #020D24); border:1px solid rgba(255,255,255,.08); border-radius:var(--radius-xl); padding:1.75rem 2rem; display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:1.5rem;">
       <div>
-        <div style="font-weight:800; color:#fff; font-size:1.05rem; margin-bottom:.3rem;">Enterprise &mdash; from &#8364;99/mo</div>
-        <p style="font-size:.85rem; color:rgba(255,255,255,.45); max-width:580px;">Dedicated infrastructure &middot; custom SLA &middot; SSO &middot; data region &middot; disaster recovery &middot; 24/7 support &middot; custom agent configs &middot; VPS clusters &middot; migration support</p>
+        <div style="font-weight:800; color:#fff; font-size:1.05rem; margin-bottom:.3rem;" data-i18n="cloud_enterprise_title">Enterprise &mdash; from &#8364;99/mo</div>
+        <p style="font-size:.85rem; color:rgba(255,255,255,.45); max-width:580px;" data-i18n="cloud_enterprise_desc">Dedicated infrastructure &middot; custom SLA &middot; SSO &middot; data region &middot; disaster recovery &middot; 24/7 support &middot; custom agent configs &middot; VPS clusters &middot; migration support</p>
       </div>
-      <a href="contact.html" class="btn btn--primary">Talk to Sales</a>
+      <a href="contact.html" class="btn btn--primary" data-i18n="cloud_enterprise_cta">Talk to Sales</a>
     </div>
 
-    <p style="text-align:center; font-size:.75rem; color:var(--gray-400); margin-top:1rem;">Promotional prices require annual commitment. Renewal at standard rate. All prices exclude VAT.</p>
+    <p style="text-align:center; font-size:.75rem; color:var(--gray-400); margin-top:1rem;" data-i18n="cloud_pricing_disclaimer">Promotional prices require annual commitment. Renewal at standard rate. All prices exclude VAT.</p>
   </div>
 </section>
 
 <!-- ═══════════════════════════════════ CTA ═══════════════════════════════════ -->
 <section class="section cta-section">
   <div class="container text-center reveal" style="position:relative; z-index:1;">
-    <span class="label label--light" style="justify-content:center;">Early Access</span>
-    <h2 class="section-title mt-2 white">Your entire stack.<br>One Blue Bridge panel.</h2>
-    <p class="section-desc mt-2" style="max-width:480px; margin:1rem auto 2rem;">Blue Bridge Cloud is in development. Join the early access list — Blue Bridge projects and clients are onboarded first.</p>
+    <span class="label label--light" style="justify-content:center;" data-i18n="cloud_cta_eyebrow">Early Access</span>
+    <h2 class="section-title mt-2 white" data-i18n-html="cloud_cta_title">Your entire stack.<br>One Blue Bridge panel.</h2>
+    <p class="section-desc mt-2" style="max-width:480px; margin:1rem auto 2rem;" data-i18n="cloud_cta_desc">Blue Bridge Cloud is in development. Join the early access list — Blue Bridge projects and clients are onboarded first.</p>
     <div style="display:flex; justify-content:center; gap:1rem; flex-wrap:wrap;">
-      <a href="contact.html" class="btn btn--primary btn--lg">Request Early Access</a>
-      <a href="pricing.html" class="btn btn--outline btn--lg">Full Platform Pricing</a>
+      <a href="contact.html" class="btn btn--primary btn--lg" data-i18n="cloud_cta_primary">Request Early Access</a>
+      <a href="pricing.html" class="btn btn--outline btn--lg" data-i18n="cloud_cta_secondary">Full Platform Pricing</a>
     </div>
   </div>
 </section>

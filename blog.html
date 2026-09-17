@@ -14,10 +14,10 @@
 
 <section class="page-hero">
   <div class="container page-hero-inner">
-    <nav class="breadcrumb"><a href="index.html">Home</a><span>/</span><span style="color:rgba(255,255,255,.7);">Blog</span></nav>
+    <nav class="breadcrumb"><a href="index.html" data-i18n="blog_breadcrumb_home">Home</a><span>/</span><span style="color:rgba(255,255,255,.7);" data-i18n="blog_breadcrumb_current">Blog</span></nav>
     <span class="label label--light" style="margin-top:1rem; display:inline-flex;" data-i18n="nav_blog">Blog</span>
-    <h1 class="page-title">Insights & Articles</h1>
-    <p class="section-desc" style="max-width:580px;">AI strategy, enterprise technology, and business insights from the Blue Bridge team.</p>
+    <h1 class="page-title" data-i18n="blog_hero_title">Insights & Articles</h1>
+    <p class="section-desc" style="max-width:580px;" data-i18n="blog_hero_desc">AI strategy, enterprise technology, and business insights from the Blue Bridge team.</p>
   </div>
 </section>
 
@@ -28,12 +28,12 @@
       <div style="position:absolute; right:-50px; top:-50px; width:400px; height:400px; border-radius:50%; background:rgba(0,82,255,.15); filter:blur(80px);"></div>
       <div style="position:relative; z-index:1; max-width:600px;">
         <div style="display:flex; gap:.75rem; align-items:center; margin-bottom:1.5rem;">
-          <span style="background:var(--blue); color:var(--white); font-size:.72rem; font-weight:700; padding:.3rem .75rem; border-radius:var(--radius-full); text-transform:uppercase; letter-spacing:.06em;">Featured</span>
-          <span style="font-size:.8rem; color:rgba(255,255,255,.4);">August 2026</span>
+          <span style="background:var(--blue); color:var(--white); font-size:.72rem; font-weight:700; padding:.3rem .75rem; border-radius:var(--radius-full); text-transform:uppercase; letter-spacing:.06em;" data-i18n="blog_featured_badge">Featured</span>
+          <span style="font-size:.8rem; color:rgba(255,255,255,.4);" data-i18n="blog_date_aug2026">August 2026</span>
         </div>
-        <h2 style="font-size:clamp(1.5rem,2.5vw,2rem); font-weight:800; color:var(--white); line-height:1.25; margin-bottom:1rem;">The EU AI Act Is Now in Force: What Enterprise Leaders Need to Know</h2>
-        <p style="font-size:.95rem; color:rgba(255,255,255,.65); line-height:1.75; margin-bottom:1.75rem;">The EU AI Act represents the most comprehensive AI regulation globally. Here's a practical breakdown for enterprise technology leaders and the compliance steps every organization should take now.</p>
-        <a href="contact.html" class="btn btn--primary">Read Article</a>
+        <h2 style="font-size:clamp(1.5rem,2.5vw,2rem); font-weight:800; color:var(--white); line-height:1.25; margin-bottom:1rem;" data-i18n="blog_featured_title">The EU AI Act Is Now in Force: What Enterprise Leaders Need to Know</h2>
+        <p style="font-size:.95rem; color:rgba(255,255,255,.65); line-height:1.75; margin-bottom:1.75rem;" data-i18n="blog_featured_excerpt">The EU AI Act represents the most comprehensive AI regulation globally. Here's a practical breakdown for enterprise technology leaders and the compliance steps every organization should take now.</p>
+        <a href="contact.html" class="btn btn--primary" data-i18n="blog_read_article">Read Article</a>
       </div>
     </div>
 
@@ -42,59 +42,84 @@
       <div class="post-card">
         <div class="post-thumb"><div class="post-thumb-placeholder"><i data-lucide="bot" style="width:32px;height:32px;"></i></div></div>
         <div class="post-body">
-          <div class="post-meta"><span class="post-cat">AI Strategy</span><span class="post-date">July 2026</span></div>
-          <div class="post-title">How to Build an AI Workforce That Actually Works: Lessons from 50 Enterprise Deployments</div>
-          <p class="post-excerpt">Deploying AI agents is easy. Making them productive, reliable, and business-aligned is the hard part. Here's what we've learned.</p>
+          <div class="post-meta"><span class="post-cat" data-i18n="blog_cat_ai_strategy">AI Strategy</span><span class="post-date" data-i18n="blog_date_jul2026">July 2026</span></div>
+          <div class="post-title" data-i18n="blog_post1_title">How to Build an AI Workforce That Actually Works: Lessons from 50 Enterprise Deployments</div>
+          <p class="post-excerpt" data-i18n="blog_post1_excerpt">Deploying AI agents is easy. Making them productive, reliable, and business-aligned is the hard part. Here's what we've learned.</p>
         </div>
       </div>
       <div class="post-card">
         <div class="post-thumb"><div class="post-thumb-placeholder"><i data-lucide="mic" style="width:32px;height:32px;"></i></div></div>
         <div class="post-body">
-          <div class="post-meta"><span class="post-cat">Voice AI</span><span class="post-date">July 2026</span></div>
-          <div class="post-title">Voice AI in Healthcare: Automating Patient Intake Without Losing the Human Touch</div>
-          <p class="post-excerpt">Clinics across LATAM are using Voice AI to handle appointment scheduling, insurance verification, and patient triage calls 24/7.</p>
+          <div class="post-meta"><span class="post-cat" data-i18n="blog_cat_voice_ai">Voice AI</span><span class="post-date" data-i18n="blog_date_jul2026">July 2026</span></div>
+          <div class="post-title" data-i18n="blog_post2_title">Voice AI in Healthcare: Automating Patient Intake Without Losing the Human Touch</div>
+          <p class="post-excerpt" data-i18n="blog_post2_excerpt">Clinics across LATAM are using Voice AI to handle appointment scheduling, insurance verification, and patient triage calls 24/7.</p>
         </div>
       </div>
       <div class="post-card">
         <div class="post-thumb"><div class="post-thumb-placeholder"><i data-lucide="cloud" style="width:32px;height:32px;"></i></div></div>
         <div class="post-body">
-          <div class="post-meta"><span class="post-cat">Cloud</span><span class="post-date">June 2026</span></div>
-          <div class="post-title">Why LATAM Enterprises Are Choosing AWS: A Total Cost of Ownership Analysis</div>
-          <p class="post-excerpt">Cloud adoption in LATAM is accelerating. We break down the real costs and benefits for regional enterprises moving from on-premise to AWS.</p>
+          <div class="post-meta"><span class="post-cat" data-i18n="blog_cat_cloud">Cloud</span><span class="post-date" data-i18n="blog_date_jun2026">June 2026</span></div>
+          <div class="post-title" data-i18n="blog_post3_title">Why LATAM Enterprises Are Choosing AWS: A Total Cost of Ownership Analysis</div>
+          <p class="post-excerpt" data-i18n="blog_post3_excerpt">Cloud adoption in LATAM is accelerating. We break down the real costs and benefits for regional enterprises moving from on-premise to AWS.</p>
         </div>
       </div>
       <div class="post-card">
         <div class="post-thumb"><div class="post-thumb-placeholder">💬</div></div>
         <div class="post-body">
-          <div class="post-meta"><span class="post-cat">Customer Experience</span><span class="post-date">June 2026</span></div>
-          <div class="post-title">WhatsApp Business AI: How Retail Brands Are Closing Sales in Chat</div>
-          <p class="post-excerpt">WhatsApp is the primary communication channel for 90%+ of LATAM consumers. AI agents that speak fluent customer are changing retail.</p>
+          <div class="post-meta"><span class="post-cat" data-i18n="blog_cat_customer_experience">Customer Experience</span><span class="post-date" data-i18n="blog_date_jun2026">June 2026</span></div>
+          <div class="post-title" data-i18n="blog_post4_title">WhatsApp Business AI: How Retail Brands Are Closing Sales in Chat</div>
+          <p class="post-excerpt" data-i18n="blog_post4_excerpt">WhatsApp is the primary communication channel for 90%+ of LATAM consumers. AI agents that speak fluent customer are changing retail.</p>
         </div>
       </div>
       <div class="post-card">
         <div class="post-thumb"><div class="post-thumb-placeholder"><i data-lucide="lock" style="width:32px;height:32px;"></i></div></div>
         <div class="post-body">
-          <div class="post-meta"><span class="post-cat">Security</span><span class="post-date">May 2026</span></div>
-          <div class="post-title">GDPR for Costa Rican Companies Serving EU Clients: A Practical Compliance Guide</div>
-          <p class="post-excerpt">If your Costa Rican or Colombian business has European customers, GDPR applies to you. Here's what you need to know and do.</p>
+          <div class="post-meta"><span class="post-cat" data-i18n="blog_cat_security">Security</span><span class="post-date" data-i18n="blog_date_may2026">May 2026</span></div>
+          <div class="post-title" data-i18n="blog_post5_title">GDPR for Costa Rican Companies Serving EU Clients: A Practical Compliance Guide</div>
+          <p class="post-excerpt" data-i18n="blog_post5_excerpt">If your Costa Rican or Colombian business has European customers, GDPR applies to you. Here's what you need to know and do.</p>
         </div>
       </div>
       <div class="post-card">
         <div class="post-thumb"><div class="post-thumb-placeholder"><i data-lucide="trending-up" style="width:32px;height:32px;"></i></div></div>
         <div class="post-body">
-          <div class="post-meta"><span class="post-cat">Business</span><span class="post-date">May 2026</span></div>
-          <div class="post-title">Measuring ROI on AI: The Metrics That Enterprise CFOs Actually Care About</div>
-          <p class="post-excerpt">Cost savings and efficiency gains are important, but the most compelling AI ROI arguments address revenue generation and competitive advantage.</p>
+          <div class="post-meta"><span class="post-cat" data-i18n="blog_cat_business">Business</span><span class="post-date" data-i18n="blog_date_may2026">May 2026</span></div>
+          <div class="post-title" data-i18n="blog_post6_title">Measuring ROI on AI: The Metrics That Enterprise CFOs Actually Care About</div>
+          <p class="post-excerpt" data-i18n="blog_post6_excerpt">Cost savings and efficiency gains are important, but the most compelling AI ROI arguments address revenue generation and competitive advantage.</p>
         </div>
       </div>
     </div>
 
     <div style="text-align:center; margin-top:3rem;" class="reveal">
-      <p style="font-size:.9rem; color:var(--gray-400); margin-bottom:1.25rem;">Subscribe to receive new articles directly in your inbox.</p>
-      <form style="display:flex; gap:.75rem; max-width:420px; margin:0 auto;" onsubmit="event.preventDefault(); this.innerHTML='<div style=\'color:var(--blue);font-weight:600;\'>✓ Subscribed!</div>'">
-        <input type="email" class="form-input" placeholder="your@company.com" required style="flex:1;">
-        <button class="btn btn--primary" type="submit">Subscribe</button>
+      <p style="font-size:.9rem; color:var(--gray-400); margin-bottom:1.25rem;" data-i18n="blog_newsletter_desc">Subscribe to receive new articles directly in your inbox.</p>
+      <form id="newsletter-form" style="display:flex; gap:.75rem; max-width:420px; margin:0 auto;" onsubmit="submitNewsletter(event)">
+        <input type="email" id="nl-email" class="form-input" placeholder="your@company.com" required style="flex:1;">
+        <input type="text" id="nl-website" name="website" autocomplete="off" tabindex="-1" style="position:absolute; left:-9999px; width:1px; height:1px; opacity:0;" aria-hidden="true">
+        <button class="btn btn--primary" type="submit" id="nl-submit-btn" data-i18n="blog_newsletter_submit">Subscribe</button>
       </form>
+      <script>
+      function submitNewsletter(e) {
+        e.preventDefault();
+        const btn = document.getElementById('nl-submit-btn');
+        const form = document.getElementById('newsletter-form');
+        btn.disabled = true;
+        fetch('https://bbos.bluebridge.es/api/v1/public/leads/newsletter', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            email: document.getElementById('nl-email').value,
+            website: document.getElementById('nl-website').value,
+          }),
+        })
+          .then(res => {
+            if (!res.ok) throw new Error('request failed');
+            form.innerHTML = '<div style="color:var(--blue);font-weight:600;">&#10003; Subscribed!</div>';
+          })
+          .catch(() => {
+            btn.disabled = false;
+            btn.textContent = 'Try again';
+          });
+      }
+      </script>
     </div>
   </div>
 </section>

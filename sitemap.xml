@@ -4,193 +4,817 @@
 
   <!-- Root -->
   <url>
-    <loc>https://www.bluebridge.es/</loc>
-    <lastmod>2026-08-05</lastmod>
+    <loc>https://www.bluebridgeglobal.be/</loc>
+    <lastmod>2026-08-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.bluebridge.es/"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://www.bluebridgeglobal.be/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://www.bluebridge.es/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.bluebridge.es/"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://www.bluebridge.es/"/>
-    <xhtml:link rel="alternate" hreflang="nl" href="https://www.bluebridge.es/"/>
     <xhtml:link rel="alternate" hreflang="pt" href="https://www.bluebridge.es/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://www.bluebridge.es/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.bluebridge.es/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.bluebridgeglobal.be/"/>
+  </url>
+  <url>
+    <loc>https://www.bluebridge.es/</loc>
+    <lastmod>2026-08-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://www.bluebridgeglobal.be/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.bluebridge.es/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.bluebridge.es/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.bluebridge.es/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.bluebridge.es/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.bluebridge.es/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.bluebridgeglobal.be/"/>
   </url>
 
   <!-- Cloud Platform -->
   <url>
-    <loc>https://www.bluebridge.es/cloud.html</loc>
-    <lastmod>2026-08-05</lastmod>
+    <loc>https://www.bluebridgeglobal.be/cloud.html</loc>
+    <lastmod>2026-08-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://www.bluebridgeglobal.be/cloud.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.bluebridge.es/cloud.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.bluebridge.es/cloud.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.bluebridge.es/cloud.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.bluebridge.es/cloud.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.bluebridge.es/cloud.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.bluebridgeglobal.be/cloud.html"/>
+  </url>
+  <url>
+    <loc>https://www.bluebridge.es/cloud.html</loc>
+    <lastmod>2026-08-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://www.bluebridgeglobal.be/cloud.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.bluebridge.es/cloud.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.bluebridge.es/cloud.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.bluebridge.es/cloud.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.bluebridge.es/cloud.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.bluebridge.es/cloud.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.bluebridgeglobal.be/cloud.html"/>
   </url>
 
   <!-- Main Pages -->
   <url>
-    <loc>https://www.bluebridge.es/solutions.html</loc>
-    <lastmod>2026-08-05</lastmod>
+    <loc>https://www.bluebridgeglobal.be/solutions.html</loc>
+    <lastmod>2026-08-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://www.bluebridgeglobal.be/solutions.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.bluebridge.es/solutions.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.bluebridge.es/solutions.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.bluebridge.es/solutions.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.bluebridge.es/solutions.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.bluebridge.es/solutions.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.bluebridgeglobal.be/solutions.html"/>
+  </url>
+  <url>
+    <loc>https://www.bluebridge.es/solutions.html</loc>
+    <lastmod>2026-08-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://www.bluebridgeglobal.be/solutions.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.bluebridge.es/solutions.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.bluebridge.es/solutions.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.bluebridge.es/solutions.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.bluebridge.es/solutions.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.bluebridge.es/solutions.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.bluebridgeglobal.be/solutions.html"/>
+  </url>
+
+  <url>
+    <loc>https://www.bluebridgeglobal.be/pricing.html</loc>
+    <lastmod>2026-08-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://www.bluebridgeglobal.be/pricing.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.bluebridge.es/pricing.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.bluebridge.es/pricing.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.bluebridge.es/pricing.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.bluebridge.es/pricing.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.bluebridge.es/pricing.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.bluebridgeglobal.be/pricing.html"/>
   </url>
   <url>
     <loc>https://www.bluebridge.es/pricing.html</loc>
-    <lastmod>2026-08-05</lastmod>
+    <lastmod>2026-08-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://www.bluebridgeglobal.be/pricing.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.bluebridge.es/pricing.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.bluebridge.es/pricing.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.bluebridge.es/pricing.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.bluebridge.es/pricing.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.bluebridge.es/pricing.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.bluebridgeglobal.be/pricing.html"/>
+  </url>
+
+  <url>
+    <loc>https://www.bluebridgeglobal.be/case-studies.html</loc>
+    <lastmod>2026-08-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://www.bluebridgeglobal.be/case-studies.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.bluebridge.es/case-studies.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.bluebridge.es/case-studies.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.bluebridge.es/case-studies.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.bluebridge.es/case-studies.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.bluebridge.es/case-studies.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.bluebridgeglobal.be/case-studies.html"/>
   </url>
   <url>
     <loc>https://www.bluebridge.es/case-studies.html</loc>
-    <lastmod>2026-08-05</lastmod>
+    <lastmod>2026-08-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://www.bluebridgeglobal.be/case-studies.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.bluebridge.es/case-studies.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.bluebridge.es/case-studies.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.bluebridge.es/case-studies.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.bluebridge.es/case-studies.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.bluebridge.es/case-studies.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.bluebridgeglobal.be/case-studies.html"/>
+  </url>
+
+  <url>
+    <loc>https://www.bluebridgeglobal.be/about.html</loc>
+    <lastmod>2026-08-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://www.bluebridgeglobal.be/about.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.bluebridge.es/about.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.bluebridge.es/about.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.bluebridge.es/about.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.bluebridge.es/about.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.bluebridge.es/about.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.bluebridgeglobal.be/about.html"/>
   </url>
   <url>
     <loc>https://www.bluebridge.es/about.html</loc>
-    <lastmod>2026-08-05</lastmod>
+    <lastmod>2026-08-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://www.bluebridgeglobal.be/about.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.bluebridge.es/about.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.bluebridge.es/about.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.bluebridge.es/about.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.bluebridge.es/about.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.bluebridge.es/about.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.bluebridgeglobal.be/about.html"/>
+  </url>
+
+  <url>
+    <loc>https://www.bluebridgeglobal.be/contact.html</loc>
+    <lastmod>2026-08-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://www.bluebridgeglobal.be/contact.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.bluebridge.es/contact.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.bluebridge.es/contact.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.bluebridge.es/contact.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.bluebridge.es/contact.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.bluebridge.es/contact.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.bluebridgeglobal.be/contact.html"/>
   </url>
   <url>
     <loc>https://www.bluebridge.es/contact.html</loc>
-    <lastmod>2026-08-05</lastmod>
+    <lastmod>2026-08-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://www.bluebridgeglobal.be/contact.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.bluebridge.es/contact.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.bluebridge.es/contact.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.bluebridge.es/contact.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.bluebridge.es/contact.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.bluebridge.es/contact.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.bluebridgeglobal.be/contact.html"/>
+  </url>
+
+  <url>
+    <loc>https://www.bluebridgeglobal.be/offices.html</loc>
+    <lastmod>2026-08-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://www.bluebridgeglobal.be/offices.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.bluebridge.es/offices.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.bluebridge.es/offices.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.bluebridge.es/offices.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.bluebridge.es/offices.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.bluebridge.es/offices.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.bluebridgeglobal.be/offices.html"/>
   </url>
   <url>
     <loc>https://www.bluebridge.es/offices.html</loc>
-    <lastmod>2026-08-05</lastmod>
+    <lastmod>2026-08-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://www.bluebridgeglobal.be/offices.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.bluebridge.es/offices.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.bluebridge.es/offices.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.bluebridge.es/offices.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.bluebridge.es/offices.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.bluebridge.es/offices.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.bluebridgeglobal.be/offices.html"/>
+  </url>
+
+  <url>
+    <loc>https://www.bluebridgeglobal.be/partners.html</loc>
+    <lastmod>2026-08-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://www.bluebridgeglobal.be/partners.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.bluebridge.es/partners.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.bluebridge.es/partners.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.bluebridge.es/partners.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.bluebridge.es/partners.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.bluebridge.es/partners.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.bluebridgeglobal.be/partners.html"/>
   </url>
   <url>
     <loc>https://www.bluebridge.es/partners.html</loc>
-    <lastmod>2026-08-05</lastmod>
+    <lastmod>2026-08-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://www.bluebridgeglobal.be/partners.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.bluebridge.es/partners.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.bluebridge.es/partners.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.bluebridge.es/partners.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.bluebridge.es/partners.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.bluebridge.es/partners.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.bluebridgeglobal.be/partners.html"/>
+  </url>
+
+  <url>
+    <loc>https://www.bluebridgeglobal.be/become-a-partner.html</loc>
+    <lastmod>2026-08-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://www.bluebridgeglobal.be/become-a-partner.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.bluebridge.es/become-a-partner.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.bluebridge.es/become-a-partner.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.bluebridge.es/become-a-partner.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.bluebridge.es/become-a-partner.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.bluebridge.es/become-a-partner.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.bluebridgeglobal.be/become-a-partner.html"/>
+  </url>
+  <url>
+    <loc>https://www.bluebridge.es/become-a-partner.html</loc>
+    <lastmod>2026-08-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://www.bluebridgeglobal.be/become-a-partner.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.bluebridge.es/become-a-partner.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.bluebridge.es/become-a-partner.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.bluebridge.es/become-a-partner.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.bluebridge.es/become-a-partner.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.bluebridge.es/become-a-partner.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.bluebridgeglobal.be/become-a-partner.html"/>
+  </url>
+
+  <url>
+    <loc>https://www.bluebridgeglobal.be/leadership.html</loc>
+    <lastmod>2026-08-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://www.bluebridgeglobal.be/leadership.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.bluebridge.es/leadership.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.bluebridge.es/leadership.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.bluebridge.es/leadership.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.bluebridge.es/leadership.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.bluebridge.es/leadership.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.bluebridgeglobal.be/leadership.html"/>
   </url>
   <url>
     <loc>https://www.bluebridge.es/leadership.html</loc>
-    <lastmod>2026-08-05</lastmod>
+    <lastmod>2026-08-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://www.bluebridgeglobal.be/leadership.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.bluebridge.es/leadership.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.bluebridge.es/leadership.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.bluebridge.es/leadership.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.bluebridge.es/leadership.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.bluebridge.es/leadership.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.bluebridgeglobal.be/leadership.html"/>
+  </url>
+
+  <url>
+    <loc>https://www.bluebridgeglobal.be/careers.html</loc>
+    <lastmod>2026-08-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://www.bluebridgeglobal.be/careers.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.bluebridge.es/careers.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.bluebridge.es/careers.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.bluebridge.es/careers.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.bluebridge.es/careers.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.bluebridge.es/careers.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.bluebridgeglobal.be/careers.html"/>
   </url>
   <url>
     <loc>https://www.bluebridge.es/careers.html</loc>
-    <lastmod>2026-08-05</lastmod>
+    <lastmod>2026-08-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://www.bluebridgeglobal.be/careers.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.bluebridge.es/careers.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.bluebridge.es/careers.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.bluebridge.es/careers.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.bluebridge.es/careers.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.bluebridge.es/careers.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.bluebridgeglobal.be/careers.html"/>
+  </url>
+
+  <url>
+    <loc>https://www.bluebridgeglobal.be/blog.html</loc>
+    <lastmod>2026-08-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://www.bluebridgeglobal.be/blog.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.bluebridge.es/blog.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.bluebridge.es/blog.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.bluebridge.es/blog.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.bluebridge.es/blog.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.bluebridge.es/blog.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.bluebridgeglobal.be/blog.html"/>
   </url>
   <url>
     <loc>https://www.bluebridge.es/blog.html</loc>
-    <lastmod>2026-08-05</lastmod>
+    <lastmod>2026-08-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://www.bluebridgeglobal.be/blog.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.bluebridge.es/blog.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.bluebridge.es/blog.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.bluebridge.es/blog.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.bluebridge.es/blog.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.bluebridge.es/blog.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.bluebridgeglobal.be/blog.html"/>
   </url>
 
   <!-- Solution Sub-Pages -->
   <url>
-    <loc>https://www.bluebridge.es/solutions/ai-workforce.html</loc>
-    <lastmod>2026-08-05</lastmod>
+    <loc>https://www.bluebridgeglobal.be/solutions/ai-workforce.html</loc>
+    <lastmod>2026-08-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://www.bluebridgeglobal.be/solutions/ai-workforce.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.bluebridge.es/solutions/ai-workforce.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.bluebridge.es/solutions/ai-workforce.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.bluebridge.es/solutions/ai-workforce.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.bluebridge.es/solutions/ai-workforce.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.bluebridge.es/solutions/ai-workforce.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.bluebridgeglobal.be/solutions/ai-workforce.html"/>
+  </url>
+  <url>
+    <loc>https://www.bluebridge.es/solutions/ai-workforce.html</loc>
+    <lastmod>2026-08-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://www.bluebridgeglobal.be/solutions/ai-workforce.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.bluebridge.es/solutions/ai-workforce.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.bluebridge.es/solutions/ai-workforce.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.bluebridge.es/solutions/ai-workforce.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.bluebridge.es/solutions/ai-workforce.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.bluebridge.es/solutions/ai-workforce.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.bluebridgeglobal.be/solutions/ai-workforce.html"/>
+  </url>
+
+  <url>
+    <loc>https://www.bluebridgeglobal.be/solutions/ai-agents.html</loc>
+    <lastmod>2026-08-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://www.bluebridgeglobal.be/solutions/ai-agents.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.bluebridge.es/solutions/ai-agents.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.bluebridge.es/solutions/ai-agents.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.bluebridge.es/solutions/ai-agents.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.bluebridge.es/solutions/ai-agents.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.bluebridge.es/solutions/ai-agents.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.bluebridgeglobal.be/solutions/ai-agents.html"/>
   </url>
   <url>
     <loc>https://www.bluebridge.es/solutions/ai-agents.html</loc>
-    <lastmod>2026-08-05</lastmod>
+    <lastmod>2026-08-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://www.bluebridgeglobal.be/solutions/ai-agents.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.bluebridge.es/solutions/ai-agents.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.bluebridge.es/solutions/ai-agents.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.bluebridge.es/solutions/ai-agents.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.bluebridge.es/solutions/ai-agents.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.bluebridge.es/solutions/ai-agents.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.bluebridgeglobal.be/solutions/ai-agents.html"/>
+  </url>
+
+  <url>
+    <loc>https://www.bluebridgeglobal.be/solutions/customer-support.html</loc>
+    <lastmod>2026-08-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://www.bluebridgeglobal.be/solutions/customer-support.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.bluebridge.es/solutions/customer-support.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.bluebridge.es/solutions/customer-support.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.bluebridge.es/solutions/customer-support.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.bluebridge.es/solutions/customer-support.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.bluebridge.es/solutions/customer-support.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.bluebridgeglobal.be/solutions/customer-support.html"/>
   </url>
   <url>
     <loc>https://www.bluebridge.es/solutions/customer-support.html</loc>
-    <lastmod>2026-08-05</lastmod>
+    <lastmod>2026-08-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://www.bluebridgeglobal.be/solutions/customer-support.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.bluebridge.es/solutions/customer-support.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.bluebridge.es/solutions/customer-support.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.bluebridge.es/solutions/customer-support.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.bluebridge.es/solutions/customer-support.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.bluebridge.es/solutions/customer-support.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.bluebridgeglobal.be/solutions/customer-support.html"/>
+  </url>
+
+  <url>
+    <loc>https://www.bluebridgeglobal.be/solutions/voice-ai.html</loc>
+    <lastmod>2026-08-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://www.bluebridgeglobal.be/solutions/voice-ai.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.bluebridge.es/solutions/voice-ai.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.bluebridge.es/solutions/voice-ai.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.bluebridge.es/solutions/voice-ai.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.bluebridge.es/solutions/voice-ai.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.bluebridge.es/solutions/voice-ai.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.bluebridgeglobal.be/solutions/voice-ai.html"/>
   </url>
   <url>
     <loc>https://www.bluebridge.es/solutions/voice-ai.html</loc>
-    <lastmod>2026-08-05</lastmod>
+    <lastmod>2026-08-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://www.bluebridgeglobal.be/solutions/voice-ai.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.bluebridge.es/solutions/voice-ai.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.bluebridge.es/solutions/voice-ai.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.bluebridge.es/solutions/voice-ai.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.bluebridge.es/solutions/voice-ai.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.bluebridge.es/solutions/voice-ai.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.bluebridgeglobal.be/solutions/voice-ai.html"/>
+  </url>
+
+  <url>
+    <loc>https://www.bluebridgeglobal.be/solutions/booking-ai.html</loc>
+    <lastmod>2026-08-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://www.bluebridgeglobal.be/solutions/booking-ai.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.bluebridge.es/solutions/booking-ai.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.bluebridge.es/solutions/booking-ai.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.bluebridge.es/solutions/booking-ai.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.bluebridge.es/solutions/booking-ai.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.bluebridge.es/solutions/booking-ai.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.bluebridgeglobal.be/solutions/booking-ai.html"/>
   </url>
   <url>
     <loc>https://www.bluebridge.es/solutions/booking-ai.html</loc>
-    <lastmod>2026-08-05</lastmod>
+    <lastmod>2026-08-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://www.bluebridgeglobal.be/solutions/booking-ai.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.bluebridge.es/solutions/booking-ai.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.bluebridge.es/solutions/booking-ai.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.bluebridge.es/solutions/booking-ai.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.bluebridge.es/solutions/booking-ai.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.bluebridge.es/solutions/booking-ai.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.bluebridgeglobal.be/solutions/booking-ai.html"/>
+  </url>
+
+  <url>
+    <loc>https://www.bluebridgeglobal.be/solutions/crm.html</loc>
+    <lastmod>2026-08-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://www.bluebridgeglobal.be/solutions/crm.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.bluebridge.es/solutions/crm.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.bluebridge.es/solutions/crm.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.bluebridge.es/solutions/crm.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.bluebridge.es/solutions/crm.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.bluebridge.es/solutions/crm.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.bluebridgeglobal.be/solutions/crm.html"/>
   </url>
   <url>
     <loc>https://www.bluebridge.es/solutions/crm.html</loc>
-    <lastmod>2026-08-05</lastmod>
+    <lastmod>2026-08-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://www.bluebridgeglobal.be/solutions/crm.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.bluebridge.es/solutions/crm.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.bluebridge.es/solutions/crm.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.bluebridge.es/solutions/crm.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.bluebridge.es/solutions/crm.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.bluebridge.es/solutions/crm.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.bluebridgeglobal.be/solutions/crm.html"/>
+  </url>
+
+  <url>
+    <loc>https://www.bluebridgeglobal.be/solutions/automation.html</loc>
+    <lastmod>2026-08-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://www.bluebridgeglobal.be/solutions/automation.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.bluebridge.es/solutions/automation.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.bluebridge.es/solutions/automation.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.bluebridge.es/solutions/automation.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.bluebridge.es/solutions/automation.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.bluebridge.es/solutions/automation.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.bluebridgeglobal.be/solutions/automation.html"/>
   </url>
   <url>
     <loc>https://www.bluebridge.es/solutions/automation.html</loc>
-    <lastmod>2026-08-05</lastmod>
+    <lastmod>2026-08-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://www.bluebridgeglobal.be/solutions/automation.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.bluebridge.es/solutions/automation.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.bluebridge.es/solutions/automation.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.bluebridge.es/solutions/automation.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.bluebridge.es/solutions/automation.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.bluebridge.es/solutions/automation.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.bluebridgeglobal.be/solutions/automation.html"/>
+  </url>
+
+  <url>
+    <loc>https://www.bluebridgeglobal.be/solutions/software-development.html</loc>
+    <lastmod>2026-08-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://www.bluebridgeglobal.be/solutions/software-development.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.bluebridge.es/solutions/software-development.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.bluebridge.es/solutions/software-development.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.bluebridge.es/solutions/software-development.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.bluebridge.es/solutions/software-development.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.bluebridge.es/solutions/software-development.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.bluebridgeglobal.be/solutions/software-development.html"/>
   </url>
   <url>
     <loc>https://www.bluebridge.es/solutions/software-development.html</loc>
-    <lastmod>2026-08-05</lastmod>
+    <lastmod>2026-08-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://www.bluebridgeglobal.be/solutions/software-development.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.bluebridge.es/solutions/software-development.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.bluebridge.es/solutions/software-development.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.bluebridge.es/solutions/software-development.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.bluebridge.es/solutions/software-development.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.bluebridge.es/solutions/software-development.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.bluebridgeglobal.be/solutions/software-development.html"/>
+  </url>
+
+  <url>
+    <loc>https://www.bluebridgeglobal.be/solutions/web-development.html</loc>
+    <lastmod>2026-08-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://www.bluebridgeglobal.be/solutions/web-development.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.bluebridge.es/solutions/web-development.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.bluebridge.es/solutions/web-development.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.bluebridge.es/solutions/web-development.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.bluebridge.es/solutions/web-development.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.bluebridge.es/solutions/web-development.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.bluebridgeglobal.be/solutions/web-development.html"/>
   </url>
   <url>
     <loc>https://www.bluebridge.es/solutions/web-development.html</loc>
-    <lastmod>2026-08-05</lastmod>
+    <lastmod>2026-08-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://www.bluebridgeglobal.be/solutions/web-development.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.bluebridge.es/solutions/web-development.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.bluebridge.es/solutions/web-development.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.bluebridge.es/solutions/web-development.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.bluebridge.es/solutions/web-development.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.bluebridge.es/solutions/web-development.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.bluebridgeglobal.be/solutions/web-development.html"/>
+  </url>
+
+  <url>
+    <loc>https://www.bluebridgeglobal.be/solutions/cloud-solutions.html</loc>
+    <lastmod>2026-08-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://www.bluebridgeglobal.be/solutions/cloud-solutions.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.bluebridge.es/solutions/cloud-solutions.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.bluebridge.es/solutions/cloud-solutions.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.bluebridge.es/solutions/cloud-solutions.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.bluebridge.es/solutions/cloud-solutions.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.bluebridge.es/solutions/cloud-solutions.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.bluebridgeglobal.be/solutions/cloud-solutions.html"/>
   </url>
   <url>
     <loc>https://www.bluebridge.es/solutions/cloud-solutions.html</loc>
-    <lastmod>2026-08-05</lastmod>
+    <lastmod>2026-08-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://www.bluebridgeglobal.be/solutions/cloud-solutions.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.bluebridge.es/solutions/cloud-solutions.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.bluebridge.es/solutions/cloud-solutions.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.bluebridge.es/solutions/cloud-solutions.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.bluebridge.es/solutions/cloud-solutions.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.bluebridge.es/solutions/cloud-solutions.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.bluebridgeglobal.be/solutions/cloud-solutions.html"/>
   </url>
 
   <!-- Legal Pages -->
   <url>
-    <loc>https://www.bluebridge.es/legal/index.html</loc>
-    <lastmod>2026-08-05</lastmod>
+    <loc>https://www.bluebridgeglobal.be/legal/index.html</loc>
+    <lastmod>2026-08-13</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://www.bluebridgeglobal.be/legal/index.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.bluebridge.es/legal/index.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.bluebridge.es/legal/index.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.bluebridge.es/legal/index.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.bluebridge.es/legal/index.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.bluebridge.es/legal/index.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.bluebridgeglobal.be/legal/index.html"/>
+  </url>
+  <url>
+    <loc>https://www.bluebridge.es/legal/index.html</loc>
+    <lastmod>2026-08-13</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://www.bluebridgeglobal.be/legal/index.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.bluebridge.es/legal/index.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.bluebridge.es/legal/index.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.bluebridge.es/legal/index.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.bluebridge.es/legal/index.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.bluebridge.es/legal/index.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.bluebridgeglobal.be/legal/index.html"/>
+  </url>
+
+  <url>
+    <loc>https://www.bluebridgeglobal.be/legal/privacy-policy.html</loc>
+    <lastmod>2026-08-13</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://www.bluebridgeglobal.be/legal/privacy-policy.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.bluebridge.es/legal/privacy-policy.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.bluebridge.es/legal/privacy-policy.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.bluebridge.es/legal/privacy-policy.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.bluebridge.es/legal/privacy-policy.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.bluebridge.es/legal/privacy-policy.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.bluebridgeglobal.be/legal/privacy-policy.html"/>
   </url>
   <url>
     <loc>https://www.bluebridge.es/legal/privacy-policy.html</loc>
-    <lastmod>2026-08-05</lastmod>
+    <lastmod>2026-08-13</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://www.bluebridgeglobal.be/legal/privacy-policy.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.bluebridge.es/legal/privacy-policy.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.bluebridge.es/legal/privacy-policy.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.bluebridge.es/legal/privacy-policy.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.bluebridge.es/legal/privacy-policy.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.bluebridge.es/legal/privacy-policy.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.bluebridgeglobal.be/legal/privacy-policy.html"/>
+  </url>
+
+  <url>
+    <loc>https://www.bluebridgeglobal.be/legal/terms.html</loc>
+    <lastmod>2026-08-13</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://www.bluebridgeglobal.be/legal/terms.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.bluebridge.es/legal/terms.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.bluebridge.es/legal/terms.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.bluebridge.es/legal/terms.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.bluebridge.es/legal/terms.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.bluebridge.es/legal/terms.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.bluebridgeglobal.be/legal/terms.html"/>
   </url>
   <url>
     <loc>https://www.bluebridge.es/legal/terms.html</loc>
-    <lastmod>2026-08-05</lastmod>
+    <lastmod>2026-08-13</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://www.bluebridgeglobal.be/legal/terms.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.bluebridge.es/legal/terms.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.bluebridge.es/legal/terms.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.bluebridge.es/legal/terms.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.bluebridge.es/legal/terms.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.bluebridge.es/legal/terms.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.bluebridgeglobal.be/legal/terms.html"/>
+  </url>
+
+  <url>
+    <loc>https://www.bluebridgeglobal.be/legal/cookies.html</loc>
+    <lastmod>2026-08-13</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.4</priority>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://www.bluebridgeglobal.be/legal/cookies.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.bluebridge.es/legal/cookies.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.bluebridge.es/legal/cookies.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.bluebridge.es/legal/cookies.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.bluebridge.es/legal/cookies.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.bluebridge.es/legal/cookies.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.bluebridgeglobal.be/legal/cookies.html"/>
   </url>
   <url>
     <loc>https://www.bluebridge.es/legal/cookies.html</loc>
-    <lastmod>2026-08-05</lastmod>
+    <lastmod>2026-08-13</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.4</priority>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://www.bluebridgeglobal.be/legal/cookies.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.bluebridge.es/legal/cookies.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.bluebridge.es/legal/cookies.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.bluebridge.es/legal/cookies.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.bluebridge.es/legal/cookies.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.bluebridge.es/legal/cookies.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.bluebridgeglobal.be/legal/cookies.html"/>
+  </url>
+
+  <url>
+    <loc>https://www.bluebridgeglobal.be/legal/security.html</loc>
+    <lastmod>2026-08-13</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://www.bluebridgeglobal.be/legal/security.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.bluebridge.es/legal/security.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.bluebridge.es/legal/security.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.bluebridge.es/legal/security.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.bluebridge.es/legal/security.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.bluebridge.es/legal/security.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.bluebridgeglobal.be/legal/security.html"/>
   </url>
   <url>
     <loc>https://www.bluebridge.es/legal/security.html</loc>
-    <lastmod>2026-08-05</lastmod>
+    <lastmod>2026-08-13</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://www.bluebridgeglobal.be/legal/security.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.bluebridge.es/legal/security.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.bluebridge.es/legal/security.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.bluebridge.es/legal/security.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.bluebridge.es/legal/security.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.bluebridge.es/legal/security.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.bluebridgeglobal.be/legal/security.html"/>
+  </url>
+
+  <url>
+    <loc>https://www.bluebridgeglobal.be/legal/trust-center.html</loc>
+    <lastmod>2026-08-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://www.bluebridgeglobal.be/legal/trust-center.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.bluebridge.es/legal/trust-center.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.bluebridge.es/legal/trust-center.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.bluebridge.es/legal/trust-center.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.bluebridge.es/legal/trust-center.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.bluebridge.es/legal/trust-center.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.bluebridgeglobal.be/legal/trust-center.html"/>
   </url>
   <url>
     <loc>https://www.bluebridge.es/legal/trust-center.html</loc>
-    <lastmod>2026-08-05</lastmod>
+    <lastmod>2026-08-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://www.bluebridgeglobal.be/legal/trust-center.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.bluebridge.es/legal/trust-center.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.bluebridge.es/legal/trust-center.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.bluebridge.es/legal/trust-center.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.bluebridge.es/legal/trust-center.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.bluebridge.es/legal/trust-center.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.bluebridgeglobal.be/legal/trust-center.html"/>
+  </url>
+
+  <url>
+    <loc>https://www.bluebridgeglobal.be/legal/compliance.html</loc>
+    <lastmod>2026-08-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://www.bluebridgeglobal.be/legal/compliance.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.bluebridge.es/legal/compliance.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.bluebridge.es/legal/compliance.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.bluebridge.es/legal/compliance.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.bluebridge.es/legal/compliance.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.bluebridge.es/legal/compliance.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.bluebridgeglobal.be/legal/compliance.html"/>
   </url>
   <url>
     <loc>https://www.bluebridge.es/legal/compliance.html</loc>
-    <lastmod>2026-08-05</lastmod>
+    <lastmod>2026-08-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://www.bluebridgeglobal.be/legal/compliance.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.bluebridge.es/legal/compliance.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.bluebridge.es/legal/compliance.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.bluebridge.es/legal/compliance.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.bluebridge.es/legal/compliance.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.bluebridge.es/legal/compliance.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.bluebridgeglobal.be/legal/compliance.html"/>
   </url>
 
 </urlset>

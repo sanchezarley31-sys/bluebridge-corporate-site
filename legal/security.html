@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Security — Blue Bridge Global Connection</title>
-<meta name="description" content="Blue Bridge Global Connection security overview: AWS infrastructure, encryption, role-based access control, GDPR, backups, monitoring, incident response, and responsible disclosure.">
+<meta name="description" content="Blue Bridge Global Connection security overview: cloud infrastructure, encryption, role-based access control, GDPR, backups, monitoring, incident response, and responsible disclosure.">
 <link rel="canonical" href="https://www.bluebridge.es/legal/security.html">
 <link rel="icon" type="image/png" href="../logo-azul.png">
 <link rel="stylesheet" href="../assets/css/main.css">
@@ -15,31 +15,31 @@
 <section class="page-hero">
   <div class="container page-hero-inner">
     <nav class="breadcrumb" aria-label="Breadcrumb">
-      <a href="../index.html">Home</a><span>/</span>
-      <a href="index.html">Legal</a><span>/</span>
-      <span style="color:rgba(255,255,255,.7);">Security</span>
+      <a href="../index.html" data-i18n="legalsec_breadcrumb_home">Home</a><span>/</span>
+      <a href="index.html" data-i18n="legalsec_breadcrumb_legal">Legal</a><span>/</span>
+      <span style="color:rgba(255,255,255,.7);" data-i18n="legalsec_breadcrumb_current">Security</span>
     </nav>
-    <span class="label label--light" style="margin-top:1rem; display:inline-flex;">Security</span>
-    <h1 class="page-title">Security Overview</h1>
-    <p class="section-desc" style="max-width:620px;">A transparent description of the technical and organizational security measures protecting Blue Bridge systems, client data, and service integrity.</p>
+    <span class="label label--light" style="margin-top:1rem; display:inline-flex;" data-i18n="legalsec_label_hero">Security</span>
+    <h1 class="page-title" data-i18n="legalsec_title">Security Overview</h1>
+    <p class="section-desc" style="max-width:620px;" data-i18n="legalsec_intro">A transparent description of the technical and organizational security measures protecting Blue Bridge systems, client data, and service integrity.</p>
   </div>
 </section>
 
-<!-- AWS INFRASTRUCTURE -->
+<!-- CLOUD INFRASTRUCTURE -->
 <section class="section">
   <div class="container">
     <div class="section-header reveal">
-      <span class="label">Infrastructure</span>
-      <h2 class="section-title mt-1">AWS Cloud Infrastructure</h2>
-      <p class="section-desc">All Blue Bridge production systems run on Amazon Web Services — the most trusted enterprise cloud platform globally.</p>
+      <span class="label" data-i18n="legalsec_label_infrastructure">Infrastructure</span>
+      <h2 class="section-title mt-1" data-i18n="legalsec_infra_title">Cloud Infrastructure</h2>
+      <p class="section-desc" data-i18n="legalsec_infra_desc">All Blue Bridge production systems run on BB Cloud — our enterprise-grade cloud platform built for reliability at scale.</p>
     </div>
     <div class="grid-3 reveal">
-      <div class="card card--feature"><div class="card-icon card-icon--blue"><i data-lucide="cloud"></i></div><div class="card-title">Multi-Region</div><p class="card-desc">Primary: us-east-1 (N. Virginia). EMEA: eu-west-1 (Ireland). Cross-region replication for critical data.</p></div>
-      <div class="card card--feature"><div class="card-icon card-icon--blue">🌐</div><div class="card-title">CloudFront CDN</div><p class="card-desc">Global content delivery via AWS CloudFront with 400+ edge locations worldwide. DDoS protection included.</p></div>
-      <div class="card card--feature"><div class="card-icon card-icon--cyan"><i data-lucide="lock"></i></div><div class="card-title">Private VPC</div><p class="card-desc">All compute resources run inside a private Virtual Private Cloud. No direct public internet access to backend systems.</p></div>
-      <div class="card card--feature"><div class="card-icon card-icon--cyan"><i data-lucide="shield-check"></i></div><div class="card-title">WAF Protection</div><p class="card-desc">AWS Web Application Firewall protects against OWASP Top 10, SQL injection, XSS, and bot attacks.</p></div>
-      <div class="card card--feature"><div class="card-icon card-icon--blue"><i data-lucide="zap"></i></div><div class="card-title">Auto Scaling</div><p class="card-desc">Elastic infrastructure automatically scales to handle traffic spikes without service degradation.</p></div>
-      <div class="card card--feature"><div class="card-icon card-icon--blue"><i data-lucide="key"></i></div><div class="card-title">IAM Policies</div><p class="card-desc">AWS Identity and Access Management with fine-grained permissions. No wildcard IAM policies in production.</p></div>
+      <div class="card card--feature"><div class="card-icon card-icon--blue"><i data-lucide="cloud"></i></div><div class="card-title" data-i18n="legalsec_card_multiregion_title">Multi-Region</div><p class="card-desc" data-i18n="legalsec_card_multiregion_desc">Primary: North America (Virginia). EMEA: Europe (Ireland). Cross-region replication for critical data.</p></div>
+      <div class="card card--feature"><div class="card-icon card-icon--blue">🌐</div><div class="card-title" data-i18n="legalsec_card_cdn_title">Global CDN</div><p class="card-desc" data-i18n="legalsec_card_cdn_desc">Global content delivery via our CDN with 400+ edge locations worldwide. DDoS protection included.</p></div>
+      <div class="card card--feature"><div class="card-icon card-icon--cyan"><i data-lucide="lock"></i></div><div class="card-title" data-i18n="legalsec_card_vpc_title">Private VPC</div><p class="card-desc" data-i18n="legalsec_card_vpc_desc">All compute resources run inside a private Virtual Private Cloud. No direct public internet access to backend systems.</p></div>
+      <div class="card card--feature"><div class="card-icon card-icon--cyan"><i data-lucide="shield-check"></i></div><div class="card-title" data-i18n="legalsec_card_waf_title">WAF Protection</div><p class="card-desc" data-i18n="legalsec_card_waf_desc">Our web application firewall protects against OWASP Top 10, SQL injection, XSS, and bot attacks.</p></div>
+      <div class="card card--feature"><div class="card-icon card-icon--blue"><i data-lucide="zap"></i></div><div class="card-title" data-i18n="legalsec_card_autoscaling_title">Auto Scaling</div><p class="card-desc" data-i18n="legalsec_card_autoscaling_desc">Elastic infrastructure automatically scales to handle traffic spikes without service degradation.</p></div>
+      <div class="card card--feature"><div class="card-icon card-icon--blue"><i data-lucide="key"></i></div><div class="card-title" data-i18n="legalsec_card_iam_title">IAM Policies</div><p class="card-desc" data-i18n="legalsec_card_iam_desc">Identity and Access Management with fine-grained permissions. No wildcard IAM policies in production.</p></div>
     </div>
   </div>
 </section>
@@ -48,28 +48,28 @@
 <section class="section section--dark">
   <div class="container">
     <div class="section-header reveal">
-      <span class="label label--light">Encryption</span>
-      <h2 class="section-title mt-1 white">Encrypted Communications</h2>
+      <span class="label label--light" data-i18n="legalsec_label_encryption">Encryption</span>
+      <h2 class="section-title mt-1 white" data-i18n="legalsec_h2_encryption">Encrypted Communications</h2>
     </div>
     <div class="grid-2 reveal" style="gap:3rem; align-items:start;">
       <div>
-        <h3 style="font-size:1.1rem; font-weight:700; color:var(--white); margin-bottom:1.25rem;">Data at Rest</h3>
+        <h3 style="font-size:1.1rem; font-weight:700; color:var(--white); margin-bottom:1.25rem;" data-i18n="legalsec_h3_data_at_rest">Data at Rest</h3>
         <div class="checklist">
-          <div class="check-item"><div class="check-icon">✓</div><span>AES-256 encryption for all stored data (databases, files, backups)</span></div>
-          <div class="check-item"><div class="check-icon">✓</div><span>AWS KMS (Key Management Service) for key management</span></div>
-          <div class="check-item"><div class="check-icon">✓</div><span>RDS PostgreSQL with encryption enabled at the storage level</span></div>
-          <div class="check-item"><div class="check-icon">✓</div><span>S3 server-side encryption (SSE-S3) for all object storage</span></div>
-          <div class="check-item"><div class="check-icon">✓</div><span>Encrypted Redis (ElastiCache) for session and cache data</span></div>
+          <div class="check-item"><div class="check-icon">✓</div><span data-i18n="legalsec_encrypt_rest_aes256">AES-256 encryption for all stored data (databases, files, backups)</span></div>
+          <div class="check-item"><div class="check-icon">✓</div><span data-i18n="legalsec_encrypt_rest_kms">Managed Key Management Service (KMS) for encryption key management</span></div>
+          <div class="check-item"><div class="check-icon">✓</div><span data-i18n="legalsec_encrypt_rest_postgres">Managed PostgreSQL with encryption enabled at the storage level</span></div>
+          <div class="check-item"><div class="check-icon">✓</div><span data-i18n="legalsec_encrypt_rest_objectstorage">Server-side encryption for all object storage</span></div>
+          <div class="check-item"><div class="check-icon">✓</div><span data-i18n="legalsec_encrypt_rest_redis">Encrypted Redis for session and cache data</span></div>
         </div>
       </div>
       <div>
-        <h3 style="font-size:1.1rem; font-weight:700; color:var(--white); margin-bottom:1.25rem;">Data in Transit</h3>
+        <h3 style="font-size:1.1rem; font-weight:700; color:var(--white); margin-bottom:1.25rem;" data-i18n="legalsec_h3_data_in_transit">Data in Transit</h3>
         <div class="checklist">
-          <div class="check-item"><div class="check-icon">✓</div><span>TLS 1.3 enforced for all HTTP connections (HTTPS everywhere)</span></div>
-          <div class="check-item"><div class="check-icon">✓</div><span>HTTP Strict Transport Security (HSTS) headers configured</span></div>
-          <div class="check-item"><div class="check-icon">✓</div><span>ACM (AWS Certificate Manager) for SSL/TLS certificates</span></div>
-          <div class="check-item"><div class="check-icon">✓</div><span>Encrypted API calls between all internal services</span></div>
-          <div class="check-item"><div class="check-icon">✓</div><span>TLS certificate pinning for mobile applications</span></div>
+          <div class="check-item"><div class="check-icon">✓</div><span data-i18n="legalsec_transit_tls">TLS 1.3 enforced for all HTTP connections (HTTPS everywhere)</span></div>
+          <div class="check-item"><div class="check-icon">✓</div><span data-i18n="legalsec_transit_hsts">HTTP Strict Transport Security (HSTS) headers configured</span></div>
+          <div class="check-item"><div class="check-icon">✓</div><span data-i18n="legalsec_transit_cert_mgmt">Managed certificate service for SSL/TLS certificates</span></div>
+          <div class="check-item"><div class="check-icon">✓</div><span data-i18n="legalsec_transit_internal_api">Encrypted API calls between all internal services</span></div>
+          <div class="check-item"><div class="check-icon">✓</div><span data-i18n="legalsec_transit_cert_pinning">TLS certificate pinning for mobile applications</span></div>
         </div>
       </div>
     </div>
@@ -80,16 +80,16 @@
 <section class="section">
   <div class="container">
     <div class="section-header reveal">
-      <span class="label">Access Control</span>
-      <h2 class="section-title mt-1">Role-Based Access Control</h2>
+      <span class="label" data-i18n="legalsec_label_access_control">Access Control</span>
+      <h2 class="section-title mt-1" data-i18n="legalsec_h2_access_control">Role-Based Access Control</h2>
     </div>
     <div class="grid-3 reveal">
-      <div class="card card--feature"><div class="card-icon card-icon--blue">🎭</div><div class="card-title">RBAC</div><p class="card-desc">Role-Based Access Control with granular permissions. Every user and system has the minimum required access (principle of least privilege).</p></div>
-      <div class="card card--feature"><div class="card-icon card-icon--cyan"><i data-lucide="smartphone"></i></div><div class="card-title">Multi-Factor Auth</div><p class="card-desc">MFA required for all administrative access. TOTP and hardware key options available for enterprise clients.</p></div>
-      <div class="card card--feature"><div class="card-icon card-icon--blue"><i data-lucide="key"></i></div><div class="card-title">API Key Management</div><p class="card-desc">Scoped API keys with expiration policies. Automated rotation for system-to-system credentials.</p></div>
-      <div class="card card--feature"><div class="card-icon card-icon--cyan"><i data-lucide="clipboard-list"></i></div><div class="card-title">Audit Logging</div><p class="card-desc">Comprehensive audit trail of all access, changes, and administrative actions. Logs retained for 12 months minimum.</p></div>
-      <div class="card card--feature"><div class="card-icon card-icon--blue">🚪</div><div class="card-title">Zero-Trust</div><p class="card-desc">Zero-trust network architecture. No implicit trust based on network location. All access is verified continuously.</p></div>
-      <div class="card card--feature"><div class="card-icon card-icon--cyan"><i data-lucide="eye"></i></div><div class="card-title">Session Management</div><p class="card-desc">JWT tokens with short expiration. Automatic session invalidation on suspicious activity. Secure cookie attributes.</p></div>
+      <div class="card card--feature"><div class="card-icon card-icon--blue">🎭</div><div class="card-title" data-i18n="legalsec_card_rbac_title">RBAC</div><p class="card-desc" data-i18n="legalsec_card_rbac_desc">Role-Based Access Control with granular permissions. Every user and system has the minimum required access (principle of least privilege).</p></div>
+      <div class="card card--feature"><div class="card-icon card-icon--cyan"><i data-lucide="smartphone"></i></div><div class="card-title" data-i18n="legalsec_card_mfa_title">Multi-Factor Auth</div><p class="card-desc" data-i18n="legalsec_card_mfa_desc">MFA required for all administrative access. TOTP and hardware key options available for enterprise clients.</p></div>
+      <div class="card card--feature"><div class="card-icon card-icon--blue"><i data-lucide="key"></i></div><div class="card-title" data-i18n="legalsec_card_apikey_title">API Key Management</div><p class="card-desc" data-i18n="legalsec_card_apikey_desc">Scoped API keys with expiration policies. Automated rotation for system-to-system credentials.</p></div>
+      <div class="card card--feature"><div class="card-icon card-icon--cyan"><i data-lucide="clipboard-list"></i></div><div class="card-title" data-i18n="legalsec_card_audit_title">Audit Logging</div><p class="card-desc" data-i18n="legalsec_card_audit_desc">Comprehensive audit trail of all access, changes, and administrative actions. Logs retained for 12 months minimum.</p></div>
+      <div class="card card--feature"><div class="card-icon card-icon--blue">🚪</div><div class="card-title" data-i18n="legalsec_card_zerotrust_title">Zero-Trust</div><p class="card-desc" data-i18n="legalsec_card_zerotrust_desc">Zero-trust network architecture. No implicit trust based on network location. All access is verified continuously.</p></div>
+      <div class="card card--feature"><div class="card-icon card-icon--cyan"><i data-lucide="eye"></i></div><div class="card-title" data-i18n="legalsec_card_session_title">Session Management</div><p class="card-desc" data-i18n="legalsec_card_session_desc">JWT tokens with short expiration. Automatic session invalidation on suspicious activity. Secure cookie attributes.</p></div>
     </div>
   </div>
 </section>
@@ -98,36 +98,36 @@
 <section class="section section--gray">
   <div class="container">
     <div class="section-header reveal">
-      <span class="label">Data Protection</span>
-      <h2 class="section-title mt-1">Backups & Recovery</h2>
+      <span class="label" data-i18n="legalsec_label_data_protection">Data Protection</span>
+      <h2 class="section-title mt-1" data-i18n="legalsec_h2_backups">Backups & Recovery</h2>
     </div>
     <div class="grid-2 reveal" style="gap:3rem; align-items:start;">
       <div class="checklist">
-        <div class="check-item check-item--light"><div class="check-icon">✓</div><span><strong>Automated daily backups</strong> of all databases and critical data</span></div>
-        <div class="check-item check-item--light"><div class="check-icon">✓</div><span><strong>Cross-region replication</strong> — backups stored in a secondary AWS region</span></div>
-        <div class="check-item check-item--light"><div class="check-icon">✓</div><span><strong>Point-in-time recovery</strong> for databases (up to 35 days)</span></div>
-        <div class="check-item check-item--light"><div class="check-icon">✓</div><span><strong>Backup encryption</strong> — all backups encrypted with AWS KMS</span></div>
-        <div class="check-item check-item--light"><div class="check-icon">✓</div><span><strong>Quarterly restore tests</strong> to validate backup integrity</span></div>
-        <div class="check-item check-item--light"><div class="check-icon">✓</div><span><strong>S3 versioning</strong> enabled for all important stored objects</span></div>
+        <div class="check-item check-item--light"><div class="check-icon">✓</div><span data-i18n-html="legalsec_backup_daily"><strong>Automated daily backups</strong> of all databases and critical data</span></div>
+        <div class="check-item check-item--light"><div class="check-icon">✓</div><span data-i18n-html="legalsec_backup_crossregion"><strong>Cross-region replication</strong> — backups stored in a secondary region</span></div>
+        <div class="check-item check-item--light"><div class="check-icon">✓</div><span data-i18n-html="legalsec_backup_pitr"><strong>Point-in-time recovery</strong> for databases (up to 35 days)</span></div>
+        <div class="check-item check-item--light"><div class="check-icon">✓</div><span data-i18n-html="legalsec_backup_encryption"><strong>Backup encryption</strong> — all backups encrypted at rest</span></div>
+        <div class="check-item check-item--light"><div class="check-icon">✓</div><span data-i18n-html="legalsec_backup_restoretest"><strong>Quarterly restore tests</strong> to validate backup integrity</span></div>
+        <div class="check-item check-item--light"><div class="check-icon">✓</div><span data-i18n-html="legalsec_backup_versioning"><strong>Object versioning</strong> enabled for all important stored objects</span></div>
       </div>
       <div style="background:var(--white); border:1px solid var(--gray-100); border-radius:var(--radius-lg); padding:2rem;">
-        <div style="font-size:.85rem; font-weight:700; color:var(--gray-400); text-transform:uppercase; letter-spacing:.08em; margin-bottom:1.5rem;">Recovery Targets</div>
+        <div style="font-size:.85rem; font-weight:700; color:var(--gray-400); text-transform:uppercase; letter-spacing:.08em; margin-bottom:1.5rem;" data-i18n="legalsec_recovery_targets_label">Recovery Targets</div>
         <div style="display:flex; flex-direction:column; gap:1.25rem;">
           <div style="display:flex; justify-content:space-between; align-items:center; padding-bottom:1rem; border-bottom:1px solid var(--gray-100);">
-            <span style="font-size:.9rem; font-weight:600; color:var(--gray-700);">Recovery Time Objective (RTO)</span>
-            <span style="font-weight:700; color:var(--blue);">4 hours</span>
+            <span style="font-size:.9rem; font-weight:600; color:var(--gray-700);" data-i18n="legalsec_rto_label">Recovery Time Objective (RTO)</span>
+            <span style="font-weight:700; color:var(--blue);" data-i18n="legalsec_rto_value">4 hours</span>
           </div>
           <div style="display:flex; justify-content:space-between; align-items:center; padding-bottom:1rem; border-bottom:1px solid var(--gray-100);">
-            <span style="font-size:.9rem; font-weight:600; color:var(--gray-700);">Recovery Point Objective (RPO)</span>
-            <span style="font-weight:700; color:var(--blue);">1 hour</span>
+            <span style="font-size:.9rem; font-weight:600; color:var(--gray-700);" data-i18n="legalsec_rpo_label">Recovery Point Objective (RPO)</span>
+            <span style="font-weight:700; color:var(--blue);" data-i18n="legalsec_rpo_value">1 hour</span>
           </div>
           <div style="display:flex; justify-content:space-between; align-items:center; padding-bottom:1rem; border-bottom:1px solid var(--gray-100);">
-            <span style="font-size:.9rem; font-weight:600; color:var(--gray-700);">Backup Retention Period</span>
-            <span style="font-weight:700; color:var(--gray-800);">35 days</span>
+            <span style="font-size:.9rem; font-weight:600; color:var(--gray-700);" data-i18n="legalsec_retention_label">Backup Retention Period</span>
+            <span style="font-weight:700; color:var(--gray-800);" data-i18n="legalsec_retention_value">35 days</span>
           </div>
           <div style="display:flex; justify-content:space-between; align-items:center;">
-            <span style="font-size:.9rem; font-weight:600; color:var(--gray-700);">Restore Test Frequency</span>
-            <span style="font-weight:700; color:var(--gray-800);">Quarterly</span>
+            <span style="font-size:.9rem; font-weight:600; color:var(--gray-700);" data-i18n="legalsec_restore_freq_label">Restore Test Frequency</span>
+            <span style="font-weight:700; color:var(--gray-800);" data-i18n="legalsec_restore_freq_value">Quarterly</span>
           </div>
         </div>
       </div>
@@ -139,13 +139,13 @@
 <section class="section section--dark">
   <div class="container">
     <div class="section-header reveal">
-      <span class="label label--light">Monitoring</span>
-      <h2 class="section-title mt-1 white">24/7 Monitoring</h2>
+      <span class="label label--light" data-i18n="legalsec_label_monitoring">Monitoring</span>
+      <h2 class="section-title mt-1 white" data-i18n="legalsec_h2_monitoring">24/7 Monitoring</h2>
     </div>
     <div class="grid-3 reveal">
-      <div class="card card--dark"><div class="card-icon card-icon--glass"><i data-lucide="bar-chart-2"></i></div><div class="card-title white">System Monitoring</div><p class="card-desc">AWS CloudWatch monitors all infrastructure metrics: CPU, memory, disk, network, database performance. Alerts configured for anomalies.</p></div>
-      <div class="card card--dark"><div class="card-icon card-icon--glass"><i data-lucide="search"></i></div><div class="card-title white">Security Monitoring</div><p class="card-desc">AWS GuardDuty provides intelligent threat detection. VPC Flow Logs analyze network traffic patterns for suspicious activity.</p></div>
-      <div class="card card--dark"><div class="card-icon card-icon--glass">📝</div><div class="card-title white">Application Logging</div><p class="card-desc">Structured logging with correlation IDs. All API requests logged. Real-time log analysis with alerting on error rate spikes.</p></div>
+      <div class="card card--dark"><div class="card-icon card-icon--glass"><i data-lucide="bar-chart-2"></i></div><div class="card-title white" data-i18n="legalsec_card_sysmon_title">System Monitoring</div><p class="card-desc" data-i18n="legalsec_card_sysmon_desc">Our monitoring platform tracks all infrastructure metrics: CPU, memory, disk, network, database performance. Alerts configured for anomalies.</p></div>
+      <div class="card card--dark"><div class="card-icon card-icon--glass"><i data-lucide="search"></i></div><div class="card-title white" data-i18n="legalsec_card_secmon_title">Security Monitoring</div><p class="card-desc" data-i18n="legalsec_card_secmon_desc">Intelligent threat detection continuously analyzes activity. Network flow logs analyze traffic patterns for suspicious activity.</p></div>
+      <div class="card card--dark"><div class="card-icon card-icon--glass">📝</div><div class="card-title white" data-i18n="legalsec_card_applog_title">Application Logging</div><p class="card-desc" data-i18n="legalsec_card_applog_desc">Structured logging with correlation IDs. All API requests logged. Real-time log analysis with alerting on error rate spikes.</p></div>
     </div>
   </div>
 </section>
@@ -154,51 +154,51 @@
 <section class="section">
   <div class="container">
     <div class="section-header reveal">
-      <span class="label">Response</span>
-      <h2 class="section-title mt-1">Incident Response</h2>
+      <span class="label" data-i18n="legalsec_label_response">Response</span>
+      <h2 class="section-title mt-1" data-i18n="legalsec_h2_incident_response">Incident Response</h2>
     </div>
     <div class="grid-2 reveal" style="gap:3rem; align-items:start;">
       <div>
         <div style="display:flex; flex-direction:column; gap:1.5rem;">
           <div style="display:flex; gap:1.25rem; align-items:flex-start;">
             <div style="width:40px; height:40px; border-radius:50%; background:rgba(0,82,255,.1); color:var(--blue); display:flex; align-items:center; justify-content:center; font-weight:700; font-size:.9rem; flex-shrink:0;">1</div>
-            <div><div style="font-weight:700; color:var(--gray-800); margin-bottom:.25rem;">Detection</div><p style="font-size:.9rem; color:var(--gray-600); line-height:1.7;">Automated monitoring detects anomalies. Security team alerted within minutes via PagerDuty.</p></div>
+            <div><div style="font-weight:700; color:var(--gray-800); margin-bottom:.25rem;" data-i18n="legalsec_step1_title">Detection</div><p style="font-size:.9rem; color:var(--gray-600); line-height:1.7;" data-i18n="legalsec_step1_desc">Automated monitoring detects anomalies. Security team alerted within minutes via PagerDuty.</p></div>
           </div>
           <div style="display:flex; gap:1.25rem; align-items:flex-start;">
             <div style="width:40px; height:40px; border-radius:50%; background:rgba(0,82,255,.1); color:var(--blue); display:flex; align-items:center; justify-content:center; font-weight:700; font-size:.9rem; flex-shrink:0;">2</div>
-            <div><div style="font-weight:700; color:var(--gray-800); margin-bottom:.25rem;">Containment</div><p style="font-size:.9rem; color:var(--gray-600); line-height:1.7;">Immediate isolation of affected systems. WAF rules updated to block attack vectors.</p></div>
+            <div><div style="font-weight:700; color:var(--gray-800); margin-bottom:.25rem;" data-i18n="legalsec_step2_title">Containment</div><p style="font-size:.9rem; color:var(--gray-600); line-height:1.7;" data-i18n="legalsec_step2_desc">Immediate isolation of affected systems. WAF rules updated to block attack vectors.</p></div>
           </div>
           <div style="display:flex; gap:1.25rem; align-items:flex-start;">
             <div style="width:40px; height:40px; border-radius:50%; background:rgba(0,82,255,.1); color:var(--blue); display:flex; align-items:center; justify-content:center; font-weight:700; font-size:.9rem; flex-shrink:0;">3</div>
-            <div><div style="font-weight:700; color:var(--gray-800); margin-bottom:.25rem;">Assessment</div><p style="font-size:.9rem; color:var(--gray-600); line-height:1.7;">Root cause analysis and impact assessment. Classification as P1/P2/P3 based on severity.</p></div>
+            <div><div style="font-weight:700; color:var(--gray-800); margin-bottom:.25rem;" data-i18n="legalsec_step3_title">Assessment</div><p style="font-size:.9rem; color:var(--gray-600); line-height:1.7;" data-i18n="legalsec_step3_desc">Root cause analysis and impact assessment. Classification as P1/P2/P3 based on severity.</p></div>
           </div>
           <div style="display:flex; gap:1.25rem; align-items:flex-start;">
             <div style="width:40px; height:40px; border-radius:50%; background:rgba(0,82,255,.1); color:var(--blue); display:flex; align-items:center; justify-content:center; font-weight:700; font-size:.9rem; flex-shrink:0;">4</div>
-            <div><div style="font-weight:700; color:var(--gray-800); margin-bottom:.25rem;">Notification</div><p style="font-size:.9rem; color:var(--gray-600); line-height:1.7;">Affected clients notified within 24 hours. GDPR breach notification within 72 hours where required.</p></div>
+            <div><div style="font-weight:700; color:var(--gray-800); margin-bottom:.25rem;" data-i18n="legalsec_step4_title">Notification</div><p style="font-size:.9rem; color:var(--gray-600); line-height:1.7;" data-i18n="legalsec_step4_desc">Affected clients notified within 24 hours. GDPR breach notification within 72 hours where required.</p></div>
           </div>
           <div style="display:flex; gap:1.25rem; align-items:flex-start;">
             <div style="width:40px; height:40px; border-radius:50%; background:rgba(0,82,255,.1); color:var(--blue); display:flex; align-items:center; justify-content:center; font-weight:700; font-size:.9rem; flex-shrink:0;">5</div>
-            <div><div style="font-weight:700; color:var(--gray-800); margin-bottom:.25rem;">Recovery & Review</div><p style="font-size:.9rem; color:var(--gray-600); line-height:1.7;">Service restoration. Post-incident report delivered to enterprise clients within 5 business days.</p></div>
+            <div><div style="font-weight:700; color:var(--gray-800); margin-bottom:.25rem;" data-i18n="legalsec_step5_title">Recovery & Review</div><p style="font-size:.9rem; color:var(--gray-600); line-height:1.7;" data-i18n="legalsec_step5_desc">Service restoration. Post-incident report delivered to enterprise clients within 5 business days.</p></div>
           </div>
         </div>
       </div>
       <div>
         <div style="background:var(--gray-50); border:1px solid var(--gray-100); border-radius:var(--radius-lg); padding:2rem; margin-bottom:1.5rem;">
-          <div style="font-size:.85rem; font-weight:700; color:var(--gray-400); text-transform:uppercase; letter-spacing:.08em; margin-bottom:1.25rem;">Response SLAs</div>
+          <div style="font-size:.85rem; font-weight:700; color:var(--gray-400); text-transform:uppercase; letter-spacing:.08em; margin-bottom:1.25rem;" data-i18n="legalsec_sla_label">Response SLAs</div>
           <div style="display:flex; flex-direction:column; gap:1rem;">
-            <div style="display:flex; justify-content:space-between;"><span style="font-size:.9rem; color:var(--gray-700);">P1 — Critical (data breach, full outage)</span><span style="font-weight:700; color:#EF4444;">&lt; 1 hour</span></div>
-            <div style="display:flex; justify-content:space-between;"><span style="font-size:.9rem; color:var(--gray-700);">P2 — High (partial outage, security threat)</span><span style="font-weight:700; color:#F59E0B;">&lt; 4 hours</span></div>
-            <div style="display:flex; justify-content:space-between;"><span style="font-size:.9rem; color:var(--gray-700);">P3 — Medium (degraded performance)</span><span style="font-weight:700; color:#10B981;">&lt; 24 hours</span></div>
-            <div style="display:flex; justify-content:space-between;"><span style="font-size:.9rem; color:var(--gray-700);">P4 — Low (minor issue)</span><span style="font-weight:700; color:var(--gray-400);">&lt; 72 hours</span></div>
+            <div style="display:flex; justify-content:space-between;"><span style="font-size:.9rem; color:var(--gray-700);" data-i18n="legalsec_sla_p1_label">P1 — Critical (data breach, full outage)</span><span style="font-weight:700; color:#EF4444;" data-i18n="legalsec_sla_p1_value">&lt; 1 hour</span></div>
+            <div style="display:flex; justify-content:space-between;"><span style="font-size:.9rem; color:var(--gray-700);" data-i18n="legalsec_sla_p2_label">P2 — High (partial outage, security threat)</span><span style="font-weight:700; color:#F59E0B;" data-i18n="legalsec_sla_p2_value">&lt; 4 hours</span></div>
+            <div style="display:flex; justify-content:space-between;"><span style="font-size:.9rem; color:var(--gray-700);" data-i18n="legalsec_sla_p3_label">P3 — Medium (degraded performance)</span><span style="font-weight:700; color:#10B981;" data-i18n="legalsec_sla_p3_value">&lt; 24 hours</span></div>
+            <div style="display:flex; justify-content:space-between;"><span style="font-size:.9rem; color:var(--gray-700);" data-i18n="legalsec_sla_p4_label">P4 — Low (minor issue)</span><span style="font-weight:700; color:var(--gray-400);" data-i18n="legalsec_sla_p4_value">&lt; 72 hours</span></div>
           </div>
         </div>
 
         <!-- Responsible Disclosure -->
         <div style="background:rgba(0,82,255,.06); border:1px solid rgba(0,82,255,.2); border-radius:var(--radius-lg); padding:2rem;">
-          <h3 style="font-size:1rem; font-weight:700; color:var(--gray-800); margin-bottom:.75rem;">🔎 Responsible Disclosure</h3>
-          <p style="font-size:.875rem; color:var(--gray-600); line-height:1.7; margin-bottom:1rem;">We welcome responsible security research. If you discover a vulnerability in our systems, please report it to us privately before public disclosure.</p>
+          <h3 style="font-size:1rem; font-weight:700; color:var(--gray-800); margin-bottom:.75rem;" data-i18n="legalsec_disclosure_title">🔎 Responsible Disclosure</h3>
+          <p style="font-size:.875rem; color:var(--gray-600); line-height:1.7; margin-bottom:1rem;" data-i18n="legalsec_disclosure_intro">We welcome responsible security research. If you discover a vulnerability in our systems, please report it to us privately before public disclosure.</p>
           <a href="mailto:security@bluebridge.es?subject=Security Vulnerability Report" class="btn btn--primary btn--sm">security@bluebridge.es</a>
-          <p style="font-size:.8rem; color:var(--gray-400); margin-top:.75rem;">We commit to: acknowledge within 24 hours, respond within 5 business days, not pursue legal action for good-faith research.</p>
+          <p style="font-size:.8rem; color:var(--gray-400); margin-top:.75rem;" data-i18n="legalsec_disclosure_commitment">We commit to: acknowledge within 24 hours, respond within 5 business days, not pursue legal action for good-faith research.</p>
         </div>
       </div>
     </div>

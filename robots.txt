@@ -9,4 +9,5 @@ Disallow: /widget.js
 # Block assets directory from indexing (except CSS/JS for rendering)
 Disallow: /assets/
 
+Sitemap: https://www.bluebridgeglobal.be/sitemap.xml
 Sitemap: https://www.bluebridge.es/sitemap.xml
