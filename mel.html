@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Conoce a Mel — Tu Recepcionista de IA, Disponible 24/7 | Blue Bridge</title>
+<meta name="description" content="Mel responde cada llamada y mensaje al instante, de día y de noche, para que tu negocio nunca vuelva a perder un cliente. Creado por Blue Bridge, en vivo en menos de una semana.">
+<link rel="canonical" href="https://www.bluebridge.es/mel.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Conoce a Mel — Tu Recepcionista de IA, Disponible 24/7">
+<meta property="og:description" content="Mel responde cada llamada y mensaje al instante, de día y de noche, para que tu negocio nunca vuelva a perder un cliente.">
+<meta property="og:url" content="https://www.bluebridge.es/mel.html">
+<meta property="og:image" content="https://www.bluebridge.es/assets/img/mel-hero.png">
+<meta name="robots" content="index, follow">
+<link rel="icon" type="image/png" href="logo-azul.png">
+<link rel="stylesheet" href="assets/css/main.css">
+
+<!-- Meta Pixel base code — PENDIENTE: reemplazar YOUR_PIXEL_ID una vez creado
+     en Meta Events Manager (Business Settings -> Data Sources -> Pixels).
+     Dispara PageView al cargar; el formulario dispara un evento Lead al enviarse. -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', 'YOUR_PIXEL_ID');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=YOUR_PIXEL_ID&ev=PageView&noscript=1"/></noscript>
+</head>
+<body>
+<div id="nav-root" data-depth="0"></div>
+
+<!-- HERO -->
+<section class="hero" style="min-height:auto; padding:4rem 0 3rem;">
+  <div class="hero-bg">
+    <div class="hero-gradient"></div>
+    <div class="hero-grid"></div>
+  </div>
+  <div class="container" style="position:relative; z-index:1; display:grid; grid-template-columns:1.1fr .9fr; gap:3rem; align-items:center;">
+    <div>
+      <span class="label label--light">Recepcionista de IA</span>
+      <h1 class="hero-title" style="margin-top:.75rem; font-size:2.4rem;">Tu Negocio Nunca Más Tiene Que Perder un Cliente</h1>
+      <p class="hero-desc" style="margin-top:1rem;">Conoce a Mel — tu recepcionista de IA. Responde llamadas y mensajes al instante, de día y de noche, agenda citas, y nunca deja a un cliente real esperando.</p>
+      <ul style="list-style:none; padding:0; margin:1.75rem 0; display:flex; flex-direction:column; gap:.75rem;">
+        <li style="display:flex; align-items:center; gap:.65rem; color:rgba(255,255,255,.8); font-size:.95rem;"><i data-lucide="check-circle" style="width:18px;height:18px;color:#10B981;flex-shrink:0;"></i> Responde al instante, las 24 horas del día</li>
+        <li style="display:flex; align-items:center; gap:.65rem; color:rgba(255,255,255,.8); font-size:.95rem;"><i data-lucide="check-circle" style="width:18px;height:18px;color:#10B981;flex-shrink:0;"></i> Nunca pierde una llamada ni un mensaje</li>
+        <li style="display:flex; align-items:center; gap:.65rem; color:rgba(255,255,255,.8); font-size:.95rem;"><i data-lucide="check-circle" style="width:18px;height:18px;color:#10B981;flex-shrink:0;"></i> Agenda citas en el momento</li>
+        <li style="display:flex; align-items:center; gap:.65rem; color:rgba(255,255,255,.8); font-size:.95rem;"><i data-lucide="check-circle" style="width:18px;height:18px;color:#10B981;flex-shrink:0;"></i> Ideal para cualquier tipo de negocio</li>
+      </ul>
+    </div>
+
+    <div class="card" style="background:rgba(10,15,30,.6); border:1px solid rgba(255,255,255,.1); padding:2rem;" id="mel-form-card">
+      <h2 style="font-size:1.2rem; font-weight:700; color:var(--white); margin-bottom:.35rem;">¿Listo para Contratar a tu Primer Empleado de IA?</h2>
+      <p style="font-size:.825rem; color:rgba(255,255,255,.5); margin-bottom:1.5rem;">Cuéntanos sobre tu negocio — te contactaremos dentro de 1 día hábil.</p>
+      <form id="mel-form" style="display:flex; flex-direction:column; gap:1rem;" onsubmit="submitMelForm(event)">
+        <div class="form-group">
+          <label class="form-label">Nombre Completo</label>
+          <input type="text" id="mf-name" class="form-input" required placeholder="Tu nombre">
+        </div>
+        <div class="form-group">
+          <label class="form-label">Nombre del Negocio</label>
+          <input type="text" id="mf-company" class="form-input" required placeholder="Tu negocio">
+        </div>
+        <div class="grid-2" style="gap:1rem;">
+          <div class="form-group">
+            <label class="form-label">Correo</label>
+            <input type="email" id="mf-email" class="form-input" required placeholder="tu@negocio.com">
+          </div>
+          <div class="form-group">
+            <label class="form-label">Teléfono</label>
+            <input type="tel" id="mf-phone" class="form-input" placeholder="+506...">
+          </div>
+        </div>
+        <input type="text" id="mf-website" name="website" autocomplete="off" tabindex="-1" style="position:absolute; left:-9999px; width:1px; height:1px; opacity:0;" aria-hidden="true">
+        <div style="display:flex; align-items:flex-start; gap:.6rem;">
+          <input type="checkbox" id="mf-consent" required style="margin-top:.2rem; accent-color:var(--blue);">
+          <label for="mf-consent" style="font-size:.78rem; color:rgba(255,255,255,.5); line-height:1.5; cursor:pointer;">Acepto la <a href="legal/privacy-policy.html" style="color:var(--cyan);">Política de Privacidad</a> y autorizo a Blue Bridge a contactarme sobre Mel.</label>
+        </div>
+        <button type="submit" class="btn btn--primary btn--lg" id="mf-submit-btn">Empezar</button>
+        <div id="mf-error" style="display:none; padding:.85rem; background:rgba(239,68,68,.1); border:1px solid rgba(239,68,68,.3); border-radius:var(--radius-md); color:#EF4444; font-size:.8rem; text-align:center;">
+          Ocurrió un error. Por favor escríbenos a <a href="mailto:sales@bluebridge.es" style="color:#EF4444; text-decoration:underline;">sales@bluebridge.es</a>.
+        </div>
+        <div id="mf-success" style="display:none; padding:.85rem; background:rgba(16,185,129,.1); border:1px solid rgba(16,185,129,.3); border-radius:var(--radius-md); color:#10B981; font-size:.8rem; text-align:center;">
+          ✓ ¡Gracias! Te contactaremos dentro de 1 día hábil.
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- QUÉ HACE MEL -->
+<section class="section">
+  <div class="container">
+    <div class="section-header section-header--center reveal">
+      <span class="label">Qué Hace Mel</span>
+      <h2 class="section-title mt-2">Un Empleado de IA, Todos los Canales</h2>
+    </div>
+    <div class="grid-3 reveal">
+      <div class="card card--feature">
+        <div class="card-icon card-icon--blue"><i data-lucide="phone-call"></i></div>
+        <div class="card-title">Responde Cada Llamada</div>
+        <p class="card-desc">Mel contesta al instante, de día o de noche — sin música de espera, sin buzón de voz, sin oportunidades perdidas.</p>
+      </div>
+      <div class="card card--feature">
+        <div class="card-icon card-icon--blue"><i data-lucide="message-circle"></i></div>
+        <div class="card-title">Responde por WhatsApp y Web</div>
+        <p class="card-desc">La misma respuesta instantánea en teléfono, WhatsApp, Instagram y el chat de tu sitio web.</p>
+      </div>
+      <div class="card card--feature">
+        <div class="card-icon card-icon--blue"><i data-lucide="calendar-check"></i></div>
+        <div class="card-title">Agenda la Cita</div>
+        <p class="card-desc">Mel revisa tu disponibilidad real y agenda la cita en el momento — sin idas y vueltas.</p>
+      </div>
+      <div class="card card--feature">
+        <div class="card-icon card-icon--blue"><i data-lucide="database"></i></div>
+        <div class="card-title">Lo Registra en tu CRM</div>
+        <p class="card-desc">Cada conversación llega automáticamente a tu CRM — nada anotado en papel, nada se pierde.</p>
+      </div>
+      <div class="card card--feature">
+        <div class="card-icon card-icon--blue"><i data-lucide="clock"></i></div>
+        <div class="card-title">En Vivo en Menos de una Semana</div>
+        <p class="card-desc">Sin implementaciones de meses. Mel se entrena con tu negocio y responde a clientes reales en días.</p>
+      </div>
+      <div class="card card--feature">
+        <div class="card-icon card-icon--blue"><i data-lucide="users"></i></div>
+        <div class="card-title">Ideal para Cualquier Negocio</div>
+        <p class="card-desc">Clínicas, salones, restaurantes, bienes raíces, servicios profesionales — Mel se adapta a tu forma de trabajar.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- IDEAL PARA CUALQUIER TIPO DE NEGOCIO -->
+<section class="section section--dark">
+  <div class="container">
+    <div class="section-header section-header--center reveal">
+      <span class="label label--light">Cualquier Industria</span>
+      <h2 class="section-title mt-2 white">Ideal para Cualquier Tipo de Negocio</h2>
+    </div>
+    <div class="grid-3 reveal">
+      <div class="card card--dark" style="display:flex; align-items:center; gap:1rem;">
+        <div style="width:32px; height:32px; background:rgba(16,185,129,.12); border-radius:50%; display:flex; align-items:center; justify-content:center; flex-shrink:0;"><i data-lucide="stethoscope" style="width:14px; height:14px; color:#10B981;"></i></div>
+        <div class="card-title white" style="font-size:1rem;">Clínicas y Salud</div>
+      </div>
+      <div class="card card--dark" style="display:flex; align-items:center; gap:1rem;">
+        <div style="width:32px; height:32px; background:rgba(16,185,129,.12); border-radius:50%; display:flex; align-items:center; justify-content:center; flex-shrink:0;"><i data-lucide="scissors" style="width:14px; height:14px; color:#10B981;"></i></div>
+        <div class="card-title white" style="font-size:1rem;">Salones y Belleza</div>
+      </div>
+      <div class="card card--dark" style="display:flex; align-items:center; gap:1rem;">
+        <div style="width:32px; height:32px; background:rgba(16,185,129,.12); border-radius:50%; display:flex; align-items:center; justify-content:center; flex-shrink:0;"><i data-lucide="utensils" style="width:14px; height:14px; color:#10B981;"></i></div>
+        <div class="card-title white" style="font-size:1rem;">Restaurantes</div>
+      </div>
+      <div class="card card--dark" style="display:flex; align-items:center; gap:1rem;">
+        <div style="width:32px; height:32px; background:rgba(16,185,129,.12); border-radius:50%; display:flex; align-items:center; justify-content:center; flex-shrink:0;"><i data-lucide="home" style="width:14px; height:14px; color:#10B981;"></i></div>
+        <div class="card-title white" style="font-size:1rem;">Bienes Raíces</div>
+      </div>
+      <div class="card card--dark" style="display:flex; align-items:center; gap:1rem;">
+        <div style="width:32px; height:32px; background:rgba(16,185,129,.12); border-radius:50%; display:flex; align-items:center; justify-content:center; flex-shrink:0;"><i data-lucide="briefcase" style="width:14px; height:14px; color:#10B981;"></i></div>
+        <div class="card-title white" style="font-size:1rem;">Servicios Profesionales</div>
+      </div>
+      <div class="card card--dark" style="display:flex; align-items:center; gap:1rem;">
+        <div style="width:32px; height:32px; background:rgba(16,185,129,.12); border-radius:50%; display:flex; align-items:center; justify-content:center; flex-shrink:0;"><i data-lucide="shopping-bag" style="width:14px; height:14px; color:#10B981;"></i></div>
+        <div class="card-title white" style="font-size:1rem;">Retail</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="section cta-section">
+  <div class="container text-center reveal" style="position:relative; z-index:1;">
+    <h2 class="section-title white">¿Listo para Contratar a tu Primer Empleado de IA?</h2>
+    <p class="section-desc mt-2 mb-4" style="max-width:500px; margin:1rem auto 2rem;">Completa el formulario de arriba y tendremos a Mel en vivo para tu negocio dentro de una semana.</p>
+    <div style="display:flex; justify-content:center; gap:1rem; flex-wrap:wrap;">
+      <a href="#mel-form-card" class="btn btn--primary btn--lg">Empezar</a>
+      <a href="pricing.html" class="btn btn--outline btn--lg">Ver Precios</a>
+    </div>
+  </div>
+</section>
+
+<div id="footer-root" data-depth="0"></div>
+<script src="assets/js/i18n.js"></script>
+<script src="assets/js/app.js"></script>
+<script>
+function melUtmParams() {
+  const p = new URLSearchParams(window.location.search);
+  return {
+    utm_source: p.get('utm_source') || '',
+    utm_medium: p.get('utm_medium') || '',
+    utm_campaign: p.get('utm_campaign') || '',
+    utm_content: p.get('utm_content') || '',
+  };
+}
+
+function submitMelForm(e) {
+  e.preventDefault();
+  const btn = document.getElementById('mf-submit-btn');
+  btn.disabled = true;
+  btn.textContent = 'Enviando...';
+  const utm = melUtmParams();
+  fetch('https://bbos.bluebridge.es/api/v1/public/leads/website-contact', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({
+      name: document.getElementById('mf-name').value,
+      company: document.getElementById('mf-company').value,
+      email: document.getElementById('mf-email').value,
+      phone: document.getElementById('mf-phone').value,
+      topic: 'AI Receptionist (Mel)',
+      message: 'Solicitó información sobre Mel desde la página mel.html.',
+      website: document.getElementById('mf-website').value,
+      utm_source: utm.utm_source,
+      utm_medium: utm.utm_medium,
+      utm_campaign: utm.utm_campaign,
+      utm_content: utm.utm_content,
+      landing_page: window.location.href,
+    }),
+  })
+    .then(res => {
+      if (!res.ok) throw new Error('request failed');
+      document.getElementById('mel-form').style.display = 'none';
+      document.getElementById('mf-success').style.display = 'block';
+      if (typeof fbq === 'function') fbq('track', 'Lead');
+    })
+    .catch(() => {
+      btn.disabled = false;
+      btn.textContent = 'Empezar';
+      document.getElementById('mf-error').style.display = 'block';
+    });
+}
+</script>
+</body>
+</html>
